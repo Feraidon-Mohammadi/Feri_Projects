@@ -1,0 +1,74 @@
+#search-form {
+  align-items: stretch;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+#search-submit-button {
+  background-image: linear-gradient(92.88deg, #455eb5 9.16%, #5643cc 43.89%, #673fd7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  color: white;
+  min-width: 100px;
+}
+
+#search-field {
+  background-color: #f1f1f1;
+  border: none;
+  min-width: 40vw;
+  padding: 10px;
+}
+
+header {
+  background-color: #aac0f0;
+  padding: 1rem;
+}
+
+#result-table {
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  font-family: sans-serif;
+  font-size: 0.9em;
+  margin: 25px 0;
+  min-width: 100%;
+}
+
+#result-table thead tr {
+  background-color: #aac0f0;
+  color: #f3f2f2;
+  text-align: left;
+}
+
+#result-table thead th,
+td {
+  padding: 12px 15px;
+}
+
+#result-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+#result-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.two-column-grid {
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: auto 1fr;
+}
+
+#book-details-dialog {
+  border: 1px solid #333;
+  border-radius: 5px;
+  max-width: 80vw;
+  padding: 2rem;
+}
+
+button.book-details-dialog__close {
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  width: 100%;
+}

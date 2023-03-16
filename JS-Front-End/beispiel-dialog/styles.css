@@ -1,0 +1,48 @@
+.two-column-grid {
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: auto 1fr;
+}
+
+.horizontal-container {
+  align-items: start;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.book-details-dialog__header {
+  align-items: center;
+  background-color: lightblue;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.book-details-dialog__header-close {
+  border: 1px solid #333;
+  border-radius: 100%;
+  height: 2rem;
+  width: 2rem;
+}
+
+.book-details-dialog__close-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+#book-details-dialog {
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+#book-details-dialog::backdrop {
+  background-color: rgba(50, 50, 50, 0.3);
+}

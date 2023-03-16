@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Roboto&display=swap");
+
+:root {
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+td {
+  padding: 0.5rem 1rem;
+}
+
+th {
+  font-weight: 100;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 80vw;
+}
+
+#user-table {
+  border: 1px solid #30303080;
+  border-collapse: collapse;
+  box-shadow: 5px 5px 5px #30303080;
+  width: 100%;
+}
+
+#user-table thead tr {
+  background-color: #ccc;
+}
+
+#user-table tbody tr:nth-of-type(odd) {
+  background-color: #eee;
+}
+
+#user-table tbody tr:nth-of-type(even) {
+  background-color: #ddd;
+}

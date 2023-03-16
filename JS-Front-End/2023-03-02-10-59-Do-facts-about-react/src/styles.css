@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+Display&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+:root {
+  --default-padding: 0.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  padding: var(--default-padding);
+}
+
+.no-markers {
+  list-style: none;
+}
+
+.nav-bar {
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--default-padding);
+}
+
+.nav-bar__menu {
+  display: flex;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.nav-bar__logo {
+  width: 60px;
+}
+
+.footer {
+  background-color: #333;
+  color: whitesmoke;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 1rem;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}

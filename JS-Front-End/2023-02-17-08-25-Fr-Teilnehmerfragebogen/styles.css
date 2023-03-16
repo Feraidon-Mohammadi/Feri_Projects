@@ -1,0 +1,115 @@
+/* 
+Ein Stylesheet definiert einen Satz an CSS-Rules (Regeln), die auf ein
+Dokument angewandt werden sollen. Ob eine Regel anwendbar ist, bestimmt
+der zur Regel gehörende Selector. Innerhalb einer Regel werden eine Reihe von
+Property: Wert Deklarationen angegeben. Trifft eine Regel auf ein Element zu,
+so werden die Deklarationen gesetzt.
+
+Die Reihenfolge, in der die zutreffenden Regeln angewandt werden, hängt von
+mehreren Faktoren ab:
+
+1) Origin: Wo kommt das Stylesheet her? Kommt es vom Browser? Ist es direkt in der Webseite
+   durch den WebDesigner eingebettet?
+2) Specificity: Für jeden Selektor wird ein Tupel bestehend aus 3 numerischen Werten berechnet.
+   Je höher die Spezifizität, desto später wird die Regel auf das Element angewandt, wodurch
+   die Deklarationen der Regel die Deklarationen von weniger spezifischen Regeln überschreiben
+   können.
+3) Inheritance: _Einige_ Properties werden von den Elternelementen an ihre Nachfahren vererbt.
+   Die Vererbung tritt dann in Kraft, wenn ein Property nicht durch eine Regel explizit gesetzt wurde.
+4) Default-Werte: Für jedes Property gibt es einen Standardwert. Diese treten nur dann in Kraft,
+   wenn das Property nicht explizit durch Vererbung oder durch eine angewandte Regel gesetzt wurde.
+5) Haben zwei Regeln dieselbe Spezifizität, dann entscheidet deren Reihenfolge im Stylesheet, welche
+   zuerst angewandt wird. Weiter oben stehende Regeln werden also vor weiter unten stehenden Regeln angewandt.
+   Hinweis: Browser Stylesheets werden vor explizit eingebundenen Stylesheets geladen, d.h. diese 
+   "stehen weiter oben" im Gesamt-Stylesheet.
+*/
+
+:root {
+  --default-font: Arial, Helvetica, sans-serif;
+  --default-gap: 0.5rem;
+  font-family: var(--default-font);
+  font-size: 16px;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 80vw; /* 80% der gesamten Browser-Breite */
+}
+
+select {
+  font-family: var(--default-font);
+  padding: 0.5rem;
+}
+
+textarea {
+  box-shadow: 1px 1px 1px #999;
+  font-family: inherit; /* erbe den Wert vom Elternelement */
+  line-height: 1.5;
+  max-width: 100%;
+  padding: 0.5rem;
+  resize: none;
+  width: 100%;
+}
+
+section {
+  /* 
+  3rem entspricht 300% der Schriftgröße des
+  html-Elements. 3em entspricht 300% der Schriftgröße
+  des Elternelements. 
+  */
+  margin: 3rem 0;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  /* border-bottom: 1px solid #999; */
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+thead {
+  background-color: #ccc;
+}
+
+th,
+td {
+  padding: 0.5rem 0.5rem;
+  text-align: left;
+}
+
+.two-column-grid {
+  /* Zellen vertikal zentrieren */
+  align-items: center;
+  column-gap: var(--default-gap);
+  display: grid;
+  /* Erste Spalte so klein wie möglich und zweite Spalte erhält den restlichen Platz */
+  grid-template-columns: auto 1fr;
+  row-gap: var(--default-gap);
+}
+
+.radio-column {
+  text-align: center;
+  width: 10%;
+}
+
+#submit-button {
+  left: 5px;
+  min-height: 20vh;
+  padding: 1.5rem 0.25rem;
+  position: fixed; /* positioniert Element an eine feste Position im Viewport (Browserfenster) */
+  top: 50vh;
+}
+
+#submit-button p {
+  writing-mode: vertical-lr;
+}

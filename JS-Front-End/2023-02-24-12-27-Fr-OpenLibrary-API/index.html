@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./app.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <form id="search-form">
+        <input type="text" id="search-field" placeholder="Titel eingeben" required />
+        <button id="search-submit-button" type="submit">Suchen</button>
+      </form>
+    </header>
+    <!-- 
+        Sucht nach Büchern anhand eines Titels.
+        Achtung: Hier werden sogenannte "works" zurückgeliefert. Ein "work" ist eine Buchsammlung,
+        welche das geiche Buch in unterschiedlichen Sprachen, Versionen etc. repräsentiert. Zu jedem "work"
+        gibt es demnach eine oder mehrere "editions".
+
+        https://openlibrary.org/search.json?title=SUCHBEGRIFF&limit=20
+        https://openlibrary.org/search.json?title=JavaScript&fields=title,language,publish_year,edition_count,author_name&limit=10&sort=new 
+    -->
+    <!--
+        Ruft Details zu einem ganz bestimmten Buch (OL9365630M) ab. 
+        https://openlibrary.org/books/OL9365630M.json 
+    -->
+    <!-- 
+        Ruft Cover für Buch mit OLID OL9365630M in Größe S(mall) ab.
+        Achtung: Nicht immer gibt es ein Cover!
+        https://covers.openlibrary.org/b/olid/OL9365630M-S.jpg 
+    -->
+
+    <table id="result-table">
+      <thead>
+        <tr>
+          <th>Titel des Werkes</th>
+          <th>Anzahl Editionen</th>
+          <th>Erscheinungsjahr</th>
+          <th>Autoren</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <dialog id="book-details-dialog">
+      <div class="two-column-grid book-details-dialog__content"></div>
+      <button class="book-details-dialog__close" type="button">Schließen</button>
+    </dialog>
+  </body>
+</html>

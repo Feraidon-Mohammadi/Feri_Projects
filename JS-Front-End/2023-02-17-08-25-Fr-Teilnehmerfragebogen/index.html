@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teilnehmerfragebogen</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header></header>
+    <nav></nav>
+    <main>
+      <form method="post">
+        <h1>Auswertungsbogen</h1>
+        <section>
+          <h2>Allgemeine Angaben</h2>
+          <div class="two-column-grid">
+            <label for="class">Kurs: </label>
+            <select id="class" name="class" required>
+              <option value="">--- Bitte Kurs wählen ---</option>
+              <option value="fi-34-ae">FI-34 AE</option>
+              <option value="kff-it">KFF-IT</option>
+              <option value="fi-33-ae">FI-33 AE</option>
+            </select>
+            <label for="subject">Fach: </label>
+            <select id="subject" name="subject" required>
+              <option value="">--- Bitte Fach wählen ---</option>
+              <option value="js-fundamentals">JavaScript Grundlagen</option>
+              <option value="csharp-fundamentals">C# Grundlagen</option>
+              <option value="windows-server">Windows Server</option>
+              <option value="frontend-development">Frontend Development Fundamentals</option>
+            </select>
+            <label for="trainer">Dozent: </label>
+            <select id="trainer" name="trainer" required>
+              <option value="">--- Bitte Trainer wählen ---</option>
+              <option value="schenker">Schenker</option>
+              <option value="huettmann">Hüttmann</option>
+              <option value="linse">Linse</option>
+              <option value="roemer">Römer</option>
+            </select>
+          </div>
+        </section>
+        <section>
+          <h2>Bewertung des Dozenten</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Frage</th>
+                <th class="radio-column">sehr gut</th>
+                <th class="radio-column">gut</th>
+                <th class="radio-column">befriedigend</th>
+                <th class="radio-column">ausreichend</th>
+                <th class="radio-column">mangelhaft</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vermittlung des Fachwissens</td>
+                <td class="radio-column"><input type="radio" name="expert-knowledge" /></td>
+                <td class="radio-column"><input type="radio" name="expert-knowledge" /></td>
+                <td class="radio-column"><input type="radio" name="expert-knowledge" /></td>
+                <td class="radio-column"><input type="radio" name="expert-knowledge" /></td>
+                <td class="radio-column"><input type="radio" name="expert-knowledge" /></td>
+              </tr>
+              <tr>
+                <td>Verwendung von verständlicher Sprache</td>
+                <td class="radio-column"><input type="radio" name="clear-language" /></td>
+                <td class="radio-column"><input type="radio" name="clear-language" /></td>
+                <td class="radio-column"><input type="radio" name="clear-language" /></td>
+                <td class="radio-column"><input type="radio" name="clear-language" /></td>
+                <td class="radio-column"><input type="radio" name="clear-language" /></td>
+              </tr>
+              <tr>
+                <td>Berücksichtigung von Teilnehmerbedürfnissen</td>
+                <td class="radio-column"><input type="radio" name="account-for-needs" /></td>
+                <td class="radio-column"><input type="radio" name="account-for-needs" /></td>
+                <td class="radio-column"><input type="radio" name="account-for-needs" /></td>
+                <td class="radio-column"><input type="radio" name="account-for-needs" /></td>
+                <td class="radio-column"><input type="radio" name="account-for-needs" /></td>
+              </tr>
+            </tbody>
+            <tfoot></tfoot>
+          </table>
+        </section>
+        <section>
+          <h2>Was hat Ihnen besonders gut gefallen?</h2>
+          <textarea name="likes" rows="5" maxlength="512"></textarea>
+        </section>
+        <section>
+          <h2>Was hat Ihnen nicht gefallen?</h2>
+          <textarea name="dislikes" rows="5" maxlength="512"></textarea>
+        </section>
+        <section>
+          <h2>Was sollte man Ihrer Meinung nach streichen bzw. kürzen?</h2>
+          <textarea name="topics-to-reduce" rows="5" maxlength="512"></textarea>
+        </section>
+        <section>
+          <h2>Abschließende Fragen</h2>
+          <div>
+            <p>Wie fanden sie das Tempo des Unterrichts?</p>
+            <input id="fast-pace" type="radio" name="pace" value="fast" />
+            <label for="fast-pace">zu schnell</label>
+            <input id="adequate-pace" type="radio" name="pace" value="adequate" />
+            <label for="adequate-pace">angemessen</label>
+            <input id="slow-pace" type="radio" name="pace" value="slow" />
+            <label for="slow-pace">zu langsam</label>
+          </div>
+          <div>
+            <p>Wie fanden sie die Fachunterlagen?</p>
+            <input
+              id="too-much-material"
+              type="radio"
+              name="supporting-material"
+              value="too-much"
+            />
+            <label for="too-much-material">zu umfangreich</label>
+            <input
+              id="adequate-material"
+              type="radio"
+              name="supporting-material"
+              value="adequate"
+            />
+            <label for="adequate-material">gerade richtig</label>
+            <input
+              id="insufficient-material"
+              type="radio"
+              name="supporting-material"
+              value="insufficient"
+            />
+            <label for="insufficient-material">zu dürftig</label>
+          </div>
+        </section>
+        <section>
+          <h2>Verbesserungsvorschläge und Anregungen zu Fachunterlagen</h2>
+          <textarea name="material-remarks" rows="5" maxlength="512"></textarea>
+        </section>
+        <section>
+          <h2>Wie bewerten sie das Fach insgesamt?</h2>
+          <input type="radio" name="final-grade" id="very-good-final-grade" value="very-good" />
+          <label for="very-good-final-grade">sehr gut</label>
+          <input type="radio" name="final-grade" id="good-final-grade" value="good" />
+          <label for="good-final-grade">gut</label>
+          <input
+            type="radio"
+            name="final-grade"
+            id="satisfactory-final-grade"
+            value="satisfactory"
+          />
+          <label for="satisfactory-final-grade">befriedigend</label>
+          <input type="radio" name="final-grade" id="sufficient-final-grade" value="sufficient" />
+          <label for="sufficient-final-grade">ausreichend</label>
+          <input
+            type="radio"
+            name="final-grade"
+            id="insufficient-final-grade"
+            value="insufficient"
+          />
+          <label for="insufficient-final-grade">mangelhaft</label>
+        </section>
+
+        <section>
+          <button id="submit-button" type="submit"><p>Senden</p></button>
+          <button type="reset">Zurücksetzen</button>
+        </section>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>

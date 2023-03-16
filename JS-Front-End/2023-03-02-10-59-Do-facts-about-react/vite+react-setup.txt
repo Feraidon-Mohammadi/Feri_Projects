@@ -1,0 +1,9 @@
+// Vite Projekt mit React und JavaScript aufsetzen
+// Framework: React Variant: JavaScript
+npm create vite@latest
+
+// Anschließend in das erstellte Verzeichnis wechseln und folgendes ausführen:
+npm install
+
+// Nun den Web Server starten mit:
+npm run dev

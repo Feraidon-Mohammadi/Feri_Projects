@@ -1,0 +1,52 @@
+{
+ "docs": [
+    {
+        "_version_": 1735664705209368576,
+        "author_facet": [
+            "OL2500658A Alien"
+        ],
+        "author _key": [
+            "OL2500658A"
+        ],
+        "author_name": [
+            "Alien"
+        ],
+        "ebook_access": "no_ebook"
+    },
+    {
+        "_version_": 1735664705209368576,
+        "author_facet": [
+            "OL2500658A Alien"
+        ],
+        "author_key": [
+            "OL2500658A"
+        ],
+        "author_name": [
+            "Alien",
+            "Bob Ross"
+        ],
+        "other": [
+            {"id": 2, "name": "hans"},
+            {"id": 3, "name": "wurst"}
+        ],
+        "ebook_access": "no_ebook"
+    }
+ ],
+ "time": "2023-02-23-08-34"
+}
+
+// result -> object
+// result.time -> string
+// result.docs -> array
+// result.docs[0] -> object
+// result.docs[1] -> object
+// result.docs[0]._version_ -> number mit Wert 1735664705209368576
+// result.docs[0].author_facet -> array
+// result.docs[0].author_facet[0] -> string mit Wert "OL2500658A Alien"
+// result.docs[1].other -> array
+// result.docs[1].other[0] -> object mit Wert {"id": 2, "name": "hans"}
+// result.docs[1].other[0].name -> string mit Wert "hans"
+// result.docs[1].other[1].id -> number mit Wert 3
+// let hans = result.docs[1].other[0] -> object
+// hans.id -> number mit Wert 2
+// hans.name -> string mit Wert "hans"
