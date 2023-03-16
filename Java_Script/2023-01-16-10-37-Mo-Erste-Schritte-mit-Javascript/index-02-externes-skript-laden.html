@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Erste Schritte mit JavaScript</title>
+        <!-- 
+            Das Attribut defer sagt dem HTML Parser, dass er das
+            Skript zwar schon parallel herunterladen kann, aber die
+            Ausführung erst nach vollständigem Dokumentaufbau beginnen soll.
+         -->
+        <script src="./hello-world.js" defer></script>
+    </head>
+    <body>
+        <p>Hello World!!!!!!!</p>
+
+        <p id="motto">JavaScript is awesome!</p>
+        <!-- 
+            Dieses Skript wird synchron ausgeführt. Der HTML Parser stoppt den Dokumentaufbau 
+            an dieser Stelle und beginnt mit der Ausführung des JavaScript Codes. Nachdem das Skript
+            abgearbeitet wurde, wird das Dokument weiter aufgebaut. 
+        -->
+        <script>
+            console.log("Das ist ein internes Skript.");
+            // Ein Zugriff auf das p-Element mit ID motto funktioniert hier.
+            // Ein Zugriff auf das p-Element mit ID greeting würde an dieser Stelle fehlschlagen,
+            // da der HTML Parser das Element noch nicht im Dokument aufgenommen hat.
+        </script>
+
+        <p id="greeting">Viele Grüße</p>
+    </body>
+</html>

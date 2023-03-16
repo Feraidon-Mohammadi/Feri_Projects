@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 75vh;
+}
+
+button {
+  padding: 10px 25px;
+}
+
+.game-details {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.board {
+  /* align-items: center; */
+  aspect-ratio: 1 / 1;
+  /* border: 1px solid black; */
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  /* justify-items: center; */
+  /* max-width: 75vh; */
+}
+
+.board__cell {
+  align-items: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+}
+
+.board__cell--highlighted {
+  background-color: yellow;
+}
+
+.board__cell--striked {
+  background-color: green;
+}
