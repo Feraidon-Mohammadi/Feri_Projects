@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="calculator.js" type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="numpad">
+        <p class="interim-calculation"></p>
+        <input type="text" id="input" value="" placeholder="Zahl eingeben" readonly />
+        <button type="button" data-type="clear-input">CE</button>
+        <button type="button" data-type="remove-last-input">C</button>
+        <button type="button" data-type="operator" data-value="%">MOD</button>
+        <button type="button" data-type="operator" data-value="/">/</button>
+        <button type="button" data-type="digit" data-value="7">7</button>
+        <button type="button" data-type="digit" data-value="8">8</button>
+        <button type="button" data-type="digit" data-value="9">9</button>
+        <button type="button" data-type="operator" data-value="*">x</button>
+        <button type="button" data-type="digit" data-value="4">4</button>
+        <button type="button" data-type="digit" data-value="5">5</button>
+        <button type="button" data-type="digit" data-value="6">6</button>
+        <button type="button" data-type="operator" data-value="-">-</button>
+        <button type="button" data-type="digit" data-value="1">1</button>
+        <button type="button" data-type="digit" data-value="2">2</button>
+        <button type="button" data-type="digit" data-value="3">3</button>
+        <button type="button" data-type="operator" data-value="+">+</button>
+        <button type="button" data-type="negate">+/-</button>
+        <button type="button" data-type="digit" data-value="0">0</button>
+        <button type="button" data-type="decimal-point">.</button>
+        <button type="button" data-type="result">=</button>
+      </div>
+      <div class="history-container">
+        <ul class="history-list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
