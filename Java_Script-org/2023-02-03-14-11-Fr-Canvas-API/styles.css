@@ -1,0 +1,14 @@
+#canvas {
+  background-color: lightgray;
+  border: 1px solid black;
+  display: block;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}

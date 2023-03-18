@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="./calculate.js" defer></script>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <div class="form-container">
+            <form id="bonus-form" class="bonus-form">
+                <label
+                    ><p>Anstellungsjahre</p>
+                    <div><input id="employee-years" type="number" value="0" min="0" required /></div
+                ></label>
+                <label
+                    ><p>Alter des Mitarbeiters</p>
+                    <div><input id="employee-age" type="number" min="18" required /></div
+                ></label>
+                <label
+                    ><p>Erzielter Umsatz</p>
+                    <div><input id="employee-sales" type="number" value="0" min="0" required /></div
+                ></label>
+                <label
+                    ><p>Durchschnittlicher Jahresumsatz</p>
+                    <div><input id="employee-average-sales" type="number" min="0" required /></div
+                ></label>
+                <button id="calculate-bonus" type="button">Bonus berechnen</button>
+            </form>
+        </div>
+
+        <div id="overlay"></div>
+
+        <div id="error-dialog" class="error-dialog">
+            <div class="error-dialog-header">
+                <span>Titel</span>
+                <!-- <div id="" class="error-dialog-x-button">x</div> -->
+                <span id="error-dialog-x-button">❌</span>
+            </div>
+            <p id="error-dialog-message">Fehlermeldung</p>
+            <button id="error-dialog-close-button" type="button">Schließen</button>
+        </div>
+    </body>
+</html>
