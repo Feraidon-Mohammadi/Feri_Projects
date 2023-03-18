@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>verschidene Fomular-Elemente</h1>
+
+    <form action="01-form-elemente.php" method="POST">
+
+        <!-- textbasierte formular-elemente-->
+        <p>
+            E-mail*: <input type="email" name="e-mail">
+            Passwort: <input type="password" name="passwort">
+            Datum: <input type="date" name="datum">
+            Time: <input type="time" name="time">
+         
+
+
+        </p>
+        <!--checkboxen for farben-->
+        <p>Farben:<br>
+            <input type="checkbox" name="farben[]" value="gelb"> gelb
+            <input type="checkbox" name="farben[]" value="blau"> blau
+            <input type="checkbox" name="farben[]" value="grün"> grün
+            <input type="checkbox" name="farben[]" value="rot"> rot
+        </p>
+
+        <!--Raidio-bottons (Optionsfelder)-->
+        <p>Ampel:</p>
+        <input type="Radio" name="ampel" value="gelb"> gelb
+        <input type="Radio" name="ampel" value="grün"> grün
+        <input type="Radio" name="ampel" value="Rot"> rot
+        
+
+
+        <!--Dropdown button-->
+        <p>Eis*:
+                <select name="eissorte">
+                <option value="-1">-Bitte sorte Wählen</option>
+                <option value="sorte-1">schoko</option>
+                <option value="sorte-2">Pistazie</option>
+                <option value="sorte-3">Caramel mit Salz</option>
+            </select>
+            </p>
+
+            <!--dropdown multiple-->
+            <p>Obst:
+                <select name="obst[]" multiple>
+                <option >Apfel</option>
+                <option >Birne</option>
+                <option >Pflaumen</option>
+                <option >Orange</option>
+            </select>
+
+            </p>
+
+            <p>
+                <textarea name="message"><marquee>Das ist vorbelegter Text.
+
+Das geht auch mit zeilenummer</marquee>
+
+                </textarea>
+
+            </p>
+
+        <p><input type="submit" value="absenden"></p>
+
+
+
+    </form>
+
+
+    
+</body>
+</html>

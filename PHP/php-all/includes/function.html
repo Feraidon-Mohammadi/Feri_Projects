@@ -1,0 +1,331 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Schreibe Header": {
+		"scope": "php",
+		"prefix": "phead",
+		"body": [
+			"require_once( '../includes/functions.inc.php' );",
+			"/*",
+			"* get_header(",
+			"*\tstring \\$title,",
+			"*\tstring/array \\$css=NULL,",
+			"*\tbool \\$bootstrap=false,",
+			"*\tstring \\$header=NULL,",
+			"*\tarray \\$nav=NULL,",
+			"*\tbool \\$fluid=false",
+			"* )",
+			"*/",
+			"\\$args = array(",
+			"\t$1",
+			");",
+			"get_header( ...\\$args );",
+			"?>"
+		],
+		"description": "Fügt das Script für die Einbindung des HTML-Headers ein"
+	},
+	"Schreibe Footer": {
+		"scope": "php",
+		"prefix": "pfoot",
+		"body": "<?php get_footer(); ?>",
+		"description": "Fügt das Script für die Einbindung des HTML-Footers ein"
+	},
+	"PHP-Bereich": {
+		"scope": "html",
+		"prefix": "php",
+		"body": "<?php $0 ?>",
+		"description": "Fügt einen PHP-Bereich ein."
+	},
+	"PHP-Bereich Umbruch": {
+		"scope": "html",
+		"prefix": "php+",
+		"body": [
+			"<?php",
+			"\t",
+			"\t$0",
+			"\t",
+			"?>"
+		],
+		"description": "Fügt einen PHP-Bereich mit Zeilenumbrüchen ein."
+	},
+	"Formular Eigenaufruf": {
+		"scope": "php,html",
+		"prefix": "formself",
+		"body": [
+			"<form action=\"<?php echo \\$_SERVER['PHP_SELF']; ?>\" method=\"post\">",
+			"\t$0",
+			"</form>"
+		],
+		"description": "Fügt einen Formular-Bereich mit Selbstaufruf ein."
+	},
+	"Grundgerüst": {
+		"scope": "php,html",
+		"prefix": "pfull",
+		"body": [
+			"<?php",
+			"require_once( '../includes/functions.inc.php' );",
+			"* get_header(",
+			"*\tstring \\$title,",
+			"*\tstring/array \\$css=NULL,",
+			"*\tbool \\$bootstrap=false,",
+			"*\tstring \\$header=NULL,",
+			"*\tarray \\$nav=NULL,",
+			"*\tbool \\$fluid=false",
+			"* )",
+			"*/",
+			"\\$args = array(",
+			"\t$1",
+			");",
+			"get_header( ...\\$args );",
+			"?>",
+			"\t$2",
+			"<?php get_footer(); ?>"
+		],
+		"description": "Fügt das Grundgerüst für den PHP-Kurs ein."
+	},
+	"Grundgerüst mit DB": {
+		"scope": "php,html",
+		"prefix": "pfulldb",
+		"body": [
+			"<?php",
+			"require_once( '../includes/functions.inc.php' );",
+			"\\$database = $1;",
+			"* /get_header(",
+			"*\tstring \\$title,",
+			"*\tstring/array \\$css=NULL,",
+			"*\tbool \\$bootstrap=false,",
+			"*\tstring \\$header=NULL,",
+			"*\tarray \\$nav=NULL,",
+			"*\tbool \\$fluid=false",
+			"* )",
+			"*/",
+			"\\$args = array(",
+			"\t$2",
+			");",
+			"get_header( ...\\$args );",
+			"require_once( '../includes/pdo-connect.inc.php' );",
+			"?>",
+			"\t$3",
+			"<?php get_footer(); ?>"
+		],
+		"description": "Fügt das Grundgerüst für den PHP-Kurs inklusive Datenbankzugriff ein."
+	},
+	"var_dump()": {
+		"scope": "php",
+		"prefix": "vd",
+		"body":  "echo '<pre>', var_dump( $1 ), '</pre>';",
+		"description": "Gibt ein pre-formatiertes var_dump() aus."
+	},
+	"var_dump()+": {
+		"scope": "php",
+		"prefix": "vd+",
+		"body":  [
+			"echo '<pre>';",
+			"var_dump( $1 )",
+			"echo '</pre>';"
+		],
+		"description": "Gibt ein pre-formatiertes var_dump() mit Zeilenumbrüchen aus."
+	},
+	"print_r()": {
+		"scope": "php",
+		"prefix": "pr",
+		"body":  "echo '<pre>', print_r( $1 ), '</pre>';",
+		"description": "Gibt ein pre-formatiertes print_r() aus."
+	},
+	"print_r()+": {
+		"scope": "php",
+		"prefix": "pr+",
+		"body":  [
+			"echo '<pre>'", 
+			"print_r( $1 )",
+			"echo '</pre>';"
+		],
+		"description": "Gibt ein pre-formatiertes print_r() mit Zeilenumbrüchen aus."
+	},
+	"Absatzausgabe PHP": {
+		"scope": "php",
+		"prefix": "ep",
+		"body":  "echo '<p>' . $1 . '</p>';",
+		"description": "Gibt per echo je ein Absatz-Anfangs und Ende-Tag aus und setzt den Zeiger in die Zeile dazwischen."
+	},
+	"Absatzausgabe PHP mit Umbruch": {
+		"scope": "php",
+		"prefix": "ep+",
+		"body":  [
+			"echo '<p>';", 
+			"$1",
+			"echo '</p>';"
+		],
+		"description": "Gibt per echo je ein Absatz-Anfangs und Ende-Tag aus und setzt den Zeiger in die Zeile dazwischen."
+	},
+	"Kommentar Titel HTML": {
+		"scope": "html",
+		"prefix": "komtitel",
+		"body": [
+			"<!-- ${1:Titel}",
+			"============================================================================================= -->"
+		],
+		"description": "Ausgabe eines Kommentar-Titels in HTML-Dateien"
+	},
+	"Kommentar Text HTML": {
+		"scope": "html",
+		"prefix": "komtext",
+		"body": "<!-- ${1:Text} -->",
+		"description": "Ausgabe eines Kommentar-Textes in HTML-Dateien"
+	},
+	"Kommentar Titel CSS/SCSS": {
+		"scope": "css,scss",
+		"prefix": "komtitel",
+		"body": "/* === ${1:Titel} === */",
+		"description": "Ausgabe eines Kommentar-Titels in CSS-Dateien"
+	},
+	"Kommentar Text CSS/SCSS": {
+		"scope": "css,scss",
+		"prefix": "komtext",
+		"body": "/* ${1:Text} */",
+		"description": "Ausgabe eines Kommentar-Textes in CSS-Dateien"
+	},
+	"Kommentar Titel PHP": {
+		"scope": "php",
+		"prefix": "komtitel",
+		"body": [
+			"/* === ${1:Titel}",
+			"============================================================================================= */"
+		],
+		"description": "Ausgabe eines Kommentar-Titels in PHP-Dateien"
+	},
+	"Kommentar Text PHP": {
+		"scope": "php",
+		"prefix": "komtext",
+		"body": "/*** ${1:Text} ***/",
+		"description": "Ausgabe eines Kommentar-Textes in PHP-Dateien"
+	},
+	"ausführlicher Kommentar": {
+		"scope": "php",
+		"prefix": "komfull",
+		"body": [
+			"/**",
+			" * ${1:Summary}",
+			" *",
+			" * ${2:Description}",
+			" *",
+			" * @since ${3:x.x.x}",
+			" *",
+			" * @see ${4:function/method/class} relied on",
+			" * @link ${5:url}",
+			" * @global ${6:type} ${7:varname} ${8:Description}.",
+			" * @param ${9:type} ${10:var} ${11:Optional. / Description. / Default.}",
+			" * @return ${12:type} ${13:Description}.",
+			" */"
+		],
+		"description": "Ausgabe eines ausführlichen Kommentar-Textes zur Beschreibung von Funktionen / Methoden / Klassen in PHP-Dateien"
+	},
+	"Prolog Schema": {
+		"prefix": "pxsd",
+		"body": [
+			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+			"<xs:schema xmlns:xs=\"http://w3.org/2001/XMLSchema\">",
+			"$1",
+			"</xs:schema>"
+		],
+		"description": "Ausgabe des Prologs für Schema-Dateien"
+	},
+	"Prolog XML": {
+		"prefix": "pxml",
+		"body": [
+			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+			"<!DOCTYPE ${1:name} SYSTEM \"${2:DTD-Datei}\">",
+			"$3"
+		],
+		"description": "Ausgabe des Prologs für XML-Dateien"
+	},
+	"PHP SQL-Abfrage": {
+		"scope": "php",
+		"prefix": "sqlquery",
+		"body": [
+			"\\$sql = $1;",
+			"",
+			"\\$result = mysqli_query( \\$db, \\$sql );",
+			"",
+			"if( false === \\$result ) {",
+			"\t$2",
+			"} else {",
+			"\techo get_db_error( \\$db, \\$sql );",
+			"}"
+		],
+		"description": "Ausgabe für mySQL-Datenbank-Abfragen"
+	},
+	"Bootstrap 5 Grundgerüst nur CSS": {
+		"scope": "html,php",
+		"prefix": "bs5",
+		"description": "Bootstrap 5.1.3 Grundgerüst nur CSS per CDN",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"de\">",
+			"<head>",
+			"\t<meta charset=\"UTF-8\">",
+			"\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+			"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"\t<title>${1:Document}</title>",
+			"\t<!-- CSS only -->",
+			"\t<!-- Bootstrap-CSS -->",
+			"\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">",
+			"\t<!-- Custom-CSS -->",
+			"\t<link rel=\"stylesheet\" href=\"$2\">",
+			"</head>",
+			"<body>",
+			"\t$3",
+			"</body>",
+			"</html>"
+		]
+	},
+	"Bootstrap 5 Grundgerüst mit JS": {
+		"scope": "html,php",
+		"prefix": "bs5js",
+		"description": "Bootstrap 5.1.3 Grundgerüst - Einbindung per CDN incl. komplettes JavaScript",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"de\">",
+			"<head>",
+			"\t<meta charset=\"UTF-8\">",
+			"\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+			"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"\t<title>${1:Document}</title>",
+			"\t<!-- CSS only -->",
+			"\t<!-- Bootstrap-CSS -->",
+			"\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">",
+			"\t<!-- Custom-CSS -->",
+			"\t<link rel=\"stylesheet\" href=\"$2\">",
+			"</head>",
+			"<body>",
+			"\t$3",
+			"<!-- Bootstrap JavaScript -->",
+			"<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>",
+			"</body>",
+			"</html>"
+		]
+	},
+	"Bootstrap JS": {
+		"scope": "html,php",
+		"prefix": "bs5jsonly",
+		"description": "Bootstrap 5.1.3 JavaScript per CDN",
+		"body": [
+			"<!-- Bootstrap JavaScript -->",
+			"<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>"
+		]
+	}
+}
