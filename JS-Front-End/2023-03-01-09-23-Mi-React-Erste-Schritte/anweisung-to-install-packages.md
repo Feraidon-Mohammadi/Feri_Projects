@@ -1,17 +1,17 @@
-1-Erst node.js version oberer als V.18.0.0 und 
+1-Erst node.js version oberer als V.18.0.0 
+ 
 	### terminal ###
 
-2-dann mach auf terminal 
+2-dann mach auf terminal in eine neue ordner 
 
+3-in terminal schreib: npm create vite@latest 
 
-3-in eine neue ordner in terminal schreib:npm create vite@latest 
-
- wenn kommt diese frage . einfach ja clicken oder Y clicken
-	***ergebnist is it ? 
-	Need to install the following packages:
-	create-vite@4.2.0
-	Ok to proceed? (y)
-	***
+wenn kommt diese frage . einfach ja clicken oder Y clicken
+#### ergebnist is it ? 
+#### Need to install the following packages:
+#### create-vite@4.2.0
+#### Ok to proceed? (y)
+#### ***
 
 4-yes ,click
 
@@ -19,27 +19,29 @@
 
 6-Reach auswaehlen von untere optionen
 
-    Vanilla
-    Vue
- >  React
-    Preact
-    Lit
-    Svelte
-    Others
+####    Vanilla
+####    Vue
+#### >  React
+####    Preact
+####    Lit
+####    Svelte
+####    Others
 
 7- JavaScript auswaehlen von untere optionen. 
 
->   JavaScript
-    TypeScript
-    JavaScript + SWC
-    TypeScript + SWC
+#### >  JavaScript
+####    TypeScript
+####    JavaScript + SWC
+####    TypeScript + SWC
+
 
 
 	### in vs code mach auf die hergestellte package ###
 
 
-8- package.json > add  dieses port to package ,wird einfacher : vite --port 8080 wo steht "dev": "vite" hinzufuegen 
-	it should be like this : "dev": "vite --port 8080",
+8-add dieses port to package.json : vite --port 8080 
+#wo steht "dev": "vite"
+# hinzufuegen it should be like this : "dev": "vite --port 8080",
 
 
 
