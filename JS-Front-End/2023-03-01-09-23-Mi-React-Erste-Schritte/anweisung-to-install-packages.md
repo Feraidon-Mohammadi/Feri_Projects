@@ -39,19 +39,20 @@ wenn kommt diese frage . einfach ja clicken oder Y clicken
 	### in vs code mach auf die hergestellte package ###
 
 
-8-add dieses port to package.json : vite --port 8080 
-#wo steht "dev": "vite"
-# hinzufuegen it should be like this : "dev": "vite --port 8080",
+8-add dieses port to package.json : --port 8080 
+wo steht: ("dev": "vite")
+it should be like this : ("dev": "vite --port 8080",)
 
 
 
 ### with crl + J  you can open terminal in vs code ###
 
 
-10-and in vscode terminal type : npm install 
-	 wenn es fertig ist dann naechste code 
+10-and in vscode terminal type : npm install
+#### wenn es fertig ist dann naechste code
+ 
 11-:npm run dev 
- 	after that u will see a link with different color
+### after that u will see a link with different color
 
 12-hold ctr + click     on link  u will see  webbrowser with port 8080 that  we did add  it on step 8
-	thats all .enjoy your  react projects 
+## thats all .enjoy your  react projects 
