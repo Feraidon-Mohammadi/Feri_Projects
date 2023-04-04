@@ -31,23 +31,33 @@ from	suppliers;
 select	orderid, customerid, orderdate, shipcity, freight, 'Sehr teure Fracht' as Kosten
 from	orders
 where	freight>1000
+
 union
+
 select	orderid, customerid, orderdate, shipcity, freight, 'Teure Fracht' 
 from	orders
 where	freight between 500 and 1000
+
 union
+
 select	orderid, customerid, orderdate, shipcity, freight, 'Auch noch ziemlich teuer' 
 from	orders
 where	freight between 100 and 499.99
+
 union
+
 select	orderid, customerid, orderdate, shipcity, freight, 'Normale Fracht' 
 from	orders
 where	freight between 10 and 99.99
+
 union
+
 select	orderid, customerid, orderdate, shipcity, freight, 'Billige Fracht'
 from	orders
 where	freight<10
+
 union
+
 select	orderid, customerid, orderdate, shipcity, freight, 'Kein Kommentar' 
 from	orders
 where	freight is null

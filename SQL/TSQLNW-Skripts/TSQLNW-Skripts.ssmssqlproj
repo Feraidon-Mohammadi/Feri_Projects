@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="TSQLNW-Skripts">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="FERAIDONM\SQLEXPRESS:FERAIDONM\fereydoun">
+          <Created>2023-03-20T23:51:17.3605642+01:00</Created>
+          <Type>SQL</Type>
+          <Server>FERAIDONM\SQLEXPRESS</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>Northwind</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQueryFeriM-project.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQueryFeriM-project.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U0_TSQLRegeln.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U0_TSQLRegeln.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U01_SFW.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U01_SFW.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U02_Joins.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U02_Joins.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U02+_Join_Wdh.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U02+_Join_Wdh.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U02+_NWCrossJoin.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U02+_NWCrossJoin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U03_Aggregate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U03_Aggregate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U03+NWWindows_Fkt.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U03+NWWindows_Fkt.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U04_SubQueries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U04_SubQueries.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U05_SetOp.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U05_SetOp.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U06_DML.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U06_DML.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U07_TransactionControl.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U07_TransactionControl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U08_Tab_AlterCol.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U08_Tab_AlterCol.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U08_Tab_Cons.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U08_Tab_Cons.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U08+_Schema.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U08+_Schema.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U08+_Tab_IdentityPK.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U08+_Tab_IdentityPK.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U10_Bereitstellung.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U10_Bereitstellung.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U10_QXXXXXXXXXXXXXXXXX.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U10_QXXXXXXXXXXXXXXXXX.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U10_Views.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U10_Views.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U11_UDF.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U11_UDF.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U11+_UDF_MutatingTbl.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FERAIDONM\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FERAIDONM\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U11+_UDF_MutatingTbl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U12_StoredProcedure.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U12_StoredProcedure.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U12+_NestedTransact.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U12+_NestedTransact.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U12+_OutParameter.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U12+_OutParameter.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U12+_TryCatch.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U12+_TryCatch.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U13_Privilegien.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U13_Privilegien.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U14_Trigger.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U14_Trigger.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U14+_Trigger_Trans.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U14+_Trigger_Trans.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U16Cursorbeispiel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U16Cursorbeispiel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U3_Aggr_Wdh.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U3_Aggr_Wdh.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U3+_AggrWdh+Cube.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U3+_AggrWdh+Cube.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U3+_Groupingsets.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>U3+_Groupingsets.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U3+_Pivot.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>U3+_Pivot.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U3+_Rank.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>U3+_Rank.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U4+_SubWith.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>U4+_SubWith.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U5_Wdh_MengenOp.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U5_Wdh_MengenOp.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U6_DMLWdh.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U6_DMLWdh.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U6+_insert_Select.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U6+_insert_Select.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U6+_Merge.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U6+_Merge.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U6+_Output.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U6+_Output.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U6+Merge_mit_IDENTITY.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U6+Merge_mit_IDENTITY.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U7_Commit_Standards.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U7_Commit_Standards.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U7_Transaction.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U7_Transaction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U7+_DeadLock1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U7+_DeadLock1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U7+_DeadLock2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U7+_DeadLock2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U7+_Sperren.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U7+_Sperren.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U8+_Selbstreferenz.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U8+_Selbstreferenz.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U8+_TabConstrDomain.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U8+_TabConstrDomain.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U8+_TabConstrEntity.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U8+_TabConstrEntity.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U8+_TabConstrOnDelete.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U8+_TabConstrOnDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U8+_TabConstrRefIntegrity.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U8+_TabConstrRefIntegrity.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U9_AWIndex.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U9_AWIndex.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U9_Index.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U9_Index.sql</FullPath>
+        </FileNode>
+        <FileNode Name="U9_Indextheorie.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:jemewesw10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>jemewesw10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>U9_Indextheorie.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

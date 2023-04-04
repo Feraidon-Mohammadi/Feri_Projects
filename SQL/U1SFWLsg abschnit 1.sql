@@ -20,7 +20,6 @@ where	customerid='SAVEA';
 
 
 
-
 /****	c  Die kompletten Daten aller Produkte der Kategorie 7.	****/
 
 select	*
@@ -149,14 +148,14 @@ order by customerid;
 
 
 
-/****	l orderid, customerid, orderdate, shipcountry, shipcity für die Bestellungen
+/****	l- orderid, customerid, orderdate, shipcountry, shipcity für die Bestellungen
 	aus dem Zeitraum vom 01. Juli 2021 bis zum 31. August 2021
 	sortiert nach der customerid und orderdate.	****/
 
 select	orderid, customerid, orderdate, 
 		shipcountry, shipcity
 from	orders
-where	orderdate between '1.7.2021' and '31.8.2021 23:59:59.998'
+where	orderdate between '2021.07.01' and '2021.8.31 23:59:59.998'
 order by customerid, orderdate;
 
 
@@ -173,7 +172,7 @@ order by customerid, orderdate;
 select	orderid, customerid, orderdate, 
 		shipcountry, shipcity
 from	orders
-where	orderdate between '1.7.2021' and '31.8.2021 23:59:59.998'
+where	orderdate between '2021.7.01' and '2021.8.31 23:59:59.998'
 and		shipcity like 'St%'
 order by customerid, orderdate;
 
@@ -193,7 +192,7 @@ select	orderid, customerid, orderdate,
 		shipcountry, shipcity,
 		datepart(wk, orderdate) as 'kalenderwoche'
 from	orders
-where	orderdate between '1.7.2021' and '31.8.2021 23:59:59.998'
+where	orderdate between '2021-07-01' and '2021.08.31 23:59:59.998'
 and		shipcity like 'St%'
 order by customerid, orderdate;
 
@@ -212,7 +211,11 @@ from	orders
 where	orderdate between '1.1.2022' and '30.6.2022 23:59:59.998'
 and		shippeddate is null;
 
-
+--chat gpt fixed 
+SELECT orderid, customerid, orderdate, shipcountry, shipcity
+FROM orders
+WHERE orderdate BETWEEN '2022-01-01' AND '2022-06-30 23:59:59.998'
+AND shippeddate IS NULL;
 
 
 
@@ -249,16 +252,21 @@ and		shippeddate is null
 and		customerid like '[a-f]%';
 
 
+-- chat gpt corrected 
+SELECT orderid, customerid, orderdate, shipcountry, shipcity, 
+       DATEDIFF(ww, requireddate, GETDATE()) AS "Wochen_überfällig"
+FROM orders
+WHERE orderdate BETWEEN '2022-04-01' AND '2022-04-30 23:59:59.998'
+  AND shippeddate IS NULL
+  AND customerid LIKE '[a-f]%' ;
 
 
 
 
-
-/****	r	orderid, customerid, orderdate, shipcountry, shipcity für die Bestellungen 
+/****	r-	orderid, customerid, orderdate, shipcountry, shipcity für die Bestellungen 
 	 aus den Jahren 2021 und 2022, bei denen die customerid mit einem Buchstaben aus 
 	dem Bereich A bis F beginnt das zweite Zeichen ein E, I, R, H oder L ist und 
 	das letzte Zeichen ein S, sortiert nach customerid und orderdate.****/
-
 select	orderdate, orderid, customerid, 
 		shipcountry, shipcity
 from	orders

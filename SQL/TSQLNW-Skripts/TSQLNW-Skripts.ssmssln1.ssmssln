@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 19.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "TSQLNW-Skripts", "TSQLNW-Skripts.ssmssqlproj", "{F833556D-4725-43BD-82BA-BC34B30A3FC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F833556D-4725-43BD-82BA-BC34B30A3FC3}.Default|Default.ActiveCfg = Default
+		{EF7F76CD-D383-4679-964B-D16C857164DE}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3994891D-7581-4B16-B49B-01E3B7A54C6E}
+	EndGlobalSection
+EndGlobal
