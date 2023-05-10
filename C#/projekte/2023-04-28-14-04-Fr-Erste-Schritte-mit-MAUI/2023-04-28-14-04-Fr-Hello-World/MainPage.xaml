@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_2023_04_28_14_04_Fr_Hello_World.MainPage"
+             Title="Meine erste MAUI Page">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Red"/>
+            <Setter Property="FontSize" Value="Large"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView BackgroundColor="White">
+        <VerticalStackLayout Padding="10">
+            <ActivityIndicator IsRunning="true" IsVisible="False"/>
+            <Label Text="Alice" HorizontalTextAlignment="Center"/>
+            <Label Text="Bob" HorizontalOptions="Center"/>
+            <Label Text="Charlie"/>
+            <Label Text="Damian"/>
+            <Label Text="Elon"/>
+            <Label Margin="0,20,0,0" 
+                   x:Name="Percent"
+                   HorizontalTextAlignment="Center"
+                   Text="{Binding Source={x:Reference PercentSlider}, Path=Value, StringFormat='{0:F2}' }"/>
+            <Slider x:Name="PercentSlider" Minimum="0" Maximum="100" Value="50"/>
+            <Editor Placeholder="Gib deinen Namen ein"/>
+            <DatePicker />
+            <TimePicker/>
+            <Stepper x:Name="MyStepper" Value="0" Increment="5" />
+            <Editor Text="{Binding Source={x:Reference MyStepper}, Path=Value, StringFormat='{0:D}'}"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

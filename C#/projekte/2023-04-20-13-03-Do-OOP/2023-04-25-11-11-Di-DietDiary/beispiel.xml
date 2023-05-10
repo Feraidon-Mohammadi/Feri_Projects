@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Diary>
+  <Foods>
+    <Food id="1">
+      <Name>Banane</Name>
+      <Fat>1</Fat>
+      <Protein>2</Protein>
+      <Carbohydrates>50</Carbohydrates>
+    </Food>
+    <Food id="2">
+      <Name>Milch</Name>
+      <Fat>20</Fat>
+      <Protein>3</Protein>
+      <Carbohydrates>50</Carbohydrates>
+    </Food>
+    <Food id="3">
+      <Name>Apfel</Name>
+      <Fat>10</Fat>
+      <Protein>5</Protein>
+      <Carbohydrates>75</Carbohydrates>
+    </Food>
+  </Foods>
+  <Entries>
+    <Entry>
+      <FoodID>1</FoodID>
+      <Amount>150</Amount>
+      <Timestamp>2023-04-26-07-30-00</Timestamp>
+    </Entry>
+    <Entry>
+      <FoodID>1</FoodID>
+      <Amount>120</Amount>
+      <Timestamp>2023-04-28-12-45-00</Timestamp>
+    </Entry>
+    <Entry>
+      <FoodID>2</FoodID>
+      <Amount>50</Amount>
+      <Timestamp>2023-04-28-09-00-00</Timestamp>
+    </Entry>
+    <Entry>
+      <FoodID>3</FoodID>
+      <Amount>170</Amount>
+      <Timestamp>2023-04-28-13-59-57</Timestamp>
+    </Entry>
+    <Entry>
+      <FoodID>3</FoodID>
+      <Amount>300</Amount>
+      <Timestamp>2023-04-20-00-00-00</Timestamp>
+    </Entry>
+    <Entry>
+      <FoodID>2</FoodID>
+      <Amount>150</Amount>
+      <Timestamp>2023-04-20-10-30-00</Timestamp>
+    </Entry>
+  </Entries>
+</Diary>

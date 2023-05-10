@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Food">
+    <Position X="2.75" Y="6.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAACAgAAAAIAERAAAIAQAAAAAARAAAAAAAAAEAAA=</HashCode>
+      <FileName>Food.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DietDiary">
+    <Position X="6.5" Y="4.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>gAEAgAAAAEAAAAIEAAAgAAAAgEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DietDiary.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="entries" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DiaryEntry">
+    <Position X="6.5" Y="7.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAEACAAAACAAAAAgAAAAAAAAgAAAAA=</HashCode>
+      <FileName>DiaryEntry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Food" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DietDiaryReport">
+    <Position X="2.75" Y="4.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>DietDiaryReport.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Diary" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

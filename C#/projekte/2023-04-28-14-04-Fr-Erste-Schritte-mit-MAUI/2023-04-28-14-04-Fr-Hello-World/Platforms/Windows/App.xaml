@@ -1,0 +1,8 @@
+﻿<maui:MauiWinUIApplication
+    x:Class="_2023_04_28_14_04_Fr_Hello_World.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:_2023_04_28_14_04_Fr_Hello_World.WinUI">
+
+</maui:MauiWinUIApplication>
