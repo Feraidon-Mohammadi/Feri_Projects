@@ -1,0 +1,1 @@
+Dieses Repository enthält die Quelltexte, die während des Kurses "Python Grundlagen" entstehen.
