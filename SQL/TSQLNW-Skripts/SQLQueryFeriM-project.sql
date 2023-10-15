@@ -205,10 +205,10 @@ And rechngnr in
 
 	select ort, count(*)	from kunden where kundennr in
 				(select kundennr from rechnung where rechnungnr in
-				(select rechnungnr from rechngpos where artnr =|in
-				(select artnr from artikel 
- where artbez=’Damenrad Diamant 2000’)))
-	group by ort
+									(select rechnungnr from rechngpos where artnr =|in
+																(select artnr from artikel 
+																	where artbez=’Damenrad Diamant 2000’)))
+																	group by ort
 
 
 
