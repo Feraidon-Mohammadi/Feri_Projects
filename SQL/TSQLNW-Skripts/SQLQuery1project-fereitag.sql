@@ -55,13 +55,13 @@ select * from zutate
 
 
 
+ALTER LOGIN admin WITH PASSWORD = 'password';
 
 
+SELECT name FROM sys.server_principals WHERE name = 'admin';
 
 
-
-
-
+SELECT IS_SRVROLEMEMBER('ALTER ANY LOGIN') AS IsMember;
 
 
 
