@@ -1,13 +1,9 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
 \usepackage[hidelinks]{hyperref} % to remvoe red field arround contents need to hide the link like under bookmakrs hidlink
 %\usepackage[bookmarks=true, hidelinks, ...]{hyperref} or if used hyperref than use this to hide it 
 \usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{geometry}
-
 \usepackage{lipsum} % add some text 
 
 \usepackage[utf8]{inputenc}
@@ -24,16 +20,23 @@
 \usepackage[backend=biber, style=numeric]{biblatex}
 \addbibresource{mybibliography.bib} % mybibliography.bib is your bibliography file
 
+\usepackage[style=numeric]{biblatex} % If using biblatex
+\addbibresource{myreferences.bib} % If using biblatex
+\usepackage{biblatex} % Assuming biblatex is used for bibliography
+
+% ############## font packages #########
+%\usepackage{times} % Times New Roman
+%\usepackage{helvet} % Helvetica
+%\usepackage{palatino} % Palatino
+%----- another way change font-----%
+%\usepackage{fontspec}
+%\setmainfont{helvet} % Replace 'Font Name' with the actual system font name
+% ############## font packages #########
 
 
-
-
-
-
-
-
-
-
+%# ##### set spaceing between sentences #######
+\usepackage{setspace}
+%# ##### set spaceing between sentences #######
 
 
 %######################## color change ########################%
@@ -65,6 +68,8 @@
 
 
 
+% ################### zurück button ###################
+\newcommand{\backtoTOC}{\hyperlink{contents}{Zurück}}
 
 
 
@@ -98,16 +103,21 @@
 \pagestyle{fancy}
 \fancyhf{} % Clear default header and footer
 
-\fancyhead[R]{\includegraphics[height=15mm]{C:/Users/ferey/OneDrive/Desktop/Projekt-Dukumentation/IADLogo.jpg}} % Adjust the path and size as needed
-\fancyhead[L]{\parbox[b]{10cm}{\centering API-Entwicklung mit Flask und JWT für Datenaustausch via Odoo , SQLite für rollenbasierten Zugriff und Funktionalitäten.}}
-
+\fancyhead[R]{\includegraphics[height=15mm]{C:/Users/admin/desktop/Projekt-Dukumentation/IADLogo2.jpg}} % Adjust the path and size as needed
+\fancyhead[L]{\parbox[b]{13cm}{Middleware Secure API für die Unternehmensressourcenplanung zur Pflege und zum Austausch von Daten mit Odoo, SQLite für die Benutzer mit rollenbasiertem Zugriff.}}
+% {API-Entwicklung mit Flask und JWT für Datenaustausch via Odoo , SQLite für rollenbasierten Zugriff und Funktionalitäten.}
+% 2- Unternehmensressourcenplanung(Middleware Secure API zur Pflege und Austausch Daten von Odoo, SQLite für rollenbasierten Zugriff auf Funktionalitäten
+% 3- Middleware Secure API für die Unternehmensressourcenplanung zur Pflege und zum Austausch von Daten zwischen Odoo und SQLite, mit rollenbasiertem Zugriff auf Funktionalitäten.
+% 4- Middleware Secure API für die Unternehmensressourcenplanung zur Pflege und zum Austausch von Daten mit Odoo, unter Verwendung von SQLite für die Verwaltung rollenbasierter Benutzerberechtigungen.
 \fancyfoot[C]{\thepage} % Customize your footer content
+\fancyfoot[L]{{Feraidon Mohammadi}}% Customize your footer content
+\fancyfoot[R]{\backtoTOC} % zurück button 
 \renewcommand{\headrulewidth}{0.4pt} % Header underline thickness
-\renewcommand{\footrulewidth}{0.4pt} % Footer underline thickness
+\renewcommand{\footrulewidth}{0.6pt} % Footer underline thickness
 
 
 % ---------------- path for pictures or logos ---------------------------
-\graphicspath{ {C:/Users/ferey/OneDrive/Desktop/Projekt-Dukumentation/} } % Setting the graphics path
+\graphicspath{ {C:/Users/admin/desktop/Projekt-Dukumentation/} } % Setting the graphics path
 
 %---------------------  Customization commands for table ------------------
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Dotted lines for section
@@ -147,8 +157,85 @@
 % ===========================================Title page ===============================================%
 % ================================================================================================%
 
+% IHK log ------------
+\begin{minipage}{\textwidth}
+\centering
+\vspace{35mm} % Add vertical space to center the logos vertically
+\vspace{-4cm} 
+\includegraphics[width=10cm]{IHK-Logo.png} % Top logo
+\vspace*{\stretch{-55}} % Add vertical space at the bottom 
+\end{minipage}
 
-% Title removed %
+
+% haupt beschreibung dokumentation projekct ---------------------
+\begin{minipage}{\textwidth}
+\centering
+ \vspace{1cm} % Adjust the space between the top logo and the text
+% Adding formatted text
+   {\Large Abschlussprüfung Sommer 2024} \\[0.5cm] % Larger text and additional space after
+   {\large Ausbildungsberuf: Fachinformatiker für Anwendungsentwicklung} \\[2cm] % Slightly smaller text
+   {\Large\bfseries Dokumentation zur Betrieblichen Projektarbeit} % Bold and large text
+ \vspace{1cm} % Adjust the space between the top logo and the text
+\end{minipage}
+
+
+
+% kurze beschreibung des Projekt -------------------------
+\begin{minipage}{\textwidth}
+\centering
+% Project explanation text
+   \large % Set the text size to normal
+\vspace{1cm}
+  {\Large \bfseries API-Entwicklung in Python mit Flask Swagger-restx und JWT für sicheren Datenaustausch via Odoo's XML-RPC.}\\[0.2cm] % Make this part larger
+   SQLite verwaltet Nutzerrechte, wobei der Zugang je nach Rolle variiert. Für verschiedene Endpunkte existiert jeweils unterschiedliche Funktionalität.\\[-3cm]
+\vspace{4cm} 
+   \end{minipage}
+
+
+
+% abgabe datum ----------------------
+\begin{minipage}{\textwidth}
+\large
+\centering
+\vspace{1cm}
+Abgabedatum: Erfurt, den 24.04.2024 \\[1cm]
+\vspace{0.5cm} 
+\end{minipage}
+
+
+% über mich -------------------
+\begin{minipage}{\textwidth}
+\centering
+{\large \textbf{Prüfungsbewerber:}} \\ % Makes the text larger and bold \\
+Feraidon Mohammadi \\
+Mainzer str 21  \\
+99089 Erfurt  \\
+ID-Nr. \\
+ %\vspace*{\stretch{2}} % This stretches the space between the project explanation and the bottom logo
+\end{minipage}
+
+
+% IAD logo ---------------------
+\begin{minipage}{\textwidth}
+\centering
+%\vspace*{\stretch{195}} % Add more space between the logos
+\vspace{1cm} 
+\hspace{0.5cm} 
+   \includegraphics[width=4cm]{iadlogo2.jpg} % Bottom logo
+   \vspace*{\stretch{9}} % Add vertical space at the bottom
+\end{minipage}
+
+
+
+% über IAD -------------------
+\begin{minipage}{\textwidth}
+\centering
+\vspace{1cm} 
+{\large \textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+\end{minipage}
 
 
 % ============================================================================================%
@@ -188,6 +275,249 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 
 
+% _____________________________________________________________________________________ Main Table _________________________________________________________________________________________%
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+% Page numbering with Roman numerals for initial pages
+\pagenumbering{Roman}
+
+% Main table of contents
+\renewcommand{\contentsname}{Inhaltsverzeichnis}
+\tableofcontents
+\label{contents} % für zurück button
+\thispagestyle{fancy} % for logo in header 
+\clearpage
+
+% List of Figures
+\listoffigures
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\thispagestyle{fancy}
+\clearpage
+
+% List of Tables
+\listoftables
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\thispagestyle{fancy}
+\clearpage
+
+% Abbreviations (if any)
+\section*{Abkürzungsverzeichnis}
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\begin{tabular}{ll}
+ABK1 & Abbreviation 1 \\
+ABK2 & Abbreviation 2 \\
+% ... more abbreviations ...
+\end{tabular}
+% Here you would manually add your abbreviations
+\clearpage
+
+% Start page numbering with Arabic numerals for the main content
+\pagenumbering{arabic}
+
+\section{Einleitung}
+
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{In der folgenden Projektdokumentation wird der Ablauf des Abschlussprojektes erläutert, das der Autor
+im Rahmen seiner Abschlussprüfung zum Fachinformatiker mit der Fachrichtung Anwendungsentwicklung durchgeführt hat. Das Projekt wurde bei der IAD GmbH (Informationsverarbeitung und angewandte Datentechnik GmbH) durchgeführt, die ihren Sitz in Erfurt hat. Die IAD GmbH wurde 1983 in Marburg gegründet. 1990 kam in Nordhausen die erste Niederlassung Thüringens hinzu. Im Jahre 1991 wurde mit der Gründung der Niederlassungen in Erfurt und Jena und noch 3 weitere Niederlassungen ein weiterer wichtiger Schritt in der Unternehmensentwicklung getan. Damit trug die IAD der wachsenden Bedeutung Thüringens als Wirtschafts- und Technologiestandort in den neuen Bundesländern Rechnung. Die IAD GmbH beschäftigt derzeit etwa 80 fest angestellte Mitarbeiterinnen und Mitarbeiter sowie noch einmal ebenso viele Freiberufler. Partnerschaften bestehen mit Microsoft (Microsoft Certified Partner for Learning Solutions, Kooperationsvertrag mit Microsoft Consulting Services), Sun Microsystems (ASEC), IBM, Oracle, Lotus, GTS und Pearson VUE.}}}
+\end{spacing}
+
+\subsection{Projektbeschreibung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Projektziel}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Architekturentwurf}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Problemstellung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Projektbegründung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Methodik oder ansatz}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Projektschnittstellen}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Funktionsplanung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+% ------------------- another section --------------------%
+
+
+\section{Projektplanung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Projektphasen}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Ressourcenplanung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{ }
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{ }
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{ }
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{ }
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+% ------------------- another section --------------------%
+
+
+\section{Analysephase}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Ist-Analyse}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+\subsubsection{„Make or Buy“-Entscheidung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{ }
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{ }
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+\subsection{ }
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+% ------------------- another section --------------------%
+
+
+\section{Entwurfsphase}
+\subsection{Zielplattform}
+\subsection{ }
+\subsection {}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+\subsection{ }
+
+
+% ------------------- another section --------------------%
+
+
+\section{Implementierungsphase}
+\subsection{Iterationsplanung}
+\subsection{ }
+\subsection{ }
+\subsection{ }
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+\subsection{ }
+
+
+% ------------------- another section --------------------%
+
+
+\section{Fonts test}
+\subsection{Fonts test}
+\begin{spacing}{1.3}
+This is \textbf{bold ,access to that font and it is installed on your system.} text.\\
+This is \textit{italic, access to that font and it is installed on your system.} text.\\
+This is \texttt{typewriter, access to that font and it is installed on your system.}\\
+This is \emph{emphasized,access to that font and it is installed on your system.} text.\\
+This is \textsc{small caps, access to that font and it is installed on your system.} text.\\
+This is \underline{underlined, access to that font and it is installed on your system.} text.\\
+This is \textsl{slanted, access to that font and it is installed on your system.} text.\\
+This is \textsf{sans serif, access to that font and it is installed on your system.} text.\\
+This is \textbf{\textmd{bold extended, access to that font and it is installed on your system.}} text.\\
+This is \textsf{sans-serif, access to that font and it is installed on your system.} text.\\
+This is \textbf{\textsf{sans-serif bold, access to that font and it is installed on your system.}} text.\\
+This is \textit{\textsf{sans-serif italic, access to that font and it is installed on your system.}} text.\\
+This is \textsl{\textsf{sans-serif slanted, access to that font and it is installed on your system.}} text.\\
+This is \textsc{\textsf{sans-serif Small Caps, access to that font and it is installed on your system.}} text.\\
+This is \texttt{typewriter text, access to that font and it is installed on your system.}\\
+
+
+% 10 size - 12 size 
+This is \normalsize{\textsf{10pt sans-serif}} text.\\
+This is \large{\textsf{12pt sans-serif}} text.\\
+This is \normalsize{\textbf{\textsf{10pt sans-serif bold}}} text.\\
+This is \large{\textit{\textsf{12pt sans-serif italic}}} text.\\
+This is \normalsize{\textsl{\textsf{10pt sans-serif slanted}}} text.\\
+This is \large{\textsc{\textsf{12pt sans-serif Small Caps}}} text.\\
+This is \normalsize{\texttt{10pt typewriter text.}}
+% end of 10 size - 12 size 
+
+
+This is {\tiny \textsf{tiny sans-serif}} text.\\
+This is {\scriptsize \textsf{scriptsize sans-serif}} text.\\
+This is {\footnotesize \textsf{footnotesize sans-serif}} text.\\
+This is {\small \textsf{small sans-serif}} text.\\
+This is {\normalsize \textsf{normalsize sans-serif}} text.\\
+This is {\large \textsf{large sans-serif}} text.\\
+This is {\Large \textsf{Large sans-serif}} text.\\
+This is {\LARGE \textsf{LARGE sans-serif}} text.\\
+This is {\huge \textsf{huge sans-serif}} text.\\
+This is {\Huge \textsf{Huge sans-serif}} text.\\
+
+This is {\large \textbf{\textsf{large sans-serif bold}}} text.\\
+This is {\Large \textit{\textsf{Large sans-serif italic}}} text.\\
+This is {\LARGE \textsl{\textsf{LARGE sans-serif slanted}}} text.\\
+This is {\huge \textsc{\textsf{huge sans-serif Small Caps}}} text.\\
+This is {\Huge \texttt{Huge typewriter text.}}\\
+\end{spacing}
+
+% Bibliography
+\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
+\clearpage
+
+% If there is an appendix, it can be added here
+% \appendix
+% \section{Appendix Title}
 
 
 
@@ -195,388 +525,48 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 
 
+\begin{figure}[ht]
+\caption{Your figure caption goes here}
+\caption{This is 1 example table.}
+\caption{This is 2 example table.}
 
 
 
+\label{fig:your_label} % optional, for referencing within the text
+\end{figure}
 
 
+%########################### 
+ \newpage
+\begin{table}[ht]
 
-
-
-
-
-
-
+\centering
+  \begin{tabular}{lll}
+    \hline
+    Column 1 & Column 2 & Column 3 \\
+    \hline
+    Item 1 & Item 2 & Item 3 \\
+     \hline
+\end{tabular}
+  \caption{This is 1 example table.}
+  \caption{This is 2 example table.}
+  \caption{This is 3example table.}
+  \caption{This is 4 example table.}
+  
+  \label{tab:example}
+\end{table}
 
 
 
 % _____________________________________________________________________________________ Main Table _________________________________________________________________________________________%
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-\pagenumbering{Roman} % Start page numbering with Roman numerals
-% Main table of contents
-\renewcommand{\contentsname}{Inhaltsverzeichnis}
-\tableofcontents
 
 
 
 
 
-% _____________________________________________________________________________________ Second Table _________________________________________________________________________________________%
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-% Manually create an entry for the list of abbreviations if you're using a manual list
-\pagenumbering{Roman} 
-\clearpage
-\phantomsection
-\addcontentsline{toc}{section}{Abbildungsverzeichnis}
-\section*{Abbildungsverzeichnis}
 
 
-
-
-
-
-
-
-% _____________________________________________________________________________________ third Table _____________________________________________________________________________________________%
-%===========================================================================================================%
-% Manually create an entry for the list of abbreviations if you're using a manual list
-\clearpage
-\phantomsection
-\addcontentsline{toc}{section}{Tabellenverzeichnis}
-\section*{Tabellenverzeichnis}
-
-
-
-
-
-
-
-
-
-
-
-
-% _____________________________________________________________________________________ fourth Table _________________________________________________________________________________________%
-%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-
-% Manually create an entry for the list of abbreviations if you're using a manual list
-\clearpage
-\phantomsection
-\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
-\section*{Abkürzungsverzeichnis}
-
-
-
-
-% _____________________________________________________________________________________ end of  fourth Table _________________________________________________________________________________________%
-%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-
-
-
-
-
-
-
-
-% Main content starts here with Arabic numerals
-\clearpage
-\pagenumbering{arabic} 
-
-
-% --------------------------This command automatically generates the table of contents--------------------------------%
-% --------------------------This command automatically generates the table of contents--------------------------------%
-% --------------------------This command automatically generates the table of contents--------------------------------%
-
-\section{Einleitung}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-\subsection{Projektbeschreibung}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-\subsection{Projektziel}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-\subsection{Projektumfeld}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-\subsection{Projektbegründung}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-\subsection{ Projektschnittstellen}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-
-
-
-
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
-\section{Projektplanung}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{Projektphasen}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{Ressourcenplanung}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{Entwicklungsprozess}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-
-
-
-
-
-
-
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
-\section{ Analysephase}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{ Ist-Analyse}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{Wirtschaftlichkeitsanalyse}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsubsection{Make or Buy“-Entscheidung}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsubsection{Projektkosten}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsubsection{Amortisationsdauer}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{Anwendungsfälle}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{ Lastenheft}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-
-
-
-
-
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
-\section{Entwurfsphase}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{Projektphasen}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{some more}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{additonal }
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-\subsection{else}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-
-
-
-
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
-\section{Implementierungsphase}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-\subsection{Projektphasen}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-\subsection{test }
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-\subsection{problem lösen}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-
-\subsection{esle}
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-
-
-
-% --------------------------This command automatically generates the table of contents--------------------------------%
-% --------------------------This command automatically generates the table of contents--------------------------------%
-% --------------------------This command automatically generates the table of contents--------------------------------%
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
-
-
-
-
-
-\newpage
-\pagenumbering{roman} 
-\phantomsection
-\addcontentsline{toc}{section}{Abbildungsverzeichnis}
-%\section*{Abbildungsverzeichnis}
-
-
-
-\setcounter{section}{0}
-
-
-
-
-\section{Documentation}
-\section{test one }
-\section{test two}
-\section{test three}
-
-
-
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-
-
-
-
-
-
-
-
-
-
-%\newpage
-\clearpage
-\pagenumbering{Roman} 
-\setcounter{section}{0}
-\section*{Literaturverzeichnis}
-\addcontentsline{toc}{section}{Literaturverzeichnis}
-\section{Documentation}
-\section{test one }
-\section{test two}
-\section{test three}
-
-
-{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-
-
-
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
-
-
-
-%\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
-
-
-\begin{comment}
-\clearpage
-\appendix
-\pagenumbering{Roman} 
-\phantomsection
-\addcontentsline{toc}{section}{A Anhang}
-\section*{Anhang}
-\subsection*{pflichtheft}
-\subsection*{one}
-\subsection*{two}
-\subsection*{three}
-\end{comment}
-
-
-
-@misc{flaskDocumentation,
-  title        = "Flask Documentation",
-  author       = "Pallets Projects",
-  year         = 2023,
-  url          = "https://flask.palletsprojects.com/",
-}
-
-@misc{swaggerDocumentation,
-  title        = "Swagger Documentation",
-  author       = "SmartBear Software",
-  year         = 2023,
-  url          = "https://swagger.io/docs/",
-}
-
-
-\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
 
 
 \end{document}
