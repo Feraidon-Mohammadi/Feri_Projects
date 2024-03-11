@@ -43,8 +43,8 @@
 
 \usepackage{tocloft} % For customizing the Table of Contents
 \usepackage{xcolor} % For defining and using colors
-\renewcommand{\cftsecfont}{\color{blue}}% Change the color of section titles in the ToC to blue
-\renewcommand{\cftsubsecfont}{\color{black}}% Change the color of subsection titles in the ToC to red
+\renewcommand{\cftsecfont}{\color{black}}% Change the color of section titles in the ToC to blue
+\renewcommand{\cftsubsecfont}{\color{blue}}% Change the color of subsection titles in the ToC to red
 \renewcommand{\cftsubsubsecfont}{\color{purple}}% Change the color of subsubsection titles in the ToC to green
 
 % custom colores 
@@ -148,8 +148,7 @@
 % ================================================================================================%
 
 
-% title removed %
-
+% title removed % 
 
 % ============================================================================================%
 % =========================================End Title Page =========================================%
@@ -221,7 +220,6 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 
 
-
 % _____________________________________________________________________________________ Second Table _________________________________________________________________________________________%
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 % Manually create an entry for the list of abbreviations if you're using a manual list
@@ -231,8 +229,8 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
 \section*{Abbildungsverzeichnis}
 
-\subsection*{Ressourcenplanung}
-\subsection*{Entwicklungsprozess}
+
+
 
 
 
@@ -248,6 +246,13 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 
 
+
+
+
+
+
+
+
 % _____________________________________________________________________________________ fourth Table _________________________________________________________________________________________%
 %------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 
@@ -256,6 +261,16 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 \phantomsection
 \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
 \section*{Abkürzungsverzeichnis}
+
+
+
+
+% _____________________________________________________________________________________ end of  fourth Table _________________________________________________________________________________________%
+%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+
+
 
 
 
@@ -435,6 +450,7 @@ Informationsverarbeitung und angewandte Datentechnik GmbH \\
 {\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
 Informationsverarbeitung und angewandte Datentechnik GmbH \\
 
+
 \subsection{esle}
 {\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
 Informationsverarbeitung und angewandte Datentechnik GmbH \\
@@ -451,16 +467,64 @@ Informationsverarbeitung und angewandte Datentechnik GmbH \\
 
 
 
+
+
+
+
+
+
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+%\newpage
+\clearpage
+\pagenumbering{Roman} 
+\setcounter{section}{0}
+\section*{Literaturverzeichnis}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\section{Documentation}
+\section{test one }
+\section{test two}
+\section{test three}
+
+\section{Documentation}
+\section{test one }
+\section{test two}
+\section{test three}
+
+
+\section{Documentation}
+\section{test one }
+\section{test two}
+\section{test three}
+
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
+
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+
+
+
 %\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
 
+
+\begin{comment}
 \clearpage
 \appendix
 \pagenumbering{Roman} 
 \phantomsection
 \addcontentsline{toc}{section}{A Anhang}
 \section*{Anhang}
-
-
+\subsection*{pflichtheft}
+\subsection*{one}
+\subsection*{two}
+\subsection*{three}
+\end{comment}
 
 
 
