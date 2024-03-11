@@ -8,6 +8,8 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 
+\usepackage{lipsum} % add some text 
+
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx} % For including images
 \usepackage{titlesec} % For customizing sections
@@ -18,6 +20,61 @@
 \usepackage{tocloft} % Customization of the table of contents
 \usepackage[ngerman]{babel} % This sets the document language to German
 % \usepackage[nottoc,numbib]{tocbibind} % Automatically includes lists in the Table of Contents without listing the TOC itself
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%######################## color change ########################%
+\usepackage{xcolor}
+%\renewcommand{\contentsname}{\color{red}{Inhaltsverzeichnis}} % Replace 'red' with your desired color
+
+
+\usepackage{tocloft} % For customizing the Table of Contents
+\usepackage{xcolor} % For defining and using colors
+\renewcommand{\cftsecfont}{\color{blue}}% Change the color of section titles in the ToC to blue
+\renewcommand{\cftsubsecfont}{\color{black}}% Change the color of subsection titles in the ToC to red
+\renewcommand{\cftsubsubsecfont}{\color{purple}}% Change the color of subsubsection titles in the ToC to green
+
+% custom colores 
+%\definecolor{mycolor}{RGB}{255,100,0} % Define custom color
+%\renewcommand{\cftsecfont}{\color{mycolor}} % Use the custom color for section titles
+
+
+%\renewcommand{\cftsecpagefont}{\bfseries\color{\sectioncolor}}% Change the color of page numbers for sections
+%\renewcommand{\cftsubsecpagefont}{\color{\subsectioncolor}}% Change the color of page numbers for subsections
+%\renewcommand{\cftsubsubsecpagefont}{\color{\subsubsectioncolor}}% Change the color of page numbers for subsubsections
+
+
+\definecolor{mycolor}{RGB}{255,100,0} % RGB color model % Define a custom color
+%\renewcommand{\contentsname}{\color{mycolor}{Inhaltsverzeichnis}} % Apply the custom color to the title "Inhaltsverzeichnis"
+
+%######################## color change ########################%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -55,6 +112,9 @@
 \renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}} % Dotted lines for subsection
 \renewcommand{\contentsname}{Inhaltsverzeichnis} % Change "Contents" to "Inhaltsverzeichnis"
 
+\renewcommand{\contentsname}{Abbildungsverzeichnis} 
+\renewcommand{\contentsname}{Tabellenverzeichnis} 
+\renewcommand{\contentsname}{Abkurzungsverzeichnis} 
 % ///////////////////////////////////////////////////////////////////////  SETTINGS  //////////////////////////////////////////////////////////////////////// %
 % ///////////////////////////////////////////////////////////////////////  SETTINGS  //////////////////////////////////////////////////////////////////////// %
 
@@ -86,7 +146,7 @@
 % ================================================================================================%
 
 
-% title removed 
+% title removed %
 
 
 % ============================================================================================%
@@ -130,6 +190,24 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % _____________________________________________________________________________________ Main Table _________________________________________________________________________________________%
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \pagenumbering{Roman} % Start page numbering with Roman numerals
@@ -143,8 +221,9 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 
 % _____________________________________________________________________________________ Second Table _________________________________________________________________________________________%
-%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 % Manually create an entry for the list of abbreviations if you're using a manual list
+\pagenumbering{Roman} 
 \clearpage
 \phantomsection
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
@@ -152,39 +231,6 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 \subsection*{Ressourcenplanung}
 \subsection*{Entwicklungsprozess}
-
-\begin{tabular}{ll}
-API & Application Programming Interface \\
-JWT & JSON Web Token \\
-XML-RPC & XML Remote Procedure Call \\
-% ... add more abbreviations as needed
-\end{tabular}
-
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{ll}
-\hline
-Column 1 & Column 2 \\
-\hline
-Item 1 & Description \\
-Item 2 & Description \\
-\hline
-\end{tabular}
-\caption{This is a caption for the table.}
-\label{tab:my_label}
-\end{table}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -197,18 +243,6 @@ Item 2 & Description \\
 \phantomsection
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
 \section*{Tabellenverzeichnis}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -236,57 +270,180 @@ Item 2 & Description \\
 % --------------------------This command automatically generates the table of contents--------------------------------%
 
 \section{Einleitung}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+
 \subsection{Projektbeschreibung}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+
 \subsection{Projektziel}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+
 \subsection{Projektumfeld}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+
 \subsection{Projektbegründung}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+
 \subsection{ Projektschnittstellen}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
 
 
+
+
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
 \section{Projektplanung}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{Projektphasen}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{Ressourcenplanung}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{Entwicklungsprozess}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
 
 
+
+
+
+
+
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
 \section{ Analysephase}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{ Ist-Analyse}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{Wirtschaftlichkeitsanalyse}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsubsection{Make or Buy“-Entscheidung}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsubsection{Projektkosten}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsubsection{Amortisationsdauer}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{Anwendungsfälle}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{ Lastenheft}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
 
 
+
+
+
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
 \section{Entwurfsphase}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{Projektphasen}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{some more}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{additonal }
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+
 \subsection{else}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
 
+
+
+
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
 \section{Implementierungsphase}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+
 \subsection{Projektphasen}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+
 \subsection{test }
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+
 \subsection{problem lösen}
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+
 \subsection{esle}
-
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
 
 
 
 % --------------------------This command automatically generates the table of contents--------------------------------%
 % --------------------------This command automatically generates the table of contents--------------------------------%
 % --------------------------This command automatically generates the table of contents--------------------------------%
-
-
-
-
-
-
-
-
-
-
 
 
 
