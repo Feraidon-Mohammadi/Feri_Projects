@@ -122,7 +122,7 @@
 \pagestyle{fancy}
 \fancyhf{} % Clear default header and footer
 
-\fancyhead[R]{\includegraphics[height=15mm]{C:/Users/ferey/OneDrive/desktop/Projekt-Dukumentation/IADLogo2.jpg}} % Adjust the path and size as needed
+\fancyhead[R]{\includegraphics[height=15mm]{C:/Users/admin/Desktop/Projekt-Dukumentation/IADLogo2.jpg}} % Adjust the path and size as needed
 \fancyhead[L]{\parbox[b]{13cm}{Middleware Secure API für die Unternehmensressourcenplanung zur Pflege und zum Austausch von Daten mit Odoo, SQLite für die Benutzer mit rollenbasiertem Zugriff.}}
 % {API-Entwicklung mit Flask und JWT für Datenaustausch via Odoo , SQLite für rollenbasierten Zugriff und Funktionalitäten.}
 % 2- Unternehmensressourcenplanung(Middleware Secure API zur Pflege und Austausch Daten von Odoo, SQLite für rollenbasierten Zugriff auf Funktionalitäten
@@ -136,7 +136,7 @@
 
 
 % ---------------- path for pictures or logos ---------------------------
-\graphicspath{ {C:/Users/ferey/OneDrive/desktop/Projekt-Dukumentation/} } % Setting the graphics path
+\graphicspath{ {C:/Users/admin/Desktop/Projekt-Dukumentation/} } % Setting the graphics path
 
 %---------------------  Customization commands for table ------------------
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Dotted lines for section
@@ -165,9 +165,22 @@
 
 
 
+% ================================================================================================%
+% ===========================================Title page ===============================================%
+\begin{titlepage} % =============================== Title page ================================================%
+% ===========================================Title page ===============================================%
+% ================================================================================================%
 
-%Header Here %
-%Header Here %
+% title removed for security  measures
+
+% ============================================================================================%
+% =========================================End Title Page =========================================%
+\end{titlepage} % ===============================End Title Page =========================================%
+% =========================================End Title Page =========================================%
+% ============================================================================================%
+
+
+
 
 
 
@@ -252,7 +265,7 @@ ABK2 & Abbreviation 2 \\
 \normalsize{\textsf{\textsf{In der folgenden Dokumentation wird das Abschlussprojekt des Autors im Rahmen seiner Prüfung zum Fachinformatiker für Anwendungsentwicklung dargelegt. Durchgeführt wurde dieses bei der IAD GmbH in Erfurt, einem Unternehmen, das seit seiner Gründung 1983 in Marburg und der Eröffnung erster Niederlassungen in Thüringen 1990, darunter Nordhausen, Erfurt und Jena, stetig gewachsen ist.\\ \setlength{\\ \parindent}{0.1em} 
 Heute ist die IAD GmbH anerkannter Partner von namhaften IT-Unternehmen wie Microsoft, Sun Microsystems, IBM, Oracle und anderen, und beschäftigt rund 80 Festangestellte sowie ebenso viele Freiberufler.
 Das Expertenteam der IAD GmbH, spezialisiert auf Beratung und Schulung, steht vor der Herausforderung, Schulungen effizient online über Microsoft Teams zu organisieren, inklusive der Erfassung von An- und Abwesenheiten der Teilnehmenden. Um diese Daten direkt in das Odoo-ERP-System einzuspeisen und zu verwalten, wurde der Entwickler beauftragt, eine Webanwendung zu entwickeln.\\ \setlength{\\ \parindent}{1cm} 
-die haupt aufgabe des Projekts ist die Schaffung einer sicheren Schnittstelle für den Datenaustausch zwischen externen Systemen und Odoo, um die Datenintegrität zu wahren und den Zugriff auf sensible Informationen strikt zu regeln. Diese Maßnahme sollte eine zusätzliche Sicherheitsebene einführen und so den Schutz sensibler Daten gewährleisten.}}}
+Die haupt aufgabe des Projekts ist die Schaffung einer sicheren Schnittstelle für den Datenaustausch zwischen externen Systemen und Odoo, um die Datenintegrität zu wahren und den Zugriff auf sensible Informationen strikt zu regeln. Diese Maßnahme sollte eine zusätzliche Sicherheitsebene einführen und so den Schutz sensibler Daten gewährleisten.}}}
 \end{spacing}
 
 
@@ -270,10 +283,46 @@ Sicherheitsmaßnahmen: Um die Sicherheit zu gewährleisten, wurde SQLite verwend
 
 \subsection{Problemstellung}
 \begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{      }}}
+\normalsize{\textsf{\textsf{\textbf{\textsf{Eingeschränkter Zugriff auf Odoo:}} Der Ist-Zustand zeigt, dass der Zugriff auf Odoo aus Sicherheits- und Datenschutzgründen nur innerhalb der Domäne möglich ist. Dies schränkt die Flexibilität und Erreichbarkeit des Systems für externe Anwendungen und Nutzer, die von außerhalb der Domäne auf das System zugreifen müssen, stark ein. \\
+\textbf{\textsf{Fehlende digitale Anwesenheitserfassung:}}
+Aktuell besteht die Vorgabe für Dozenten, das Klassenbuch und die Anwesenheitserfassung zu führen, was derzeit nicht digital unterstützt wird. Dies verursacht einen erhöhten administrativen Aufwand und kann zu Ungenauigkeiten in der Datenerfassung führen.\\
+\textbf{\textsf{Unzureichende Integration für das Klassenbuchprogramm:}} Es gibt keine vorhandene Schnittstelle, die es dem in Entwicklung befindlichen Klassenbuchprogramm für Teams ermöglicht, effizient auf die benötigten Daten aus Odoo zuzugreifen. Dies behindert die digitale Transformation der Anwesenheitserfassung und des Klassenbuchmanagements.\\
+\textbf{\textsf{Mangel an sicherer und kontrollierter Datenzugriffsmöglichkeit:}} Für externe Anwendungen besteht keine sichere Methode, um auf die notwendigen Daten aus Odoo zuzugreifen, ohne die Sicherheits- und Datenschutzstandards zu kompromittieren.\\
+\textbf{\textsf{Fehlen einer eigenständigen Nutzerverwaltung:}} Es gibt keine dedizierte Lösung für die Verwaltung der Nutzer, die auf die API zugreifen sollen. Dies ist essentiell, um den Zugriff auf die Daten zu kontrollieren und zu sichern.}}}
+\end{spacing}
+
+\subsubsection{Kontext des Problems:}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{Die IAD nutzt das ERP-System Odoo zur Verwaltung von Teilnehmenden und Weiterbildungen über mehrere Standorte hinweg. Der Zugriff auf wichtige Funktionen ist jedoch auf die interne Domäne beschränkt, was die digitale Anwesenheitserfassung und das Klassenbuchmanagement, insbesondere für Online-Weiterbildungen via Microsoft Teams, erschwert. Aktuelle Prozesse erfordern manuelle Eingriffe und sind nicht effizient für die digitale Ära ausgerichtet, was die Notwendigkeit einer sicheren und flexiblen Zugriffslösung hervorhebt.}}}
 \end{spacing}
 
 
+\subsubsection{Auswirkungen des Problems:}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{Durch den eingeschränkten Zugang und das Fehlen einer digitalen Lösung für das Klassenbuchmanagement entstehen ineffiziente Arbeitsabläufe, potenzielle Fehlerquellen bei der Dateneingabe und eine erhöhte administrative Last für die Dozenten. Dies kann zu Ungenauigkeiten bei der Teilnehmerverwaltung führen, die wiederum die Qualität der Bildungsangebote beeinträchtigen und zusätzlichen Aufwand für Korrekturen erfordern. Die Einschränkungen behindern zudem die Möglichkeiten, das Bildungsangebot flexibel und standortunabhängig zu gestalten.}}}
+\end{spacing}
+
+
+\subsubsection{Betroffene:}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{Primär betroffen sind die Dozenten, die einen erhöhten Verwaltungsaufwand betreiben müssen, und die Teilnehmenden, deren Lernerfahrung durch ineffiziente Prozesse beeinträchtigt werden kann. Des Weiteren sind die administrativen Mitarbeiter betroffen, die mit der Datenpflege und -korrektur befasst sind, sowie das IT-Personal, das nach sicheren Lösungen für den Datenzugriff und die Nutzerverwaltung suchen muss.}}}
+\end{spacing}
+
+
+\subsubsection{Lücke im Wissen oder in der Technologie:}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{Es besteht eine technologische Lücke in Bezug auf eine sichere, flexible und effiziente Integration externer Anwendungen, wie das Klassenbuchprogramm, mit dem internen ERP-System Odoo. Aktuelle Lösungen bieten keinen angemessenen Mechanismus für den sicheren Datenzugriff von außerhalb der Domäne, was die Umsetzung digitaler Anwesenheitserfassung und Teilnehmerverwaltung limitiert}}}
+\end{spacing}
+
+
+\subsubsection{Ziel der Problemstellung:}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{Das Ziel ist die Entwicklung einer Middleware Secure API, die eine sichere und eingeschränkte Verbindung zu Odoo ermöglicht und dabei moderne Sicherheits- und Datenschutzstandards erfüllt. Die Lösung soll die digitale Anwesenheitserfassung und das Klassenbuchmanagement effizient unterstützen, die Nutzerverwaltung außerhalb der Domäne vereinfachen und die Integration in die bestehende IT-Infrastruktur als Docker-Container ermöglichen. Dadurch werden die operativen Abläufe optimiert, die Datenintegrität gesichert und eine hochwertige Bildungserfahrung gewährleistet.}}}
+\end{spacing}
+
+
+
+% #################### end of problems #############%
 
 \subsection{Projektziel}
 \begin{spacing}{1.3}
