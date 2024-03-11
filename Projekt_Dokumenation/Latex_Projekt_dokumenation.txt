@@ -1,12 +1,10 @@
 \documentclass{article}
-\usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage[hidelinks]{hyperref} % to remvoe red field arround contents need to hide the link like under bookmakrs hidlink
 %\usepackage[bookmarks=true, hidelinks, ...]{hyperref} or if used hyperref than use this to hide it 
 \usepackage{amsmath}
 \usepackage{lipsum} % add some text 
 
-\usepackage[utf8]{inputenc}
 \usepackage{graphicx} % For including images
 \usepackage{titlesec} % For customizing sections
 \usepackage{titling}  % For customizing the title
@@ -17,21 +15,15 @@
 \usepackage[ngerman]{babel} % This sets the document language to German
 % \usepackage[nottoc,numbib]{tocbibind} % Automatically includes lists in the Table of Contents without listing the TOC itself
 
-\usepackage[backend=biber, style=numeric]{biblatex}
-\addbibresource{mybibliography.bib} % mybibliography.bib is your bibliography file
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, % Colored links instead of boxes
+    linkcolor=blue, % Color of internal links
+    filecolor=magenta, % Color of file links
+    urlcolor=cyan, % Color of external urls
+}
 
-\usepackage[style=numeric]{biblatex} % If using biblatex
-\addbibresource{myreferences.bib} % If using biblatex
-\usepackage{biblatex} % Assuming biblatex is used for bibliography
 
-% ############## font packages #########
-%\usepackage{times} % Times New Roman
-%\usepackage{helvet} % Helvetica
-%\usepackage{palatino} % Palatino
-%----- another way change font-----%
-%\usepackage{fontspec}
-%\setmainfont{helvet} % Replace 'Font Name' with the actual system font name
-% ############## font packages #########
 
 
 %# ##### set spaceing between sentences #######
@@ -40,8 +32,17 @@
 
 
 %######################## color change ########################%
-\usepackage{xcolor}
 %\renewcommand{\contentsname}{\color{red}{Inhaltsverzeichnis}} % Replace 'red' with your desired color
+
+
+% ##### spacing after finish a line #######
+%\usepackage{setspace}
+% Adjust space between paragraphs
+%\setlength{\parskip}{1em}
+% Remove paragraph indent
+%\setlength{\parindent}{0pt}
+%#####end spacing after new line  #######
+
 
 
 \usepackage{tocloft} % For customizing the Table of Contents
@@ -78,6 +79,22 @@
 
 
 
+%################# add literature ############
+%\usepackage[overwrite]{filecontents}
+\usepackage[backend=biber, style=numeric]{biblatex} % Specify the backend and style
+\addbibresource{references.bib}
+%\usepackage{csquotes}
+%################# add literature ############
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -103,7 +120,7 @@
 \pagestyle{fancy}
 \fancyhf{} % Clear default header and footer
 
-\fancyhead[R]{\includegraphics[height=15mm]{C:/Users/admin/desktop/Projekt-Dukumentation/IADLogo2.jpg}} % Adjust the path and size as needed
+\fancyhead[R]{\includegraphics[height=15mm]{C:/Users/ferey/OneDrive/desktop/Projekt-Dukumentation/IADLogo2.jpg}} % Adjust the path and size as needed
 \fancyhead[L]{\parbox[b]{13cm}{Middleware Secure API für die Unternehmensressourcenplanung zur Pflege und zum Austausch von Daten mit Odoo, SQLite für die Benutzer mit rollenbasiertem Zugriff.}}
 % {API-Entwicklung mit Flask und JWT für Datenaustausch via Odoo , SQLite für rollenbasierten Zugriff und Funktionalitäten.}
 % 2- Unternehmensressourcenplanung(Middleware Secure API zur Pflege und Austausch Daten von Odoo, SQLite für rollenbasierten Zugriff auf Funktionalitäten
@@ -117,7 +134,7 @@
 
 
 % ---------------- path for pictures or logos ---------------------------
-\graphicspath{ {C:/Users/admin/desktop/Projekt-Dukumentation/} } % Setting the graphics path
+\graphicspath{ {C:/Users/ferey/OneDrive/desktop/Projekt-Dukumentation/} } % Setting the graphics path
 
 %---------------------  Customization commands for table ------------------
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Dotted lines for section
@@ -126,7 +143,8 @@
 
 \renewcommand{\contentsname}{Abbildungsverzeichnis} 
 \renewcommand{\contentsname}{Tabellenverzeichnis} 
-\renewcommand{\contentsname}{Abkurzungsverzeichnis} 
+\renewcommand{\contentsname}{Abkurzungsverzeichnis}
+\renewcommand{\contentsname}{Literaturverzeichnis} 
 % ///////////////////////////////////////////////////////////////////////  SETTINGS  //////////////////////////////////////////////////////////////////////// %
 % ///////////////////////////////////////////////////////////////////////  SETTINGS  //////////////////////////////////////////////////////////////////////// %
 
@@ -138,7 +156,7 @@
 
 % ########################################
 % ################################################
-\begin{document}% ############# START  DOCUMENTS ###########################
+\begin{document} % ------------------ START  DOCUMENTS -------------------------------%
 % ################################################
 % ########################################
 
@@ -146,103 +164,8 @@
 
 
 
-
-
-
-
-
-% ================================================================================================%
-% ===========================================Title page ===============================================%
-\begin{titlepage} % =============================== Title page ================================================%
-% ===========================================Title page ===============================================%
-% ================================================================================================%
-
-% IHK log ------------
-\begin{minipage}{\textwidth}
-\centering
-\vspace{35mm} % Add vertical space to center the logos vertically
-\vspace{-4cm} 
-\includegraphics[width=10cm]{IHK-Logo.png} % Top logo
-\vspace*{\stretch{-55}} % Add vertical space at the bottom 
-\end{minipage}
-
-
-% haupt beschreibung dokumentation projekct ---------------------
-\begin{minipage}{\textwidth}
-\centering
- \vspace{1cm} % Adjust the space between the top logo and the text
-% Adding formatted text
-   {\Large Abschlussprüfung Sommer 2024} \\[0.5cm] % Larger text and additional space after
-   {\large Ausbildungsberuf: Fachinformatiker für Anwendungsentwicklung} \\[2cm] % Slightly smaller text
-   {\Large\bfseries Dokumentation zur Betrieblichen Projektarbeit} % Bold and large text
- \vspace{1cm} % Adjust the space between the top logo and the text
-\end{minipage}
-
-
-
-% kurze beschreibung des Projekt -------------------------
-\begin{minipage}{\textwidth}
-\centering
-% Project explanation text
-   \large % Set the text size to normal
-\vspace{1cm}
-  {\Large \bfseries API-Entwicklung in Python mit Flask Swagger-restx und JWT für sicheren Datenaustausch via Odoo's XML-RPC.}\\[0.2cm] % Make this part larger
-   SQLite verwaltet Nutzerrechte, wobei der Zugang je nach Rolle variiert. Für verschiedene Endpunkte existiert jeweils unterschiedliche Funktionalität.\\[-3cm]
-\vspace{4cm} 
-   \end{minipage}
-
-
-
-% abgabe datum ----------------------
-\begin{minipage}{\textwidth}
-\large
-\centering
-\vspace{1cm}
-Abgabedatum: Erfurt, den 24.04.2024 \\[1cm]
-\vspace{0.5cm} 
-\end{minipage}
-
-
-% über mich -------------------
-\begin{minipage}{\textwidth}
-\centering
-{\large \textbf{Prüfungsbewerber:}} \\ % Makes the text larger and bold \\
-Feraidon Mohammadi \\
-Mainzer str 21  \\
-99089 Erfurt  \\
-ID-Nr. \\
- %\vspace*{\stretch{2}} % This stretches the space between the project explanation and the bottom logo
-\end{minipage}
-
-
-% IAD logo ---------------------
-\begin{minipage}{\textwidth}
-\centering
-%\vspace*{\stretch{195}} % Add more space between the logos
-\vspace{1cm} 
-\hspace{0.5cm} 
-   \includegraphics[width=4cm]{iadlogo2.jpg} % Bottom logo
-   \vspace*{\stretch{9}} % Add vertical space at the bottom
-\end{minipage}
-
-
-
-% über IAD -------------------
-\begin{minipage}{\textwidth}
-\centering
-\vspace{1cm} 
-{\large \textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
-Informationsverarbeitung und angewandte Datentechnik GmbH \\
-Maximilian-Welsch-Straße 2 \\
-99084 Erfurt \\
-\end{minipage}
-
-
-% ============================================================================================%
-% =========================================End Title Page =========================================%
-\end{titlepage} % ===============================End Title Page =========================================%
-% =========================================End Title Page =========================================%
-% ============================================================================================%
+%Title removed from here %
+% Title removed from Here %
 
 
 
@@ -293,6 +216,9 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 \thispagestyle{fancy}
 \clearpage
 
+
+
+
 % List of Tables
 \listoftables
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
@@ -307,27 +233,54 @@ ABK1 & Abbreviation 1 \\
 ABK2 & Abbreviation 2 \\
 % ... more abbreviations ...
 \end{tabular}
-% Here you would manually add your abbreviations
+
+
+
+
+
+
+
+
+
 \clearpage
 
 % Start page numbering with Arabic numerals for the main content
 \pagenumbering{arabic}
-
+\setlength{\parindent}{0pt}
 \section{Einleitung}
-
-\begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{In der folgenden Projektdokumentation wird der Ablauf des Abschlussprojektes erläutert, das der Autor
-im Rahmen seiner Abschlussprüfung zum Fachinformatiker mit der Fachrichtung Anwendungsentwicklung durchgeführt hat. Das Projekt wurde bei der IAD GmbH (Informationsverarbeitung und angewandte Datentechnik GmbH) durchgeführt, die ihren Sitz in Erfurt hat. Die IAD GmbH wurde 1983 in Marburg gegründet. 1990 kam in Nordhausen die erste Niederlassung Thüringens hinzu. Im Jahre 1991 wurde mit der Gründung der Niederlassungen in Erfurt und Jena und noch 3 weitere Niederlassungen ein weiterer wichtiger Schritt in der Unternehmensentwicklung getan. Damit trug die IAD der wachsenden Bedeutung Thüringens als Wirtschafts- und Technologiestandort in den neuen Bundesländern Rechnung. Die IAD GmbH beschäftigt derzeit etwa 80 fest angestellte Mitarbeiterinnen und Mitarbeiter sowie noch einmal ebenso viele Freiberufler. Partnerschaften bestehen mit Microsoft (Microsoft Certified Partner for Learning Solutions, Kooperationsvertrag mit Microsoft Consulting Services), Sun Microsystems (ASEC), IBM, Oracle, Lotus, GTS und Pearson VUE.}}}
+\begin{spacing}{1.2}
+\setlength{\parskip}{0.2em} % add space after ( . ) finish a sentences
+\normalsize{\textsf{\textsf{In der folgenden Dokumentation wird das Abschlussprojekt des Autors im Rahmen seiner Prüfung zum Fachinformatiker für Anwendungsentwicklung dargelegt. Durchgeführt wurde dieses bei der IAD GmbH in Erfurt, einem Unternehmen, das seit seiner Gründung 1983 in Marburg und der Eröffnung erster Niederlassungen in Thüringen 1990, darunter Nordhausen, Erfurt und Jena, stetig gewachsen ist. %\setlength{\parindent}{0pt} % \\  \setlength{\parskip}{1.3em}\\
+Heute ist die IAD GmbH anerkannter Partner von namhaften IT-Unternehmen wie Microsoft, Sun Microsystems, IBM, Oracle und anderen, und beschäftigt rund 80 Festangestellte sowie ebenso viele Freiberufler.
+Das Expertenteam der IAD GmbH, spezialisiert auf Beratung und Schulung, steht vor der Herausforderung, Schulungen effizient online über Microsoft Teams zu organisieren, inklusive der Erfassung von An- und Abwesenheiten der Teilnehmenden. Um diese Daten direkt in das Odoo-ERP-System einzuspeisen und zu verwalten, wurde der Entwickler beauftragt, eine Webanwendung zu entwickeln.
+Das Ziel des Projekts ist die Schaffung einer sicheren Schnittstelle für den Datenaustausch zwischen externen Systemen und Odoo, um die Datenintegrität zu wahren und den Zugriff auf sensible Informationen strikt zu regeln. Diese Maßnahme sollte eine zusätzliche Sicherheitsebene einführen und so den Schutz sensibler Daten gewährleisten.}}}
 \end{spacing}
+
+
 
 \subsection{Projektbeschreibung}
 \begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{      }}}
+\normalsize{\textsf{\textsf{Technologie Stack: Die API wurde unter Verwendung von Flask-RESTX entwickelt, einem leistungsstarken Framework für die Erstellung von RESTful APIs in Python. Flask-RESTX bietet eine einfache, aber flexible Plattform für die Entwicklung von APIs mit Unterstützung für automatische Dokumentation, Datenvalidierung und Routing.
+Integration mit Odoo: Odoo dient als primäres ERP-System, das eine Vielzahl von Geschäftsprozessen verwaltet. Die entwickelte API agiert als Middleware, die den Datenaustausch zwischen Odoo und externen Systemen erleichtert. Diese Integration ermöglicht es, Geschäftslogik und Datenmanagement effizient zu handhaben.
+Sicherheitsmaßnahmen: Um die Sicherheit zu gewährleisten, wurde SQLite verwendet, um Benutzerrechte zu verwalten. Durch diese Maßnahme kann der Zugriff auf die API streng kontrolliert werden, indem nur autorisierten Nutzern der Zugriff auf bestimmte Daten erlaubt wird. Die Verwendung von SQLite bietet eine leichte, aber zuverlässige Lösung für das Rechtemanagement.
+ }}}
 \end{spacing}
+
+
+\subsection{Fazit}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{Die Implementierung der Flask-RESTX API als Middleware zwischen externen Systemen und Odoo hat sich als eine effektive Lösung zur Verbesserung der Sicherheit und Effizienz im Datenaustausch erwiesen. Durch die sorgfältige Planung und Implementierung der Sicherheitsmechanismen wurde sichergestellt, dass die Datenkommunikation den höchsten Sicherheitsstandards entspricht.
+ }}}
+\end{spacing}
+
 
 \subsection{Projektziel}
 \begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{      }}}
+\normalsize{\textsf{\textsf{Das Hauptziel dieses Projekts war die Schaffung einer sicheren und effizienten Schnittstelle für den Datenaustausch, um die Integrität und Vertraulichkeit der Daten zu gewährleisten. Durch die Entwicklung dieser API wurde eine Middleware-Lösung realisiert, die folgende Vorteile bietet:
+Sicherer Datenaustausch: Gewährleistung, dass keine sensiblen Daten unbefugt zugänglich sind.
+Effizienzsteigerung: Automatisierung des Datenaustausches zwischen Systemen, was zu einer Reduzierung manueller Eingriffe und potentiellen Fehlern führt.
+Erweiterbarkeit: Die Architektur der API ermöglicht es, zukünftige Anforderungen und Integrationen effizient zu implementieren.
+}}}
 \end{spacing}
 
 \subsection{Architekturentwurf}
@@ -511,29 +464,22 @@ This is {\huge \textsc{\textsf{huge sans-serif Small Caps}}} text.\\
 This is {\Huge \texttt{Huge typewriter text.}}\\
 \end{spacing}
 
-% Bibliography
-\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
+
+
+
+
+
+
 \clearpage
-
-% If there is an appendix, it can be added here
-% \appendix
-% \section{Appendix Title}
-
-
-
-
-
-
-
 \begin{figure}[ht]
 \caption{Your figure caption goes here}
 \caption{This is 1 example table.}
 \caption{This is 2 example table.}
 
-
-
 \label{fig:your_label} % optional, for referencing within the text
 \end{figure}
+
+
 
 
 %########################### 
@@ -558,8 +504,116 @@ This is {\Huge \texttt{Huge typewriter text.}}\\
 
 
 
-% _____________________________________________________________________________________ Main Table _________________________________________________________________________________________%
+
+
+
+% _________________________________________________________________________________ MainTable______________________________________________________________________%
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+
+\newpage
+\section*{Literaturverzeichnis}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\printbibliography[heading=none]
+go f---------------------------------------------------------ffdsf
+
+
+
+%\pagenumbering{roman}
+%\addcontentsline{toc}{section}{Literaturverzeichnis}
+%\newpage
+%\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
+%\section{Literaturverzeichnis}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+%% LaTeX2e file `.bib'
+%% generated by the `filecontents' environment
+%% from source `Project_after_ziel_and_beschreibung' on 2024/03/05.
+%%
+@misc{flaskDocumentation,
+  title        = "Flask Documentation",
+  author       = "Pallets Projects",
+  year         = "2023",
+  url          = "https://flask.palletsprojects.com/",
+  note         = "Accessed: 2023-03-10"
+}
+@misc{swaggerDocumentation,
+  title        = "Swagger Documentation",
+  author       = "SmartBear Software",
+  year         = "2023",
+  url          = "https://swagger.io/docs/",
+  note         = "Accessed: 2023-03-10"
+}
+
+
+\pagenumbering{roman}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\newpage
+\clearpage
+\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
+%\section{Literaturverzeichnis}
+
+@misc{flaskDocumentation,
+  title        = "Flask Documentation",
+  author       = "Pallets Projects",
+  year         = 2023,
+  url          = "https://flask.palletsprojects.com/",
+  note = {{Accessed: 2023-03-10}}
+  }
+@misc{swaggerDocumentation,
+  title        = "Swagger Documentation",
+  author       = "SmartBear Software",
+  year         = 2023,
+  url          = "https://swagger.io/docs/",
+  note = {{Accessed: 2023-03-10}}
+  }
+  
+  
+  
+\end{comment}
 
 
 
