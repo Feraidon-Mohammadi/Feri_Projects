@@ -146,8 +146,8 @@
 % ===========================================Title page ===============================================%
 % ================================================================================================%
 
-% title removed % 
 
+%Title removed %
 
 % ============================================================================================%
 % =========================================End Title Page =========================================%
@@ -194,19 +194,16 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 % Main table of contents
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 \tableofcontents
-\thispagestyle{fancy}
 \clearpage
 
 % List of Figures
 \listoffigures
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
-\thispagestyle{fancy}
 \clearpage
 
 % List of Tables
 \listoftables
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
-\thispagestyle{fancy}
 \clearpage
 
 % Abbreviations (if any)
@@ -262,19 +259,11 @@ ABK2 & Abbreviation 2 \\
 
 \begin{figure}[ht]
 \caption{Your figure caption goes here}
-  \caption{This is 1 example table.}
-  \caption{This is 2 example table.}
-
-
-
 \label{fig:your_label} % optional, for referencing within the text
 \end{figure}
 
 
-%########################### 
- \newpage
 \begin{table}[ht]
-
   \centering
   \begin{tabular}{lll}
     \hline
@@ -283,11 +272,7 @@ ABK2 & Abbreviation 2 \\
     Item 1 & Item 2 & Item 3 \\
     \hline
   \end{tabular}
- 
-  \caption{This is 1 example table.}
-  \caption{This is 2 example table.}
-  \caption{This is 3example table.}
-  \caption{This is 4 example table.}
+  \caption{This is an example table.}
   \label{tab:example}
 \end{table}
 
@@ -295,7 +280,6 @@ ABK2 & Abbreviation 2 \\
 
 % _____________________________________________________________________________________ Main Table _________________________________________________________________________________________%
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-
 
 
 
