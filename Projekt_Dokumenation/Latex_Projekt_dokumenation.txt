@@ -15,6 +15,8 @@
 \usepackage[ngerman]{babel} % This sets the document language to German
 % \usepackage[nottoc,numbib]{tocbibind} % Automatically includes lists in the Table of Contents without listing the TOC itself
 
+\usepackage[titletoc]{appendix} % to use Anhangsverzeichnis table  
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true, % Colored links instead of boxes
@@ -164,11 +166,8 @@
 
 
 
-%Title removed from here %
-% Title removed from Here %
-
-
-
+%Header Here %
+%Header Here %
 
 
 
@@ -250,28 +249,30 @@ ABK2 & Abbreviation 2 \\
 \section{Einleitung}
 \begin{spacing}{1.2}
 \setlength{\parskip}{0.2em} % add space after ( . ) finish a sentences
-\normalsize{\textsf{\textsf{In der folgenden Dokumentation wird das Abschlussprojekt des Autors im Rahmen seiner Prüfung zum Fachinformatiker für Anwendungsentwicklung dargelegt. Durchgeführt wurde dieses bei der IAD GmbH in Erfurt, einem Unternehmen, das seit seiner Gründung 1983 in Marburg und der Eröffnung erster Niederlassungen in Thüringen 1990, darunter Nordhausen, Erfurt und Jena, stetig gewachsen ist. %\setlength{\parindent}{0pt} % \\  \setlength{\parskip}{1.3em}\\
+\normalsize{\textsf{\textsf{In der folgenden Dokumentation wird das Abschlussprojekt des Autors im Rahmen seiner Prüfung zum Fachinformatiker für Anwendungsentwicklung dargelegt. Durchgeführt wurde dieses bei der IAD GmbH in Erfurt, einem Unternehmen, das seit seiner Gründung 1983 in Marburg und der Eröffnung erster Niederlassungen in Thüringen 1990, darunter Nordhausen, Erfurt und Jena, stetig gewachsen ist.\\ \setlength{\\ \parindent}{0.1em} 
 Heute ist die IAD GmbH anerkannter Partner von namhaften IT-Unternehmen wie Microsoft, Sun Microsystems, IBM, Oracle und anderen, und beschäftigt rund 80 Festangestellte sowie ebenso viele Freiberufler.
-Das Expertenteam der IAD GmbH, spezialisiert auf Beratung und Schulung, steht vor der Herausforderung, Schulungen effizient online über Microsoft Teams zu organisieren, inklusive der Erfassung von An- und Abwesenheiten der Teilnehmenden. Um diese Daten direkt in das Odoo-ERP-System einzuspeisen und zu verwalten, wurde der Entwickler beauftragt, eine Webanwendung zu entwickeln.
-Das Ziel des Projekts ist die Schaffung einer sicheren Schnittstelle für den Datenaustausch zwischen externen Systemen und Odoo, um die Datenintegrität zu wahren und den Zugriff auf sensible Informationen strikt zu regeln. Diese Maßnahme sollte eine zusätzliche Sicherheitsebene einführen und so den Schutz sensibler Daten gewährleisten.}}}
+Das Expertenteam der IAD GmbH, spezialisiert auf Beratung und Schulung, steht vor der Herausforderung, Schulungen effizient online über Microsoft Teams zu organisieren, inklusive der Erfassung von An- und Abwesenheiten der Teilnehmenden. Um diese Daten direkt in das Odoo-ERP-System einzuspeisen und zu verwalten, wurde der Entwickler beauftragt, eine Webanwendung zu entwickeln.\\ \setlength{\\ \parindent}{1cm} 
+die haupt aufgabe des Projekts ist die Schaffung einer sicheren Schnittstelle für den Datenaustausch zwischen externen Systemen und Odoo, um die Datenintegrität zu wahren und den Zugriff auf sensible Informationen strikt zu regeln. Diese Maßnahme sollte eine zusätzliche Sicherheitsebene einführen und so den Schutz sensibler Daten gewährleisten.}}}
 \end{spacing}
 
 
 
 \subsection{Projektbeschreibung}
 \begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{Technologie Stack: Die API wurde unter Verwendung von Flask-RESTX entwickelt, einem leistungsstarken Framework für die Erstellung von RESTful APIs in Python. Flask-RESTX bietet eine einfache, aber flexible Plattform für die Entwicklung von APIs mit Unterstützung für automatische Dokumentation, Datenvalidierung und Routing.
+\normalsize{\textsf{\textsf{Technologie Stack: Die API wurde unter Verwendung von Flask-RESTX entwickelt, einem leistungsstarken Framework für die Erstellung von RESTful APIs in Python. \\ Flask-RESTX bietet eine einfache, aber flexible Plattform für die Entwicklung von APIs mit Unterstützung für automatische Dokumentation, Datenvalidierung und Routing.
 Integration mit Odoo: Odoo dient als primäres ERP-System, das eine Vielzahl von Geschäftsprozessen verwaltet. Die entwickelte API agiert als Middleware, die den Datenaustausch zwischen Odoo und externen Systemen erleichtert. Diese Integration ermöglicht es, Geschäftslogik und Datenmanagement effizient zu handhaben.
 Sicherheitsmaßnahmen: Um die Sicherheit zu gewährleisten, wurde SQLite verwendet, um Benutzerrechte zu verwalten. Durch diese Maßnahme kann der Zugriff auf die API streng kontrolliert werden, indem nur autorisierten Nutzern der Zugriff auf bestimmte Daten erlaubt wird. Die Verwendung von SQLite bietet eine leichte, aber zuverlässige Lösung für das Rechtemanagement.
  }}}
 \end{spacing}
 
 
-\subsection{Fazit}
+
+
+\subsection{Problemstellung}
 \begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{Die Implementierung der Flask-RESTX API als Middleware zwischen externen Systemen und Odoo hat sich als eine effektive Lösung zur Verbesserung der Sicherheit und Effizienz im Datenaustausch erwiesen. Durch die sorgfältige Planung und Implementierung der Sicherheitsmechanismen wurde sichergestellt, dass die Datenkommunikation den höchsten Sicherheitsstandards entspricht.
- }}}
+\normalsize{\textsf{\textsf{      }}}
 \end{spacing}
+
 
 
 \subsection{Projektziel}
@@ -283,20 +284,22 @@ Erweiterbarkeit: Die Architektur der API ermöglicht es, zukünftige Anforderung
 }}}
 \end{spacing}
 
-\subsection{Architekturentwurf}
-\begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{      }}}
-\end{spacing}
 
-\subsection{Problemstellung}
-\begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{      }}}
-\end{spacing}
+
 
 \subsection{Projektbegründung}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
+
+
+
+\subsection{Architekturentwurf}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
 
 \subsection{Methodik oder ansatz}
 \begin{spacing}{1.3}
@@ -322,35 +325,49 @@ Erweiterbarkeit: Die Architektur der API ermöglicht es, zukünftige Anforderung
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
 
+
 \subsection{Projektphasen}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
+
 
 \subsection{Ressourcenplanung}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
 
-\subsection{ }
+
+\subsection{Entwicklungsprozess }
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
 
-\subsection{ }
+
+\subsection{Vorkalkulations Projektkosten}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
 
-\subsection{ }
+
+\subsection{Pflichtenheft}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
 
-\subsection{ }
+
+\subsection{Zeitplan und Meilensteine}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
+
+
+\subsection{Risikomanagement}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
 
 
 % ------------------- another section --------------------%
@@ -361,58 +378,242 @@ Erweiterbarkeit: Die Architektur der API ermöglicht es, zukünftige Anforderung
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
 
+
 \subsection{Ist-Analyse}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
-\subsubsection{„Make or Buy“-Entscheidung}
+
+
+\subsubsection{Make or Buy-Entscheidung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+ 
+
+\subsubsection{Wirtschaftlichkeitsanalyse}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
 
-\subsection{ }
+
+\subsubsection{Projektkosten }
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
 
-\subsection{ }
+
+\subsubsection{Amortisationsdauer}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
-\subsection{ }
+
+
+
+\subsection{Bedarfsanalyse(Anforderungsanalyse)}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
+
+\subsection{Tecknische Analyse}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+\subsection{SWOT-Analyse(Stärken, Schwächen, Chancen, Risiken)}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+\subsection{Lastenheft}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
 
 
 % ------------------- another section --------------------%
 
 
 \section{Entwurfsphase}
-\subsection{Zielplattform}
-\subsection{ }
-\subsection {}
+
+\subsection {Architekturdesign}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
-\subsection{ }
 
+
+\subsection{Zielplattform}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+\subsection{Entwurf der Benutzeroberfläche(UI-Design)}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+\subsection{Sicherheitsentwurf}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+\subsection{Softwarearchitektur}%Softwarearchitektur: Definieren Sie die Softwarearchitektur, einschließlich der Wahl des Programmierparadigmas, der Frameworks und der Drittanbieterbibliotheken, sowie die Strukturierung des Codes in Module oder Komponenten.
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+\subsection{Maßnahmen zur Qualitätssicherung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+\subsection{Pflichtenheft}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+\subsection{Dokumentation des Entwurfs}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
 
 % ------------------- another section --------------------%
 
 
 \section{Implementierungsphase}
 \subsection{Iterationsplanung}
-\subsection{ }
-\subsection{ }
-\subsection{ }
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
-\subsection{ }
+
+\subsection{Einheitentests (Unit Testing) }
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Integrationstests}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Systemtests}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+\subsection{Benutzerakzeptanztests (UAT)}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+
+\subsection{Fehlerbehebung und Optimierung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+\subsection{Deployment:}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+
+
+\subsection{Dokumentation der Implementierung:}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{      }}}
+\end{spacing}
+% ------------------- another section --------------------%
+
+
+
+
+\section{Documentation}
+%\subsection{Documentation}
+go f--+++++++ Documenation +++++++++++-ffdsf
+
 
 
 % ------------------- another section --------------------%
+
+
+
+
+
+\section{Kontrolle und Abschluss}
+%\subsection{Documentation}
+go f--+++++++ Documenation +++++++++++-ffdsf
+\subsection{Funktionstest}
+\subsection{ Fehlerüberprüfung und Behebung}
+\subsection{ Qualitätsicherung}
+\subsection{Kontrolle der geplanten Zeitdauer}
+
+
+
+% ------------------- another section --------------------%
+
+
+
+\newpage
+\section*{xxxxxxxxxxx}
+\addcontentsline{toc}{section}{xxxxxxxxxxx}
+\printbibliography[heading=none]
+go f--+++++++++++++++++++-ffdsf
+\subsection{xxxx }
+\subsection{ xxxxx}
+\subsection{ xxxxxxx}
+\newpage
+
+
+
+% ------------------- another section --------------------%
+
+
+
+\newpage
+\section*{Kontrolle und Abschluss}
+\addcontentsline{toc}{section}{Kontrolle und Abschluss}
+\printbibliography[heading=none]
+go f----------------- Unittests -------------------------ffdsf
+\subsection{Funktionstest}
+\subsection{ Fehlerüberprüfung und Behebung}
+\subsection{ Qualitätsicherung}
+\subsection{Kontrolle der geplanten Zeitdauer}
+\newpage
+
+
+
+% ------------------- another section --------------------%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Fonts test}
@@ -465,13 +666,19 @@ This is {\Huge \texttt{Huge typewriter text.}}\\
 \end{spacing}
 
 
-
-
-
-
-
 \clearpage
-\begin{figure}[ht]
+\section{Fazit}
+\subsection{Fazit}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{Die Implementierung der Flask-RESTX API als Middleware zwischen externen Systemen und Odoo hat sich als eine effektive Lösung zur Verbesserung der Sicherheit und Effizienz im Datenaustausch erwiesen. Durch die sorgfältige Planung und Implementierung der Sicherheitsmechanismen wurde sichergestellt, dass die Datenkommunikation den höchsten Sicherheitsstandards entspricht.
+ }}}
+\end{spacing}
+
+
+
+%\clearpage
+\begin{figure}[ht]{Abbildungsverzeichnis}
+%\subsection{Abbildungsverzeichnis}
 \caption{Your figure caption goes here}
 \caption{This is 1 example table.}
 \caption{This is 2 example table.}
@@ -488,12 +695,15 @@ This is {\Huge \texttt{Huge typewriter text.}}\\
 
 \centering
   \begin{tabular}{lll}
+
     \hline
     Column 1 & Column 2 & Column 3 \\
     \hline
     Item 1 & Item 2 & Item 3 \\
      \hline
 \end{tabular}
+
+
   \caption{This is 1 example table.}
   \caption{This is 2 example table.}
   \caption{This is 3example table.}
@@ -507,7 +717,7 @@ This is {\Huge \texttt{Huge typewriter text.}}\\
 
 
 
-% _________________________________________________________________________________ MainTable______________________________________________________________________%
+% _________________________________________________________________________________ MainTable________________________________________________________________________________________________%
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 
 
@@ -526,11 +736,32 @@ go f---------------------------------------------------------ffdsf
 %\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
 %\section{Literaturverzeichnis}
 
+\newpage
+\clearpage
 
 
+\begin{appendices}
+\section*{Anhang}
+\addcontentsline{toc}{section}{Anhangsverzeichnis}
 
+\section{First Appendix Section ---------------------------------- Title}
+\subsection{Subsection Title A.1}
+% Content of the first subsection of the first appendix
 
+\subsection{Subsection Title A.2}
+% Content of the second subsection of the first appendix
 
+\section{Second Appendix Section ------------------------------ Title}
+\subsection{Subsection Title B.1}
+% Content of the first subsection of the second appendix
+
+\subsection{Subsection Title B.2}
+% Content of the second subsection of the second appendix
+
+\subsection{Subsection Title B.3}
+% Content of the third subsection of the second appendix
+
+\end{appendices}
 
 
 
