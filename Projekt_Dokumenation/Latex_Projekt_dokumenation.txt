@@ -8,8 +8,6 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 
-\usepackage{lipsum} % add some text 
-
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx} % For including images
 \usepackage{titlesec} % For customizing sections
@@ -20,62 +18,6 @@
 \usepackage{tocloft} % Customization of the table of contents
 \usepackage[ngerman]{babel} % This sets the document language to German
 % \usepackage[nottoc,numbib]{tocbibind} % Automatically includes lists in the Table of Contents without listing the TOC itself
-
-\usepackage[backend=biber, style=numeric]{biblatex}
-\addbibresource{mybibliography.bib} % mybibliography.bib is your bibliography file
-
-\usepackage[style=numeric]{biblatex} % If using biblatex
-\addbibresource{myreferences.bib} % If using biblatex
-\usepackage{biblatex} % Assuming biblatex is used for bibliography
-
-
-
-
-
-
-
-
-%######################## color change ########################%
-\usepackage{xcolor}
-%\renewcommand{\contentsname}{\color{red}{Inhaltsverzeichnis}} % Replace 'red' with your desired color
-
-
-\usepackage{tocloft} % For customizing the Table of Contents
-\usepackage{xcolor} % For defining and using colors
-\renewcommand{\cftsecfont}{\color{black}}% Change the color of section titles in the ToC to blue
-\renewcommand{\cftsubsecfont}{\color{blue}}% Change the color of subsection titles in the ToC to red
-\renewcommand{\cftsubsubsecfont}{\color{purple}}% Change the color of subsubsection titles in the ToC to green
-
-% custom colores 
-%\definecolor{mycolor}{RGB}{255,100,0} % Define custom color
-%\renewcommand{\cftsecfont}{\color{mycolor}} % Use the custom color for section titles
-
-
-%\renewcommand{\cftsecpagefont}{\bfseries\color{\sectioncolor}}% Change the color of page numbers for sections
-%\renewcommand{\cftsubsecpagefont}{\color{\subsectioncolor}}% Change the color of page numbers for subsections
-%\renewcommand{\cftsubsubsecpagefont}{\color{\subsubsectioncolor}}% Change the color of page numbers for subsubsections
-
-
-\definecolor{mycolor}{RGB}{255,100,0} % RGB color model % Define a custom color
-%\renewcommand{\contentsname}{\color{mycolor}{Inhaltsverzeichnis}} % Apply the custom color to the title "Inhaltsverzeichnis"
-
-%######################## color change ########################%
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -113,9 +55,6 @@
 \renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}} % Dotted lines for subsection
 \renewcommand{\contentsname}{Inhaltsverzeichnis} % Change "Contents" to "Inhaltsverzeichnis"
 
-\renewcommand{\contentsname}{Abbildungsverzeichnis} 
-\renewcommand{\contentsname}{Tabellenverzeichnis} 
-\renewcommand{\contentsname}{Abkurzungsverzeichnis} 
 % ///////////////////////////////////////////////////////////////////////  SETTINGS  //////////////////////////////////////////////////////////////////////// %
 % ///////////////////////////////////////////////////////////////////////  SETTINGS  //////////////////////////////////////////////////////////////////////// %
 
@@ -147,7 +86,8 @@
 % ================================================================================================%
 
 
-%Title removed %
+% title removed 
+
 
 % ============================================================================================%
 % =========================================End Title Page =========================================%
@@ -186,100 +126,180 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 
 
+
+
+
+
 % _____________________________________________________________________________________ Main Table _________________________________________________________________________________________%
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-% Page numbering with Roman numerals for initial pages
-\pagenumbering{Roman}
-
+\pagenumbering{Roman} % Start page numbering with Roman numerals
 % Main table of contents
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 \tableofcontents
-\clearpage
 
-% List of Figures
-\listoffigures
+
+
+
+
+
+% _____________________________________________________________________________________ Second Table _________________________________________________________________________________________%
+%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+% Manually create an entry for the list of abbreviations if you're using a manual list
+\clearpage
+\phantomsection
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
-\clearpage
+\section*{Abbildungsverzeichnis}
 
-% List of Tables
-\listoftables
-\addcontentsline{toc}{section}{Tabellenverzeichnis}
-\clearpage
+\subsection*{Ressourcenplanung}
+\subsection*{Entwicklungsprozess}
 
-% Abbreviations (if any)
-\section*{Abkürzungsverzeichnis}
-\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
 \begin{tabular}{ll}
-ABK1 & Abbreviation 1 \\
-ABK2 & Abbreviation 2 \\
-% ... more abbreviations ...
+API & Application Programming Interface \\
+JWT & JSON Web Token \\
+XML-RPC & XML Remote Procedure Call \\
+% ... add more abbreviations as needed
 \end{tabular}
-% Here you would manually add your abbreviations
-\clearpage
-
-% Start page numbering with Arabic numerals for the main content
-\pagenumbering{arabic}
-
-\section{Einleitung}
-\subsection{Projektbeschreibung}
-\subsection{Projektziel}
-% ... additional subsections ...
-
-\section{Projektplanung}
-\subsection{Projektphasen}
-\subsection{Ressourcenplanung}
-% ... additional subsections ...
-
-\section{Analysephase}
-\subsection{Ist-Analyse}
-\subsubsection{„Make or Buy“-Entscheidung}
-% ... additional subsections and subsubsections ...
-
-\section{Entwurfsphase}
-\subsection{Zielplattform}
-% ... additional subsections ...
-
-\section{Implementierungsphase}
-\subsection{Iterationsplanung}
-% ... rest of your main content ...
-
-% Bibliography
-\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
-\clearpage
-
-% If there is an appendix, it can be added here
-% \appendix
-% \section{Appendix Title}
-
-
-
-
-
-
-
-\begin{figure}[ht]
-\caption{Your figure caption goes here}
-\label{fig:your_label} % optional, for referencing within the text
-\end{figure}
 
 
 \begin{table}[ht]
-  \centering
-  \begin{tabular}{lll}
-    \hline
-    Column 1 & Column 2 & Column 3 \\
-    \hline
-    Item 1 & Item 2 & Item 3 \\
-    \hline
-  \end{tabular}
-  \caption{This is an example table.}
-  \label{tab:example}
+\centering
+\begin{tabular}{ll}
+\hline
+Column 1 & Column 2 \\
+\hline
+Item 1 & Description \\
+Item 2 & Description \\
+\hline
+\end{tabular}
+\caption{This is a caption for the table.}
+\label{tab:my_label}
 \end{table}
 
 
 
-% _____________________________________________________________________________________ Main Table _________________________________________________________________________________________%
-%---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+
+
+
+
+
+% _____________________________________________________________________________________ third Table _____________________________________________________________________________________________%
+%===========================================================================================================%
+% Manually create an entry for the list of abbreviations if you're using a manual list
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\section*{Tabellenverzeichnis}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% _____________________________________________________________________________________ fourth Table _________________________________________________________________________________________%
+%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+% Manually create an entry for the list of abbreviations if you're using a manual list
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\section*{Abkürzungsverzeichnis}
+
+
+
+
+% Main content starts here with Arabic numerals
+\clearpage
+\pagenumbering{arabic} 
+
+
+% --------------------------This command automatically generates the table of contents--------------------------------%
+% --------------------------This command automatically generates the table of contents--------------------------------%
+% --------------------------This command automatically generates the table of contents--------------------------------%
+
+\section{Einleitung}
+\subsection{Projektbeschreibung}
+\subsection{Projektziel}
+\subsection{Projektumfeld}
+\subsection{Projektbegründung}
+\subsection{ Projektschnittstellen}
+
+
+\section{Projektplanung}
+\subsection{Projektphasen}
+\subsection{Ressourcenplanung}
+\subsection{Entwicklungsprozess}
+
+
+\section{ Analysephase}
+\subsection{ Ist-Analyse}
+\subsection{Wirtschaftlichkeitsanalyse}
+\subsubsection{Make or Buy“-Entscheidung}
+\subsubsection{Projektkosten}
+\subsubsection{Amortisationsdauer}
+\subsection{Anwendungsfälle}
+\subsection{ Lastenheft}
+
+
+\section{Entwurfsphase}
+\subsection{Projektphasen}
+\subsection{some more}
+\subsection{additonal }
+\subsection{else}
+
+\section{Implementierungsphase}
+\subsection{Projektphasen}
+\subsection{test }
+\subsection{problem lösen}
+\subsection{esle}
+
+
+
+
+% --------------------------This command automatically generates the table of contents--------------------------------%
+% --------------------------This command automatically generates the table of contents--------------------------------%
+% --------------------------This command automatically generates the table of contents--------------------------------%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
