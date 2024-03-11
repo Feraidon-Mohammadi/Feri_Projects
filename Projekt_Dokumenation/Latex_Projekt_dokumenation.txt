@@ -21,6 +21,8 @@
 \usepackage[ngerman]{babel} % This sets the document language to German
 % \usepackage[nottoc,numbib]{tocbibind} % Automatically includes lists in the Table of Contents without listing the TOC itself
 
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{mybibliography.bib} % mybibliography.bib is your bibliography file
 
 
 
@@ -231,8 +233,6 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 \subsection*{Ressourcenplanung}
 \subsection*{Entwicklungsprozess}
-
-
 
 
 
@@ -451,14 +451,14 @@ Informationsverarbeitung und angewandte Datentechnik GmbH \\
 
 
 
+%\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
 
-
-
-
-
-
-
-
+\clearpage
+\appendix
+\pagenumbering{Roman} 
+\phantomsection
+\addcontentsline{toc}{section}{A Anhang}
+\section*{Anhang}
 
 
 
