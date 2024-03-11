@@ -146,7 +146,8 @@
 % ===========================================Title page ===============================================%
 % ================================================================================================%
 
-% title removed 
+% title removed % 
+
 
 % ============================================================================================%
 % =========================================End Title Page =========================================%
@@ -225,43 +226,25 @@ ABK2 & Abbreviation 2 \\
 \section{Einleitung}
 \subsection{Projektbeschreibung}
 \subsection{Projektziel}
-Start projectziel here \\
-
-\subsection{Problemstellung}
-\subsection{Projektbegründung}
-\subsection{Methodik oder ansatz}
-\subsection{Projektschnittstellen}
-
+% ... additional subsections ...
 
 \section{Projektplanung}
 \subsection{Projektphasen}
-Start projectziel here \\
 \subsection{Ressourcenplanung}
-\subsection{ }
-\subsection{ }
-\subsection{ }
-\subsection{ }
+% ... additional subsections ...
 
 \section{Analysephase}
 \subsection{Ist-Analyse}
-Start projectziel here \\
 \subsubsection{„Make or Buy“-Entscheidung}
-\subsection{ }
-\subsection{ }
-\subsection{ }
+% ... additional subsections and subsubsections ...
 
 \section{Entwurfsphase}
 \subsection{Zielplattform}
-\subsection{ }
-\subsection {}
-\subsection{ }
+% ... additional subsections ...
 
 \section{Implementierungsphase}
 \subsection{Iterationsplanung}
-\subsection{ }
-\subsection{ }
-\subsection{ }
-\subsection{ }
+% ... rest of your main content ...
 
 % Bibliography
 \printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
@@ -279,8 +262,8 @@ Start projectziel here \\
 
 \begin{figure}[ht]
 \caption{Your figure caption goes here}
-\caption{This is 1 example table.}
-\caption{This is 2 example table.}
+  \caption{This is 1 example table.}
+  \caption{This is 2 example table.}
 
 
 
@@ -292,19 +275,19 @@ Start projectziel here \\
  \newpage
 \begin{table}[ht]
 
-\centering
+  \centering
   \begin{tabular}{lll}
     \hline
     Column 1 & Column 2 & Column 3 \\
     \hline
     Item 1 & Item 2 & Item 3 \\
-     \hline
-\end{tabular}
+    \hline
+  \end{tabular}
+ 
   \caption{This is 1 example table.}
   \caption{This is 2 example table.}
   \caption{This is 3example table.}
   \caption{This is 4 example table.}
-  
   \label{tab:example}
 \end{table}
 
