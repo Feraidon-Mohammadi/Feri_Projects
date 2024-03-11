@@ -21,6 +21,19 @@
 \usepackage[ngerman]{babel} % This sets the document language to German
 % \usepackage[nottoc,numbib]{tocbibind} % Automatically includes lists in the Table of Contents without listing the TOC itself
 
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{mybibliography.bib} % mybibliography.bib is your bibliography file
+
+
+
+
+
+
+
+
+
+
+
 
 
 %######################## color change ########################%
@@ -30,8 +43,8 @@
 
 \usepackage{tocloft} % For customizing the Table of Contents
 \usepackage{xcolor} % For defining and using colors
-\renewcommand{\cftsecfont}{\color{blue}}% Change the color of section titles in the ToC to blue
-\renewcommand{\cftsubsecfont}{\color{black}}% Change the color of subsection titles in the ToC to red
+\renewcommand{\cftsecfont}{\color{black}}% Change the color of section titles in the ToC to blue
+\renewcommand{\cftsubsecfont}{\color{blue}}% Change the color of subsection titles in the ToC to red
 \renewcommand{\cftsubsubsecfont}{\color{purple}}% Change the color of subsubsection titles in the ToC to green
 
 % custom colores 
@@ -101,6 +114,9 @@
 \renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}} % Dotted lines for subsection
 \renewcommand{\contentsname}{Inhaltsverzeichnis} % Change "Contents" to "Inhaltsverzeichnis"
 
+\renewcommand{\contentsname}{Abbildungsverzeichnis} 
+\renewcommand{\contentsname}{Tabellenverzeichnis} 
+\renewcommand{\contentsname}{Abkurzungsverzeichnis} 
 % ///////////////////////////////////////////////////////////////////////  SETTINGS  //////////////////////////////////////////////////////////////////////// %
 % ///////////////////////////////////////////////////////////////////////  SETTINGS  //////////////////////////////////////////////////////////////////////// %
 
@@ -131,7 +147,9 @@
 % ===========================================Title page ===============================================%
 % ================================================================================================%
 
-% title removed  %
+
+% Title removed %
+
 
 % ============================================================================================%
 % =========================================End Title Page =========================================%
@@ -174,6 +192,24 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % _____________________________________________________________________________________ Main Table _________________________________________________________________________________________%
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \pagenumbering{Roman} % Start page numbering with Roman numerals
@@ -185,47 +221,14 @@ Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ \hline
 
 
 
-
 % _____________________________________________________________________________________ Second Table _________________________________________________________________________________________%
-%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 % Manually create an entry for the list of abbreviations if you're using a manual list
+\pagenumbering{Roman} 
 \clearpage
 \phantomsection
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
 \section*{Abbildungsverzeichnis}
-
-\subsection*{Ressourcenplanung}
-\subsection*{Entwicklungsprozess}
-
-\begin{tabular}{ll}
-API & Application Programming Interface \\
-JWT & JSON Web Token \\
-XML-RPC & XML Remote Procedure Call \\
-% ... add more abbreviations as needed
-\end{tabular}
-
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{ll}
-\hline
-Column 1 & Column 2 \\
-\hline
-Item 1 & Description \\
-Item 2 & Description \\
-\hline
-\end{tabular}
-\caption{This is a caption for the table.}
-\label{tab:my_label}
-\end{table}
-
-
-
-
-
-
-
-
 
 
 
@@ -253,11 +256,6 @@ Item 2 & Description \\
 
 
 
-
-
-
-
-
 % _____________________________________________________________________________________ fourth Table _________________________________________________________________________________________%
 %------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 
@@ -266,6 +264,16 @@ Item 2 & Description \\
 \phantomsection
 \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
 \section*{Abkürzungsverzeichnis}
+
+
+
+
+% _____________________________________________________________________________________ end of  fourth Table _________________________________________________________________________________________%
+%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+
+
 
 
 
@@ -445,6 +453,7 @@ Informationsverarbeitung und angewandte Datentechnik GmbH \\
 {\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
 Informationsverarbeitung und angewandte Datentechnik GmbH \\
 
+
 \subsection{esle}
 {\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
 Informationsverarbeitung und angewandte Datentechnik GmbH \\
@@ -468,6 +477,37 @@ Informationsverarbeitung und angewandte Datentechnik GmbH \\
 
 
 
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+
+
+
+
+
+\newpage
+\pagenumbering{roman} 
+\phantomsection
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+%\section*{Abbildungsverzeichnis}
+
+
+
+\setcounter{section}{0}
+
+
+
+
+\section{Documentation}
+\section{test one }
+\section{test two}
+\section{test three}
+
+
+
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
 
 
 
@@ -479,10 +519,64 @@ Informationsverarbeitung und angewandte Datentechnik GmbH \\
 
 
 
+%\newpage
+\clearpage
+\pagenumbering{Roman} 
+\setcounter{section}{0}
+\section*{Literaturverzeichnis}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\section{Documentation}
+\section{test one }
+\section{test two}
+\section{test three}
+
+
+{\textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
 
 
 
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
 
+
+
+%\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
+
+
+\begin{comment}
+\clearpage
+\appendix
+\pagenumbering{Roman} 
+\phantomsection
+\addcontentsline{toc}{section}{A Anhang}
+\section*{Anhang}
+\subsection*{pflichtheft}
+\subsection*{one}
+\subsection*{two}
+\subsection*{three}
+\end{comment}
+
+
+
+@misc{flaskDocumentation,
+  title        = "Flask Documentation",
+  author       = "Pallets Projects",
+  year         = 2023,
+  url          = "https://flask.palletsprojects.com/",
+}
+
+@misc{swaggerDocumentation,
+  title        = "Swagger Documentation",
+  author       = "SmartBear Software",
+  year         = 2023,
+  url          = "https://swagger.io/docs/",
+}
+
+
+\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
 
 
 \end{document}
