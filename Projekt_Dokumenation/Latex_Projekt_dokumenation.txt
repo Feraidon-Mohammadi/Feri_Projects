@@ -17,14 +17,18 @@
 
 \usepackage[titletoc]{appendix} % to use Anhangsverzeichnis table  
 
-\usepackage{hyperref}
+
+\usepackage{titletoc}% For defining and using colors
+\usepackage{xcolor} % For defining and using colors
+\usepackage{hyperref}% For defining and using colors
 \hypersetup{
     colorlinks=true, % Colored links instead of boxes
     linkcolor=blue, % Color of internal links
     filecolor=magenta, % Color of file links
-    urlcolor=cyan, % Color of external urls
+    urlcolor=purple, % Color of external urls
 }
 
+\usepackage{amssymb} % add square for subsubtitles 
 
 
 
@@ -46,12 +50,85 @@
 %#####end spacing after new line  #######
 
 
+%######################## color change ########################%
+% +++++++++++++++++++++++++++++++++++++++###############+++++++++++++++++++++++++++++++++++++%
+% ++++++++++++++++++++++++++++++++++++++++colorize titels ++++++++++++++++++++++++++++++++++++++++%
 
-\usepackage{tocloft} % For customizing the Table of Contents
-\usepackage{xcolor} % For defining and using colors
+% change colore of tables contents section subsection and subsubsection in side the table
 \renewcommand{\cftsecfont}{\color{black}}% Change the color of section titles in the ToC to blue
 \renewcommand{\cftsubsecfont}{\color{blue}}% Change the color of subsection titles in the ToC to red
 \renewcommand{\cftsubsubsecfont}{\color{purple}}% Change the color of subsubsection titles in the ToC to green
+
+% change colore of tables contents section subsection and subsubsection outside the tables
+\definecolor{sectioncolor}{RGB}{0, 0, 200} % Blue
+\definecolor{subsectioncolor}{RGB}{50,50,150} % Red
+\definecolor{subsubsectioncolor}{RGB}{122,122,250} % Green (not black as the comment says)
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{sectioncolor}}
+  {\thesection}
+  {1em}
+  {}
+  
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{subsectioncolor}}
+  {\thesubsection}
+  {1em}
+  {}
+
+\titleformat{\subsubsection}
+  {\normalfont\large\bfseries\color{subsubsectioncolor}}
+  {\thesubsubsection}
+  {1em}
+  {}
+
+\begin{comment}
+%   Black: RGB(0, 0, 0)
+
+%   Blue: RGB(0, 0, 255)
+
+%   Brown:  RGB(165, 42, 42)
+
+%   Cyan: RGB(0, 255, 255)
+
+%   Darkgray: RGB(169, 169, 169)
+
+%   Gray: RGB(128, 128, 128)
+
+%   Green: RGB(0, 128, 0)
+
+%   Lightgray: RGB(211, 211, 211)
+
+%   Lime: RGB(0, 255, 0)
+
+%   Magenta: RGB(255, 0, 255)
+
+%   Olive: RGB(128, 128, 0)
+
+%   Orange: RGB(255, 165, 0)
+
+%   Pink: RGB(255, 192, 203)
+
+%   Purple: RGB(128, 0, 128)
+
+%   Red: RGB(255, 0, 0)
+
+%   Teal: RGB(0, 128, 128)
+
+%   Violet: RGB(238, 130, 238)
+
+%   White: RGB(255, 255, 255)
+
+%   Yellow: RGB(255, 255, 0)
+\end{comment}
+
+% ++++++++++++++++++++++++++++++++++++++++colorize titels ++++++++++++++++++++++++++++++++++++++++%
+% ++++++++++++++++++++++++++++++++++++++++######### ++++++++++++++++++++++++++++++++++++++++%
+
+
+
+
+
 
 % custom colores 
 %\definecolor{mycolor}{RGB}{255,100,0} % Define custom color
@@ -63,10 +140,13 @@
 %\renewcommand{\cftsubsubsecpagefont}{\color{\subsubsectioncolor}}% Change the color of page numbers for subsubsections
 
 
-\definecolor{mycolor}{RGB}{255,100,0} % RGB color model % Define a custom color
+%\definecolor{mycolor}{RGB}{255,100,0} % RGB color model % Define a custom color
 %\renewcommand{\contentsname}{\color{mycolor}{Inhaltsverzeichnis}} % Apply the custom color to the title "Inhaltsverzeichnis"
 
 %######################## color change ########################%
+
+
+
 
 
 
@@ -129,7 +209,7 @@
 % 3- Middleware Secure API für die Unternehmensressourcenplanung zur Pflege und zum Austausch von Daten zwischen Odoo und SQLite, mit rollenbasiertem Zugriff auf Funktionalitäten.
 % 4- Middleware Secure API für die Unternehmensressourcenplanung zur Pflege und zum Austausch von Daten mit Odoo, unter Verwendung von SQLite für die Verwaltung rollenbasierter Benutzerberechtigungen.
 \fancyfoot[C]{\thepage} % Customize your footer content
-\fancyfoot[L]{{Feraidon Mohammadi}}% Customize your footer content
+\fancyfoot[L]{{vorname nachname footer}}% Customize your footer content
 \fancyfoot[R]{\backtoTOC} % zurück button 
 \renewcommand{\headrulewidth}{0.4pt} % Header underline thickness
 \renewcommand{\footrulewidth}{0.6pt} % Footer underline thickness
@@ -171,7 +251,86 @@
 % ===========================================Title page ===============================================%
 % ================================================================================================%
 
-% title removed for security  measures
+% IHK log ------------
+\begin{minipage}{\textwidth}
+\centering
+\vspace{35mm} % Add vertical space to center the logos vertically
+\vspace{-4cm} 
+\includegraphics[width=10cm]{IHKLogo.png} % Top logo IHK
+\vspace*{\stretch{-55}} % Add vertical space at the bottom 
+\end{minipage}
+
+
+% haupt beschreibung dokumentation projekct ---------------------
+\begin{minipage}{\textwidth}
+\centering
+ \vspace{1cm} % Adjust the space between the top logo and the text
+% Adding formatted text
+   {\Large Abschlussprüfung Sommer 2024} \\[0.5cm] % Larger text and additional space after
+   {\large Ausbildungsberuf: Fachinformatiker für Anwendungsentwicklung} \\[2cm] % Slightly smaller text
+   {\Large\bfseries Dokumentation zur Betrieblichen Projektarbeit} % Bold and large text
+ \vspace{1cm} % Adjust the space between the top logo and the text
+\end{minipage}
+
+
+
+% kurze beschreibung des Projekt -------------------------
+\begin{minipage}{\textwidth}
+\centering
+% Project explanation text
+   \large % Set the text size to normal
+\vspace{1cm}
+  {\Large \bfseries API-Entwicklung in Python mit Flask Swagger-restx und JWT für sicheren Datenaustausch via Odoo's XML-RPC.}\\[0.2cm] % Make this part larger
+   SQLite verwaltet Nutzerrechte, wobei der Zugang je nach Rolle variiert. Für verschiedene Endpunkte existiert jeweils unterschiedliche Funktionalität.\\[-3cm]
+\vspace{4cm} 
+   \end{minipage}
+
+
+
+% abgabe datum ----------------------
+\begin{minipage}{\textwidth}
+\large
+\centering
+\vspace{1cm}
+Abgabedatum: Erfurt, den 24.04.2024 \\[1cm]
+\vspace{0.5cm} 
+\end{minipage}
+
+
+% über mich -------------------
+\begin{minipage}{\textwidth}
+\centering
+{\large \textbf{Prüfungsbewerber:}} \\ % Makes the text larger and bold \\
+Name Vorname\\
+Straße hause nummber  \\
+PLZ Ort\\
+ID-Nr. \\
+ %\vspace*{\stretch{2}} % This stretches the space between the project explanation and the bottom logo
+\end{minipage}
+
+
+% IAD logo ---------------------
+\begin{minipage}{\textwidth}
+\centering
+%\vspace*{\stretch{195}} % Add more space between the logos
+\vspace{1cm} 
+\hspace{0.5cm} 
+   \includegraphics[width=4cm]{iadlogo2.jpg} % Bottom logo
+   \vspace*{\stretch{9}} % Add vertical space at the bottom
+\end{minipage}
+
+
+
+% über IAD -------------------
+\begin{minipage}{\textwidth}
+\centering
+\vspace{1cm} 
+{\large \textbf{Ausbildungsbetrieb:}} \\ % Makes the text larger and bold
+Informationsverarbeitung und angewandte Datentechnik GmbH \\
+Maximilian-Welsch-Straße 2 \\
+99084 Erfurt \\
+\end{minipage}
+
 
 % ============================================================================================%
 % =========================================End Title Page =========================================%
@@ -254,47 +413,51 @@ ABK2 & Abbreviation 2 \\
 
 
 
+
 \clearpage
 
 % Start page numbering with Arabic numerals for the main content
 \pagenumbering{arabic}
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{0pt} % distance before start paragraph
 \section{Einleitung}
 \begin{spacing}{1.2}
 \setlength{\parskip}{0.2em} % add space after ( . ) finish a sentences
-\normalsize{\textsf{\textsf{In der folgenden Dokumentation wird das Abschlussprojekt des Autors im Rahmen seiner Prüfung zum Fachinformatiker für Anwendungsentwicklung dargelegt. Durchgeführt wurde dieses bei der IAD GmbH in Erfurt, einem Unternehmen, das seit seiner Gründung 1983 in Marburg und der Eröffnung erster Niederlassungen in Thüringen 1990, darunter Nordhausen, Erfurt und Jena, stetig gewachsen ist.\\ \setlength{\\ \parindent}{0.1em} 
+\normalsize{\textsf{\textsf{In der folgenden Dokumentation wird das Abschlussprojekt des Autors im Rahmen seiner Prüfung zum Fachinformatiker für Anwendungsentwicklung dargelegt. Durchgeführt wurde dieses bei der IAD GmbH in Erfurt, einem Unternehmen, das seit seiner Gründung 1983 in Marburg und der Eröffnung erster Niederlassungen in Thüringen 1990, darunter Nordhausen, Erfurt und Jena, stetig gewachsen ist.\\\begin{spacing}{0.5}\end{spacing}
 Heute ist die IAD GmbH anerkannter Partner von namhaften IT-Unternehmen wie Microsoft, Sun Microsystems, IBM, Oracle und anderen, und beschäftigt rund 80 Festangestellte sowie ebenso viele Freiberufler.
-Das Expertenteam der IAD GmbH, spezialisiert auf Beratung und Schulung, steht vor der Herausforderung, Schulungen effizient online über Microsoft Teams zu organisieren, inklusive der Erfassung von An- und Abwesenheiten der Teilnehmenden. Um diese Daten direkt in das Odoo-ERP-System einzuspeisen und zu verwalten, wurde der Entwickler beauftragt, eine Webanwendung zu entwickeln.\\ \setlength{\\ \parindent}{1cm} 
-Die haupt aufgabe des Projekts ist die Schaffung einer sicheren Schnittstelle für den Datenaustausch zwischen externen Systemen und Odoo, um die Datenintegrität zu wahren und den Zugriff auf sensible Informationen strikt zu regeln. Diese Maßnahme sollte eine zusätzliche Sicherheitsebene einführen und so den Schutz sensibler Daten gewährleisten.}}}
+Das Expertenteam der IAD GmbH, spezialisiert auf Beratung und Schulung, steht vor der Herausforderung, Schulungen effizient online über Microsoft Teams zu organisieren, inklusive der Erfassung von An- und Abwesenheiten der Teilnehmenden. Um diese Daten direkt in das Odoo-ERP-System einzuspeisen und zu verwalten, wurde der Entwickler beauftragt, eine Webanwendung zu entwickeln.\\\begin{spacing}{0.5}\end{spacing}
+die haupt aufgabe des Projekts ist die Schaffung einer sicheren Schnittstelle für den Datenaustausch zwischen externen Systemen und Odoo, um die Datenintegrität zu wahren und den Zugriff auf sensible Informationen strikt zu regeln. Diese Maßnahme sollte eine zusätzliche Sicherheitsebene einführen und so den Schutz sensibler Daten gewährleisten.}}}
 \end{spacing}
 
 
 
 \subsection{Projektbeschreibung}
-\begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{Technologie Stack: Die API wurde unter Verwendung von Flask-RESTX entwickelt, einem leistungsstarken Framework für die Erstellung von RESTful APIs in Python. \\ Flask-RESTX bietet eine einfache, aber flexible Plattform für die Entwicklung von APIs mit Unterstützung für automatische Dokumentation, Datenvalidierung und Routing.
-Integration mit Odoo: Odoo dient als primäres ERP-System, das eine Vielzahl von Geschäftsprozessen verwaltet. Die entwickelte API agiert als Middleware, die den Datenaustausch zwischen Odoo und externen Systemen erleichtert. Diese Integration ermöglicht es, Geschäftslogik und Datenmanagement effizient zu handhaben.
-Sicherheitsmaßnahmen: Um die Sicherheit zu gewährleisten, wurde SQLite verwendet, um Benutzerrechte zu verwalten. Durch diese Maßnahme kann der Zugriff auf die API streng kontrolliert werden, indem nur autorisierten Nutzern der Zugriff auf bestimmte Daten erlaubt wird. Die Verwendung von SQLite bietet eine leichte, aber zuverlässige Lösung für das Rechtemanagement.
- }}}
+\begin{spacing}{1.2}
+\normalsize{\textsf{\textsf{\textbf{\textsf{Technologie Stack: }}Die API wurde unter Verwendung von Flask-RESTX entwickelt, einem leistungsstarken Framework für die Erstellung von RESTful APIs in Python.
+Flask-RESTX bietet eine einfache, aber flexible Plattform für die Entwicklung von APIs mit Unterstützung für automatische Dokumentation, Datenvalidierung und Routing.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Integration mit Odoo: }}Odoo dient als primäres ERP-System, das eine Vielzahl von Geschäftsprozessen verwaltet.
+Die entwickelte API agiert als Middleware, die den Datenaustausch zwischen Odoo und externen Systemen erleichtert. Diese Integration ermöglicht es, Geschäftslogik und Datenmanagement effizient zu handhaben.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Sicherheitsmaßnahmen: }}Um die Sicherheit zu gewährleisten, wurde SQLite verwendet, um Benutzerrechte zu verwalten. Durch diese Maßnahme kann der Zugriff auf die API streng kontrolliert werden, indem nur autorisierten Nutzern der Zugriff auf bestimmte Daten erlaubt wird. Die Verwendung von SQLite bietet eine leichte, aber zuverlässige Lösung für das Rechtemanagement.}}}
 \end{spacing}
 
 
 
 
 \subsection{Problemstellung}
-\begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{\textbf{\textsf{Eingeschränkter Zugriff auf Odoo:}} Der Ist-Zustand zeigt, dass der Zugriff auf Odoo aus Sicherheits- und Datenschutzgründen nur innerhalb der Domäne möglich ist. Dies schränkt die Flexibilität und Erreichbarkeit des Systems für externe Anwendungen und Nutzer, die von außerhalb der Domäne auf das System zugreifen müssen, stark ein. \\
-\textbf{\textsf{Fehlende digitale Anwesenheitserfassung:}}
-Aktuell besteht die Vorgabe für Dozenten, das Klassenbuch und die Anwesenheitserfassung zu führen, was derzeit nicht digital unterstützt wird. Dies verursacht einen erhöhten administrativen Aufwand und kann zu Ungenauigkeiten in der Datenerfassung führen.\\
-\textbf{\textsf{Unzureichende Integration für das Klassenbuchprogramm:}} Es gibt keine vorhandene Schnittstelle, die es dem in Entwicklung befindlichen Klassenbuchprogramm für Teams ermöglicht, effizient auf die benötigten Daten aus Odoo zuzugreifen. Dies behindert die digitale Transformation der Anwesenheitserfassung und des Klassenbuchmanagements.\\
-\textbf{\textsf{Mangel an sicherer und kontrollierter Datenzugriffsmöglichkeit:}} Für externe Anwendungen besteht keine sichere Methode, um auf die notwendigen Daten aus Odoo zuzugreifen, ohne die Sicherheits- und Datenschutzstandards zu kompromittieren.\\
-\textbf{\textsf{Fehlen einer eigenständigen Nutzerverwaltung:}} Es gibt keine dedizierte Lösung für die Verwaltung der Nutzer, die auf die API zugreifen sollen. Dies ist essentiell, um den Zugriff auf die Daten zu kontrollieren und zu sichern.}}}
+\begin{spacing}{1.2}
+\normalsize{\textsf{\textsf{\textbf{\textsf{Eingeschränkter Zugriff auf Odoo:}} Der Ist-Zustand zeigt, dass der Zugriff auf Odoo aus Sicherheits- und Datenschutzgründen nur innerhalb der Domäne möglich ist. Dies schränkt die Flexibilität und Erreichbarkeit des Systems für externe Anwendungen und Nutzer, die von außerhalb der Domäne auf das System zugreifen müssen, stark ein.\\\begin{spacing}{0.5}\end{spacing}
+ \textbf{\textsf{Fehlende digitale Anwesenheitserfassung:}} Aktuell besteht die Vorgabe für Dozenten, das Klassenbuch und die Anwesenheitserfassung zu führen, was derzeit nicht digital unterstützt wird. Dies verursacht einen erhöhten administrativen Aufwand und kann zu Ungenauigkeiten in der Datenerfassung führen.\\\begin{spacing}{0.5}\end{spacing}
+ \textbf{\textsf{Unzureichende Integration für das Klassenbuchprogramm:}} Es gibt keine vorhandene Schnittstelle, die es dem in Entwicklung befindlichen Klassenbuchprogramm für Teams ermöglicht, effizient auf die benötigten Daten aus Odoo zuzugreifen. Dies behindert die digitale Transformation der Anwesenheitserfassung und des Klassenbuchmanagements.\\\begin{spacing}{0.5}\end{spacing}
+ \textbf{\textsf{Mangel an sicherer und kontrollierter Datenzugriffsmöglichkeit:}} Für externe Anwendungen besteht keine sichere Methode, um auf die notwendigen Daten aus Odoo zuzugreifen, ohne die Sicherheits- und Datenschutzstandards zu kompromittieren.\\\begin{spacing}{0.5}\end{spacing}
+ \textbf{\textsf{Fehlen einer eigenständigen Nutzerverwaltung:}} Es gibt keine dedizierte Lösung für die Verwaltung der Nutzer, die auf die API zugreifen sollen. Dies ist essentiell, um den Zugriff auf die Daten zu kontrollieren und zu sichern.}}}
 \end{spacing}
+
+
 
 \subsubsection{Kontext des Problems:}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{Die IAD nutzt das ERP-System Odoo zur Verwaltung von Teilnehmenden und Weiterbildungen über mehrere Standorte hinweg. Der Zugriff auf wichtige Funktionen ist jedoch auf die interne Domäne beschränkt, was die digitale Anwesenheitserfassung und das Klassenbuchmanagement, insbesondere für Online-Weiterbildungen via Microsoft Teams, erschwert. Aktuelle Prozesse erfordern manuelle Eingriffe und sind nicht effizient für die digitale Ära ausgerichtet, was die Notwendigkeit einer sicheren und flexiblen Zugriffslösung hervorhebt.}}}
 \end{spacing}
+
 
 
 \subsubsection{Auswirkungen des Problems:}
@@ -303,16 +466,21 @@ Aktuell besteht die Vorgabe für Dozenten, das Klassenbuch und die Anwesenheitse
 \end{spacing}
 
 
+
 \subsubsection{Betroffene:}
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{Primär betroffen sind die Dozenten, die einen erhöhten Verwaltungsaufwand betreiben müssen, und die Teilnehmenden, deren Lernerfahrung durch ineffiziente Prozesse beeinträchtigt werden kann. Des Weiteren sind die administrativen Mitarbeiter betroffen, die mit der Datenpflege und -korrektur befasst sind, sowie das IT-Personal, das nach sicheren Lösungen für den Datenzugriff und die Nutzerverwaltung suchen muss.}}}
 \end{spacing}
 
 
+
+
 \subsubsection{Lücke im Wissen oder in der Technologie:}
 \begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{Es besteht eine technologische Lücke in Bezug auf eine sichere, flexible und effiziente Integration externer Anwendungen, wie das Klassenbuchprogramm, mit dem internen ERP-System Odoo. Aktuelle Lösungen bieten keinen angemessenen Mechanismus für den sicheren Datenzugriff von außerhalb der Domäne, was die Umsetzung digitaler Anwesenheitserfassung und Teilnehmerverwaltung limitiert}}}
+\normalsize{\textsf{\textsf{Es besteht eine technologische Lücke in Bezug auf eine sichere, flexible und effiziente Integration externer Anwendungen, wie das Klassenbuchprogramm, mit dem internen ERP-System Odoo. Aktuelle Lösungen bieten keinen angemessenen Mechanismus für den sicheren Datenzugriff von außerhalb der Domäne, was die Umsetzung digitaler Anwesenheitserfassung und Teilnehmerverwaltung limitiert.}}}
 \end{spacing}
+
+
 
 
 \subsubsection{Ziel der Problemstellung:}
@@ -322,15 +490,15 @@ Aktuell besteht die Vorgabe für Dozenten, das Klassenbuch und die Anwesenheitse
 
 
 
-% #################### end of problems #############%
+
+
 
 \subsection{Projektziel}
 \begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{Das Hauptziel dieses Projekts war die Schaffung einer sicheren und effizienten Schnittstelle für den Datenaustausch, um die Integrität und Vertraulichkeit der Daten zu gewährleisten. Durch die Entwicklung dieser API wurde eine Middleware-Lösung realisiert, die folgende Vorteile bietet:
-Sicherer Datenaustausch: Gewährleistung, dass keine sensiblen Daten unbefugt zugänglich sind.
-Effizienzsteigerung: Automatisierung des Datenaustausches zwischen Systemen, was zu einer Reduzierung manueller Eingriffe und potentiellen Fehlern führt.
-Erweiterbarkeit: Die Architektur der API ermöglicht es, zukünftige Anforderungen und Integrationen effizient zu implementieren.
-}}}
+\normalsize{\textsf{\textsf{Das Hauptziel dieses Projekts ist die Schaffung einer sicheren und effizienten Schnittstelle für den Datenaustausch, um die Integrität und Vertraulichkeit der Daten zu gewährleisten. Durch die Entwicklung dieser API wurde eine Middleware-Lösung realisiert, die folgende Vorteile bietet:\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Sicherer Datenaustausch: }}Gewährleistung, dass keine sensiblen Daten unbefugt zugänglich sind.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Effizienzsteigerung: }}Automatisierung des Datenaustausches zwischen Systemen, was zu einer Reduzierung manueller Eingriffe und potentiellen Fehlern führt.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Erweiterbarkeit: }}Die Architektur der API ermöglicht es, zukünftige Anforderungen und Integrationen effizient zu implementieren.}}}
 \end{spacing}
 
 
@@ -338,15 +506,21 @@ Erweiterbarkeit: Die Architektur der API ermöglicht es, zukünftige Anforderung
 
 \subsection{Projektbegründung}
 \begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{      }}}
+Der Entwickler hat sich aus folgenden Gründen entschiedet ein App Mit Flask Swagger-ui zu Entwickeln, dass es als Middleware verwendet wird.\\\begin{spacing}{0.5}\end{spacing}
+\normalsize{\textsf{\textsf{\textbf{\textsf{Verbesserung der Betriebseffizienz:}}
+Durch die Automatisierung des Klassenbuchmanagements und der Anwesenheitserfassung können zeitaufwendige manuelle Prozesse eliminiert werden. Dies führt zu einer signifikanten Reduzierung des administrativen Aufwands und ermöglicht Dozenten sowie Verwaltungspersonal, sich auf ihre Kernkompetenzen und die Verbesserung der Bildungsqualität zu konzentrieren.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Erhöhung der Datenintegrität und -sicherheit:}}
+Die sichere API garantiert einen kontrollierten Zugriff auf die Daten in Odoo, minimiert das Risiko von Datenlecks und sorgt für eine hohe Datenqualität. Durch die Implementierung von Best Practices für die Datensicherheit und die Nutzung einer eigenständigen SQL-Datenbank für die Nutzerverwaltung wird das Datenschutzniveau signifikant erhöht.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Flexibilität und Skalierbarkeit:}}
+Die Entwicklung der API als Docker-Container ermöglicht eine einfache Integration in die bestehende Infrastruktur und gewährleistet gleichzeitig die Skalierbarkeit des Systems. Die Lösung kann somit problemlos an wachsende Anforderungen und Teilnehmerzahlen angepasst werden.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Unterstützung digitaler Bildungsformate:}}
+In Anbetracht der steigenden Bedeutung digitaler Lernformate ermöglicht die API die nahtlose Verwaltung von Online- und Präsenzweiterbildungen. Die digitale Anwesenheitserfassung und das Klassenbuchmanagement unterstützen sowohl synchrone als auch asynchrone Lernformate und tragen damit zur Flexibilisierung des Bildungsangebots bei.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Reaktion auf Nutzerbedürfnisse:}}
+Durch die Bereitstellung einer Schnittstelle für das Klassenbuchprogramm in Teams wird auf die spezifischen Anforderungen der Dozenten und Teilnehmenden reagiert. Die nutzerfreundliche Gestaltung fördert die Akzeptanz und die effektive Nutzung des Systems.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Wettbewerbsvorteil und Imageförderung:}}
+Die Digitalisierung interner Prozesse und die Implementierung fortschrittlicher Technologielösungen stärken das Image der IAD als moderner und innovativer Bildungsträger. Dies kann einen entscheidenden Wettbewerbsvorteil darstellen und die Attraktivität für potenzielle Teilnehmende und Dozenten erhöhen.}}}
 \end{spacing}
 
-
-
-\subsection{Architekturentwurf}
-\begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{      }}}
-\end{spacing}
 
 
 
@@ -489,10 +663,221 @@ Erweiterbarkeit: Die Architektur der API ermöglicht es, zukünftige Anforderung
 
 \section{Entwurfsphase}
 
-\subsection {Architekturdesign}
+% --------------------------------- start architekture --------------------------%
+\subsection{Architekturentwurf}
 \begin{spacing}{1.3}
-\normalsize{\textsf{\textsf{      }}}
+\normalsize{\textsf{\textsf{\textbf{\textsf{Gesamtarchitektur: }}Der Hauptteil des Projekts besteht aus Flask und Swagger-UI, um eine kompatible grafische Oberfläche bereitzustellen. Anschließend wird die Odoo ERP-Datenbank für den Datenaustausch zwischen internen und externen Services verwendet.
+Um die Daten zwischen internen und externen Quellen sowie zwischen dem Klassenbuchprogramm und Odoo in einer sicheren Umgebung zu verwalten, muss eine App entwickelt werden, als Middleware, die den Anforderungen entspricht.\\
+Für die Sicherheit der Endpunkte muss eine SQLite-Datenbank verwendet werden, um spezifische Rechte für bestimmte Nutzer oder Dozenten bezüglich des App-Zugriffs festzulegen.
+Schließlich muss die App in einem Docker-Container deployed werden.}}}
 \end{spacing}
+
+
+
+
+\subsubsection{App-Initialisierung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{Die Anwendung beginnt mit der Erstellung einer Flask-Instanz, die als Herzstück und zentraler Koordinationspunkt fungiert. Diese Instanz ist verantwortlich für die Initialisierung und Konfiguration der Kernaspekte der Anwendung, einschließlich der Definition von URL-Routen, Anfrage-Handlern und weiteren anwendungsspezifischen Einstellungen.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Modularer Aufbau: }}Um eine klare Struktur und bessere Wartbarkeit zu gewährleisten, ist die Anwendung in verschiedene Module aufgeteilt. Die Kernkomponenten des Projekts sind in einem Paket organisiert, das im Wurzelverzeichnis unter dem Namen app bereitgestellt wird. Ein separates Startskript, run.py, befindet sich im Root-Verzeichnis, um den Start der Anwendung zu erleichtern. Dies ist besonders nützlich für den Einsatz in einem Docker-Container, da es die Bereitstellung und Ausführung der Anwendung vereinfacht.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Die Hauptklasse MyApplication: }}Innerhalb der Anwendung wurde eine zentrale Klasse namens MyApplication definiert, die als Hauptklasse dient. Diese Klasse implementiert verschiedene Setup-Funktionen unter Verwendung der objektorientierten Programmierung (OOP), um globalen Variablen und bestimmten Daten Zugriff über verschiedene Klassen, Methoden und Module hinweg zu ermöglichen. Eine Unterklasse namens ClassConfiguration ist speziell für SQL-Konfigurationen vorgesehen und ermöglicht es, die Datenbankkonfiguration separat zu handhaben und bei Bedarf zu erweitern..\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Modularisierung der Funktionalitäten:}} Die Anwendung nutzt Modularisierung intensiv, um ihre Funktionalitäten zu organisieren und zukünftige Erweiterungen zu erleichtern:
+\begin{itemize}
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Odoo-Integration: }}Ein spezielles Modul ist für die Verbindung und Interaktion mit der Odoo-ERP-Software zuständig. Dies ermöglicht eine nahtlose Integration von Geschäftsprozessen und Datenmanagement .\\
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Datenbankstrukturen: }} Die Struktur der Datenbank und alle Datenmodelle sind in einem eigenen Modul definiert. Dies fördert eine klare Trennung von Datenlogik und Anwendungslogik.\\
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Odoo- und Nutzerressourcen: }}Weitere Module sind spezifisch für die Verwaltung von Odoo-Ressourcen und Nutzerdaten vorgesehen. Diese Organisation unterstützt eine modulare Entwicklung und Erweiterung der Anwendung.\\
+\end{itemize}
+\textbf{\textsf{Routen-Definition und View-Funktionen: }}Flask verwendet Dekorateure, um URL-Routen zu definieren und mit Funktionen zu verknüpfen, die als View-Funktionen bezeichnet werden. Diese Funktionen werden aufgerufen, wenn eine HTTP-Anfrage mit der zugeordneten Route übereinstimmt. Innerhalb der View-Funktionen wird die Logik zur Verarbeitung der Anfragen und zum Zurücksenden der Antworten implementiert.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Anfrage-Handling: }}Flask vereinfacht die Handhabung eingehender HTTP-Anfragen, indem es Objekte bereitstellt, die den Anfragekontext enthalten, wie z.B. request. Entwickler können auf Daten wie Query-Parameter, URL-Parameter, Formulardaten und JSON-Inhalte aus dem Anfragekörper zugreifen.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Antwort-Generierung: }}Flask ermöglicht die einfache Erstellung von HTTP-Antworten, die entweder aus einfachen Zeichenketten, HTML-Inhalten oder JSON-Daten bestehen können. Durch die Verwendung des jsonify-Hilfsfunktion kann Flask automatisch Python-Diktate in JSON-Antworten umwandeln, was für RESTful-APIs essentiell ist.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Fehlerbehandlung und Middleware: }}Flask bietet Mechanismen zur Fehlerbehandlung und Unterstützung für Middleware-Komponenten, die es ermöglichen, Code vor oder nach Anfragen auszuführen, was für Authentifizierung, Autorisierung und Logging nützlich ist.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Erleichterung durch Flask: }}Flask erleichtert die Erstellung von Webservern und die Handhabung von HTTP-Anfragen, Eine eingebaute Entwicklungsumgebung und einen Debugger umfasst, was die Entwicklung und das Debugging von Anwendungen beschleunigt,\\
+Die Erstellung von RESTful APIs durch unterstützende Funktionen wie jsonify für die JSON-Serienisierung von Antwortdaten vereinfacht }}}
+\end{spacing}
+
+
+
+\subsubsection{Datenfluss}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{\textbf{\textsf{Anfrage von der Klassenbuch-App: }}
+Ein Nutzer oder System sendet eine Anfrage an die API, die mit dem Flask-Framework entwickelt wurde. Diese Anfrage könnte eine Abfrage nach Daten oder eine Aufforderung zur Aktualisierung von Daten in Odoo sein.\\
+Bevor die Anfrage verarbeitet wird, muss der Nutzer authentifiziert werden. Dies geschieht in der Regel über die API, die eine Authentifizierungslogik implementiert. Dies könnte über ein Token-System, OAuth oder eine andere Methode erfolgen. Die Details des authentifizierten Nutzers (z.B. Berechtigungen) werden in der relationalen Datenbank gespeichert und für die Autorisierung der Anfrage verwendet.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Verarbeitung in der API und Weiterleitung an Odoo: }}\\
+\begin{itemize}
+\item[\scalebox{0.5}{$\blacksquare$}]\textbf{Datenabfrage/Aktualisierung: }Nach erfolgreicher Authentifizierung wird die Anfrage von der Flask-API verarbeitet. Abhängig von der Art der Anfrage kann dies die Abfrage bestimmter Daten aus Odoo oder die Aktualisierung von Datensätzen in Odoo umfassen.\begin{spacing}{0.5}\end{spacing}
+\item[\scalebox{0.5}{$\blacksquare$}]\textbf{Kommunikation mit Odoo über XML-RPC: }Flask interagiert mit Odoo über die XML-RPC-Schnittst-elle. XML-RPC ist ein Remote Procedure Call-Protokoll, das XML verwendet, um Daten zu kodieren und über HTTP zu übertragen. Die API verwendet dieses Protokoll, um Anfragen an Odoo zu senden und Antworten zu empfangen. Dies beinhaltet das Senden von Befehlen zur Datenabfrage oder -aktualisierung in Odoo basierend auf der ursprünglichen Anfrage.
+\end{itemize}
+\textbf{\textsf{Datenmanagement in Odoo und Rückmeldung: }}
+\begin{itemize}
+\item[\scalebox{0.5}{$\blacksquare$}]\textbf{Verarbeitung in Odoo: }Odoo verarbeitet die Anfrage, indem es auf seine PostgreSQL-Datenbank zugreift, um die erforderlichen Daten abzufragen oder zu aktualisieren. Odoo führt alle notwendigen Geschäftslogiken durch, die für die Verarbeitung der Anfrage erforderlich sind, einschließlich der Verwaltung von Datensätzen, Berechnungen oder Validierungen.
+\item[\scalebox{0.5}{$\blacksquare$}]\textbf{Rückmeldung an die API: }Nach Abschluss der Verarbeitung sendet Odoo eine Antwort über die XML-RPC-Schnittstelle zurück an die Flask-API. Diese Antwort enthält die Ergebnisse der Datenabfrage oder den Status der Datenaktualisierung.\begin{spacing}{0.5}\end{spacing}
+\end{itemize}
+\textbf{\textsf{Nutzerverwaltung in der relationalen Datenbank: }}
+\begin{itemize}
+\item[\scalebox{0.5}{$\blacksquare$}]\textbf{Verwaltung und Authentifizierung: }Die Nutzerverwaltung, einschließlich der Speicherung von Nutzerinformationen, Authentifizierungsdetails und Berechtigungen, erfolgt in der relationalen Datenbank SQLite , die mit der Flask-API verbunden ist. Diese Informationen werden für die Authentifizierung und Autorisierung von Anfragen verwendet.
+\item[\scalebox{0.5}{$\blacksquare$}]\textbf{Einrichtung der Datenbankverbindung: }Flask bietet durch Erweiterungen wie Flask-SQLAlchemy eine einfache und effiziente Möglichkeit, eine Anwendung mit einer SQLite-Datenbank zu verbinden. Um die Datenbankverbindung herzustellen, muss zunächst Flask-SQLAlchemy in das Projekt integriert werden. Folgende Schritte sind notwendig:\\\begin{spacing}{0.5}\end{spacing}
+\textbullet{ }\textbf{\textsf{Installation von Flask-SQLAlchemy: }}Füge Flask-SQLAlchemy zu den Projektabhängigkeiten hinzu, indem du es über pip installierst.\\\begin{spacing}{0.5}\end{spacing}
+\textbullet{ }\textbf{\textsf{Konfiguration der Anwendung: }}Konfiguriere die Flask-Anwendung, um den Pfad zur SQLite-Datenbankdatei anzugeben. Dies geschieht in der Konfigurationsdatei oder direkt im Anwendungscode sowie unten.\\\begin{spacing}{0.5}\end{spacing}
+app.config['SQLALCHEMY\_DATABASE\_URI'] = 'sqlite:///pfad/zu/datenbank.db'\\
+db = SQLAlchemy(app)
+\end{itemize}
+}}}
+\end{spacing}
+
+
+
+
+
+
+
+
+
+
+
+%
+%
+%
+%
+%
+%
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Sicherheitskonzept}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{\textbf{\textsf{Authentifizierung und Autorisierung: }}Für die Registrierung von Nutzern wird ein spezifischer Prozess angewendet, bei dem Nutzer entweder als normale Nutzer oder Super-Nutzer in einer SQLite-Datenbank registriert werden können. Die Passwörter der Nutzer werden unter Verwendung des SHA-256-Algorithmus gehasht, bevor sie in der Datenbank gespeichert werden, um die Sicherheit der Nutzercredentials zu gewährleisten.\\
+Die Anmeldung erfolgt über HTTP Basic Auth mit einer Erweiterung, die eine Ablaufzeit umfasst. Hierbei wird ein JSON Web Token (JWT) erstellt, das die Nutzer-ID, den Benutzernamen, einen geheimen Schlüssel und eine Ablaufzeit enthält. Dieser JWT wird generiert, sobald ein Nutzer erfolgreich authentifiziert wurde, d.h., nachdem die Richtigkeit des Passworts bestätigt wurde. Der Token wird dann im Antwort-Header an den Nutzer gesendet und muss für nachfolgende Anfragen zur Datenerfassung oder -speicherung vorgelegt werden.\\\begin{spacing}{0.5}\end{spacing}
+\textbf{\textsf{Weitere Sicherheitsmaßnahmen: }}Um die Sicherheit unserer Anwendung weiter zu erhöhen, haben wir zusätzliche Maßnahmen implementiert:
+Rate Limiting: Um potenzielle Denial-of-Service-Angriffe (DoS) zu verhindern, begrenzen wir die Anzahl der Anfragen, die ein Nutzer innerhalb eines bestimmten Zeitraums an die API senden kann.
+Sichere Header: Wir setzen Sicherheitsheader wie X-Frame-Options ein, um unsere Anwendung gegen Clickjacking-Angriffe zu schützen.}}}
+\end{spacing}
+
+
+
+
+\subsubsection{Nutzerverwaltung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{\textbf{\textsf{Nutzerverwaltung in SQLite: }}SQLite bietet eine einfache und effiziente Lösung für die Speicherung von Nutzerdaten. Jeder Nutzer wird in der Datenbank mit einer eindeutigen ID, einem Benutzernamen, einem gehashten Passwort und ggf. weiteren Attributen wie Rollen oder Berechtigungen gespeichert.\\
+Die Nutzung von SQLite für die Nutzerverwaltung bietet mehrere Vorteile:  %\\\begin{spacing}{0.3}\end{spacing}
+\begin{itemize}
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Leichtgewichtig und Einfach: }}SQLite benötigt keine separate Serverprozesse oder -konfigurationen, was die Einrichtung und Wartung vereinfacht.
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Portabilität: }}Da SQLite-Datenbanken als einfache Datei auf dem Dateisystem gespeichert sind, ist es einfach, Datenbanken zwischen verschiedenen Umgebungen oder Systemen zu migrieren.
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Geringe Betriebskosten: }}SQLite ist für kleinere Anwendungen kostenlos und erfordert keine teuren Datenbankmanagement-Systeme.\\
+\end{itemize}
+\begin{spacing}{1}\end{spacing}
+\textbf{\textsf{Nutzerdatenverwaltung: }}
+Die Nutzerdatenverwaltung umfasst die Erstellung, Aktualisierung und Löschung von Nutzerdatensätzen sowie die Abfrage von Nutzerinformationen für Authentifizierungszwecke. Nutzer können über ein Admin-Interface oder durch direkte API-Aufrufe verwaltet werden. Die Passwörter der Nutzer werden vor der Speicherung in der Datenbank mit einem Hashing-Algorithmus wie SHA-256 gehasht, um zusätzliche Sicherheit zu bieten und sicherzustellen, dass Passwörter nicht im Klartext gespeichert werden.\\\begin{spacing}{1}\end{spacing}
+\textbf{\textsf {Authentifizierung der Nutzer: }}
+Die Authentifizierung in der API-Anwendung erfolgt durch HTTP Basic Auth, erweitert um ein System mit Ablaufzeiten für die Authentifizierungssitzungen:
+\begin{itemize}
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{HTTP Basic Auth: }}Bei diesem Authentifizierungsverfahren geben Nutzer ihren Benutzernamen und ihr Passwort an, die in der Anfrage-Header kodiert werden. Die API dekodiert diese Credentials und vergleicht das gehashte Passwort mit dem in der SQLite-Datenbank gespeicherten Hash.
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Token-basierte Authentifizierung mit Ablaufzeit: }}Nach erfolgreicher Authentifizierung wird ein JWT (JSON Web Token) erstellt, der die Nutzer-ID, den Benutzernamen, einen geheimen Schlüssel und eine Ablaufzeit enthält. Dieser Token wird im Antwort-Header zurückgesendet und muss bei nachfolgenden Anfragen vorgelegt werden, um den Zugriff auf geschützte Ressourcen zu erlauben.\\
+Diese Methode ermöglicht eine sichere und effektive Authentifizierung von Nutzern, während die Nutzung von JWTs mit Ablaufzeiten dazu beiträgt, die Sicherheit durch die Begrenzung der Dauer einer Sitzung zu erhöhen
+\end{itemize}
+}}}
+\end{spacing}
+
+
+
+\subsubsection{Containerisierung}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{\textbf{\textsf{Containerisierung – Ein Überblick: }}Containerisierung ist eine Methode zur Softwareverteilung, bei der Anwendungen zusammen mit ihren Abhängigkeiten und einigen Teilen des Betriebssystems in einem Prozess verpackt werden, der als Container bezeichnet wird. Diese Container sind von der Umgebung, in der sie ausgeführt werden, isoliert, was bedeutet, dass sie konsistent über verschiedene Entwicklungs-, Test- und Produktionsumgebungen hinweg funktionieren.\\\begin{spacing}{1.3}\end{spacing}
+\textbf{\textsf{Kernvorteile der Containerisierung:}}\\\begin{spacing}{0.5}\end{spacing}
+\textbullet{ }\textbf{\textsf{Konsistenz und Portabilität: }}Da Container alle Abhängigkeiten einer Anwendung enthalten, funktionieren sie über verschiedene Umgebungen hinweg gleich. Dies reduziert das "Es funktioniert auf meinem Rechner"-Problem und erleichtert die Bereitstellung und Migration von Anwendungen.\\\begin{spacing}{0.5}\end{spacing}
+\textbullet{ }\textbf{\textsf{Effizienz und Schnelligkeit: }}Container teilen sich den Betriebssystemkern und sind daher leichtgewichtiger als traditionelle virtuelle Maschinen. Sie starten schneller und verbrauchen weniger Ressourcen, was eine effiziente Nutzung der Hardware ermöglicht.\\\begin{spacing}{0.5}\end{spacing}
+\textbullet{ }\textbf{\textsf{Isolation und Sicherheit: }}Jeder Container ist von anderen Containern isoliert, was die Sicherheit erhöht. Wenn eine Anwendung in einem Container abstürzt oder kompromittiert wird, bleibt der Schaden auf diesen einen Container beschränkt und betrifft nicht den Host oder andere Container.\\\begin{spacing}{0.5}\end{spacing}
+\textbullet{ }\textbf{\textsf{Skalierbarkeit und Verwaltung: }}Container können leicht hoch- und heruntergefahren werden, was die Skalierung von Anwendungen nach Bedarf erleichtert. Orchestrierungswerkzeuge wie Kubernetes ermöglichen zudem die automatisierte Verwaltung, Skalierung und Bereitstellung von Containern.\\\begin{spacing}{1.3}\end{spacing}
+\textbf{\textsf{Verwendung im Projekt: }}\\\begin{spacing}{0.5}\end{spacing}
+da die Containerisierung nicht direkt Teil der Entwickler Aufgaben ist, bildet sie den Rahmen, innerhalb dessen die entwickelte Anwendung bereitgestellt und betrieben wird. Durch die Verwendung von Containern kann sichergestellt werden, dass die Anwendung zuverlässig in unterschiedlichen Umgebungen funktioniert und leicht skaliert werden kann, um der Nachfrage gerecht zu werden.\\\begin{spacing}{0.5}\end{spacing}
+Die Einbettung der Anwendung in einen Docker-Container, eine der populärsten Containerisierungstechnologien, ermöglicht es Entwicklern und Betreibern, von den oben genannten Vorteilen zu profitieren. Dies vereinfacht die Bereitstellung und das Management der Anwendung erheblich, unabhängig davon, ob sie lokal, in einer privaten Cloud oder in der öffentlichen Cloud ausgeführt wird.}}}
+\end{spacing}
+
+
+
+\subsubsection{Schnittstellen}
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{\textbf{\textsf{Odoo Daten-Austausch: }}
+\begin{itemize}
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Zweck: }}Interaktion mit Odoo zur Abfrage und Austausch von Daten für die App in sichere umgebung.
+% --------------------------->.\\\begin{spacing}{0.9}\end{spacing}
+für die Interaktion mit Odoo zur sicheren Abfrage und zum Austausch von Daten für die Anwendung wurden spezifische Sicherheitsmaßnahmen für jede Route implementiert, um die Integrität und Sicherheit der Datenübertragung zu gewährleisten. Für den Zugriff auf bestimmte Endpunkte, insbesondere für die Durchführung von Änderungen mittels POST-Anfragen, ist die Berechtigung als Superuser erforderlich.\\\begin{spacing}{0.5}\end{spacing}
+Die Sicherheitsmaßnahmen umfassen die Verwendung von JSON Web Tokens (JWT) für die Authentifizierung bei jeder Anfrage. Innerhalb der Applikation wurde entwickler eine Funktion implementiert, die alle notwendigen Sicherheitskopfzeilen in die Antwortnachrichten integriert, insbesondere wenn auf spezielle Endpunkte zugegriffen wird, die sensible Daten manipulieren oder abrufen. Die Funktion add\_token\_to\_header fügt, falls ein Benutzerobjekt vorhanden ist und auf eine URL mit Get-Special-id zugegriffen wird, den generierten Token sowie weitere Sicherheitskopfzeilen in die HTTP-Antwort ein. Diese Kopfzeilen umfassen unter anderem Richtlinien zur Transportverschlüsselung, Frame-Optionen und Inhaltsicherheitsrichtlinien.\\\begin{spacing}{0.5}\end{spacing}
+Hier ist eine erweiterte Beschreibung der Endpunkte und der zugehörigen Sicherheitsmaßnahmen:
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Endpoints: }}\\
+\textbullet{ }\textbf{\textsf{GET /odoo/maßnahme/\{id\}: }}Abrufen von Maßnahmedaten anhand der ID. Verwendet marshal-list-with zur Formatanpassung für die Flask-API. abgesichert durch userlogin und JWT noch obengenannte erweiterter sichreheit maßnahmen.\\
+\textbullet{ }\textbf{\textsf{POST /odoo/maßnahme: }}Hinzufügen neuer Maßnahmen oder Daten in Odoo. Zugriff nur für Superuser oder Benutzer mit erweiterten Rechten. abgesichert durch SuperUser login und JWT noch obengenannte erweiterter sichreheit maßnahmen.\\
+\textbullet{ }\textbf{\textsf{GET /odoo/maßnahme/nummer/\{nummer\}: }}Abrufen von Daten anhand der Maßnahmenummer. abgesichert durch userlogin und JWT noch obengenannte erweiterter sichreheit maßnahmen.\\
+\textbullet{ }\textbf{\textsf{GET /odoo/maßnahme/name/\{name\}: }}Abrufen von Daten anhand des Maßnahmennamens. abgesichert durch userlogin und JWT noch obengenannte erweiterter sichreheit maßnahmen.\\
+\textbullet{ }\textbf{\textsf{GET /odoo/models/Get-all: }}Abrufen von Daten aus 3 verschiedenen Odoo-Modellen. Entwickelt für zukünftige Anforderungen, um verschiedene Datenmodelle in einer Antwort zu kombinieren, aus sicherheit grunden entwickler hatte dieses entpunkte mit nur eine daten von jede modelle limitiert, abgesichert durch userlogin und JWT noch erweiterter sichreheit maßnahmen.\\
+\textbullet{ }\textbf{\textsf{GET /odoo/user/\{name\}: }}Abrufen von Benutzerdaten aus Odoo für Verwaltungs- und Speicherzwecke im Klassenbuchprogramm. abgesichert durch userlogin und JWT noch obengenannte erweiterter sichreheit maßnahmen.\\
+\end{itemize}
+% nächste tabelle 
+\textbf{\textsf{Account Management}} 
+\begin{itemize}
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Zweck: }}Verwaltung von Benutzerrollen und Berechtigungen über eine SQLite-Datenbank..
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Endpoints (CRUD-Funktionen für Benutzerverwaltung): }}\\
+\textbullet{ }\textbf{\textsf{POST /accounts: }}Hinzufügen neuer Benutzer.\\
+\textbullet{ }\textbf{\textsf{GET /accounts/id\{id\}: }}Aufrufen von Benutzerdaten.\\
+\textbullet{ }\textbf{\textsf{PUT /accounts/id\{id\}: }}Aktualisieren von Benutzerdaten.\\
+\textbullet{ }\textbf{\textsf{DELETE /accounts/id\{id\}: }}Löschen von Benutzern.\\
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Zugriffskontrolle: }}Nur Superuser haben die Berechtigung, Benutzer zu verwalten. Die Rolle des Superusers wird vom Leiter des IAD, Herr Neuehausen, verwaltet.\\
+\end{itemize}
+% nächste tabelle 
+\textbf{\textsf{Profil Management}} 
+\begin{itemize}
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Zweck: }}Ermöglicht Benutzern, ihre Kontodetails einzusehen und zu verwalten.
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Endpoints: }}Eigene Daten verwalten\\
+\textbullet{ }\textbf{\textsf{GET /Profile: }}Abrufen der eigenen Kontodetails.\\
+\textbullet{ }\textbf{\textsf{PUT /accounts/id\{id\}: }}Aktualisieren der eigenen Kontodetails.
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Zugriffskontrolle: }}aus sicherheit Grunden hatte der entwickler beschränkt, Nur Eigene Daten zu verwalten und das wurde auch limitiert.\\
+\end{itemize}
+% nächste tabelle 
+\textbf{\textsf{Hilfe / Support Service }} 
+\begin{itemize}
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Zweck: }}Bietet Unterstützung und Hilfsdienste für Benutzer der App.
+\item[\scalebox{0.6}{$\blacksquare$}]\textbf{\textsf{Endpoints: }}Email senden zum hilfe anförderungen\\
+\textbullet{ }\textbf{\textsf{PUT /Help-request/id\{id\}: }}hilfe email zum schreiben und schicken zum administrator\\
+\end{itemize}
+{\Large \textit{\textsf{( Diese strukturierte und sicherheitsorientierte Herangehensweise gewährleistet eine robuste und sichere Schnittstelle für die Interaktion mit Odoo, wobei gleichzeitig die Anforderungen an Datenschutz und -sicherheit erfüllt werden.)}}}
+\textbf{\textsf{Sicherheits- und Zugriffskontrolle: }}Die Dokumentation muss deutlich machen, dass nicht alle Benutzer berechtigt sind, neue Nutzer hinzuzufügen oder auf die Informationen aller Nutzer zuzugreifen. Solche Aktionen sind ausschließlich Super-Nutzern vorbehalten.
+}}}
+\end{spacing}
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Fehlerbehandlung und Middleware }
+\begin{spacing}{1.3}
+\normalsize{\textsf{\textsf{\textbf{\textsf{ Fehlerbehandlung und Middleware:}} }}}
+\end{spacing}
+
+
+
+
+
+% --------------------------------- end architekture --------------------------%
+
+
 
 
 \subsection{Zielplattform}
@@ -535,6 +920,15 @@ Erweiterbarkeit: Die Architektur der API ermöglicht es, zukünftige Anforderung
 \begin{spacing}{1.3}
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
+
+
+
+
+
+
+
+
+
 
 % ------------------- another section --------------------%
 
@@ -668,7 +1062,7 @@ go f----------------- Unittests -------------------------ffdsf
 \section{Fonts test}
 \subsection{Fonts test}
 \begin{spacing}{1.3}
-This is \textbf{bold ,access to that font and it is installed on your system.} text.\\
+This is \textbf{bold ,access to that font and it is installed on your system...............................................} text.\\
 This is \textit{italic, access to that font and it is installed on your system.} text.\\
 This is \texttt{typewriter, access to that font and it is installed on your system.}\\
 This is \emph{emphasized,access to that font and it is installed on your system.} text.\\
@@ -686,7 +1080,7 @@ This is \texttt{typewriter text, access to that font and it is installed on your
 
 
 % 10 size - 12 size 
-This is \normalsize{\textsf{10pt sans-serif}} text.\\
+This is \normalsize{\textsf{10pt sans-serif11111111111111}} text.\\
 This is \large{\textsf{12pt sans-serif}} text.\\
 This is \normalsize{\textbf{\textsf{10pt sans-serif bold}}} text.\\
 This is \large{\textit{\textsf{12pt sans-serif italic}}} text.\\
@@ -696,7 +1090,7 @@ This is \normalsize{\texttt{10pt typewriter text.}}
 % end of 10 size - 12 size 
 
 
-This is {\tiny \textsf{tiny sans-serif}} text.\\
+This is {\tiny \textsf{tiny sans-serif +++++++++++++}} text.\\
 This is {\scriptsize \textsf{scriptsize sans-serif}} text.\\
 This is {\footnotesize \textsf{footnotesize sans-serif}} text.\\
 This is {\small \textsf{small sans-serif}} text.\\
@@ -707,7 +1101,7 @@ This is {\LARGE \textsf{LARGE sans-serif}} text.\\
 This is {\huge \textsf{huge sans-serif}} text.\\
 This is {\Huge \textsf{Huge sans-serif}} text.\\
 
-This is {\large \textbf{\textsf{large sans-serif bold}}} text.\\
+This is {\large \textbf{\textsf{large sans-serif bold -----------------}}} text.\\
 This is {\Large \textit{\textsf{Large sans-serif italic}}} text.\\
 This is {\LARGE \textsl{\textsf{LARGE sans-serif slanted}}} text.\\
 This is {\huge \textsc{\textsf{huge sans-serif Small Caps}}} text.\\
