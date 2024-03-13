@@ -1,0 +1,30 @@
+button {
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+
+header {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 20px;
+  }
+  
+  .header-content {
+    text-align: center;
+  }
+  
+  header {
+    background-image: url('your-image-path.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+  }
+  
+
