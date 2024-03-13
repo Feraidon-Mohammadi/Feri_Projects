@@ -1,0 +1,537 @@
+BoxLayoutExample:
+
+
+
+
+
+<ResizableLabel>:
+    font_size: self.width / 20  # Adjust the divisor for desired scaling
+
+<ResizableLabel2>:
+    font_size: self.width / 8  # Adjust the divisor for desired scaling
+
+<BoxLayoutExample>
+
+    orientation: "vertical"
+
+
+    ResizableLabel:
+        text: "Register Form"
+        padding: (self.height - self.line_height) # input placeholder in middle of field up and down
+        size_hint: (1, 1)
+        #size: "100dp" , "80dp"
+        color: 1, 1, 1, 1
+        halign: 'center'
+        valign: 'middle'
+        font_size: 4
+
+        #pos: "200dp", "400dp"
+        canvas.before:
+            Color:
+                rgba: 0.1, 1, 1, 0.1  # Blue background color
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+
+
+
+
+        #size_hint: 1, None  #---------------------------- Allow vertical size to adjust based on content
+        #height: self.texture_size[1]  #---------------------- Set the height based on the content size
+        #text_size: self.width, None  #------------------------ Limit the text width to the label's width
+        #halign: 'center'  #----------------------- Horizontal alignment (you can use 'left', 'center', or 'right')
+
+
+
+
+
+
+    BoxLayout:
+        padding: [20, 0, 20, 0] # padding for right side of the inputextbox
+        canvas.before:
+            Color:
+                rgba: 0.4, 0.4, 0.5, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        ResizableLabel2:
+            text: "Vor Name"
+            size_hint: 2.5, 0.6
+            #size_hint: 1, None
+            font_size: 11
+            #font_size: 15, self.width * 0.5 # Adjust the divisor as needed
+            #text_size: self.width -15, None
+            halign: 'center'
+            valign: 'middle'
+            #height: self.texture_size[1]
+
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 0.5
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                Line:
+                    width: 1.5  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+            #padding: [0, 50, 50, 0] #--------------------------------position of the text vor name
+
+        TextInput:
+            id: vor_name
+            multiline: False # Turn off type Multiple lines
+            hint_text: "Type here" # Placeholder text
+            padding: [10, (self.height - self.line_height) / 2, 0, 0] # input placeholder in middle of field up and down
+            font_size: 12
+            size_hint: 6, 0.635
+            pos_hint: {"center_y":0.3, "centery_x": 0.3}
+            #height:35
+            #padding: [0, 0, 0, 0]
+            background_color: 1, 1, 1, 1
+
+            canvas.before:
+                Line:
+                    width: 1  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+
+
+
+
+    BoxLayout:
+        padding: [20, 0, 20, 0] # padding for right side of the inputextbox
+        canvas.before:
+            Color:
+                rgba: 0.4, 0.4, 0.5, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        ResizableLabel2:
+            text: " Nach Name     "
+            size_hint: 2.5, 0.6
+            #text_size: self.width, 17 # text dont go out of the field
+            font_size: 11
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 0.5 # Blue background color
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                Line:
+                    width: 1.5  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+
+        TextInput:
+            id: nach_name
+            multiline: False # Turn off type Multiple lines
+            hint_text: "Type here" # Placeholder text
+            padding: [10, (self.height - self.line_height) / 2, 0, 0] # input placeholder in middle of field up and down
+            font_size: 12
+            size_hint: 6 ,0.635
+            #size_hint_y: None
+            #size_hint_x: 0.3
+            pos_hint: {"center_y":0.3}
+            height:35
+            #padding: 10
+            background_color: 1, 1, 1, 1
+
+            canvas.before:
+                Line:
+                    width: 1  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+
+
+
+
+    BoxLayout:
+        padding: [20, 0, 20, 0] # padding for right side of the inputextbox
+        canvas.before:
+            Color:
+                rgba: 0.4, 0.4, 0.5, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        ResizableLabel2:
+            text: " Email Address"
+            font_size: 13
+            size_hint: 2.5, 0.6
+            #text_size: self.width, 17 # text dont go out of the field
+            halign: 'center'
+            valign: 'middle'
+            #color: 1, 0, 1, 0
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 0.5 # Blue background color
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                Line:
+                    width: 1.5  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+        TextInput:
+            id: emailaddress
+            multiline: False # Turn off type Multiple lines
+            hint_text: ".example@cloud.com" # Placeholder text
+            padding: [10, (self.height - self.line_height) / 2, 0, 0] # input placeholder in middle of field up and down
+            font_size: 12
+            size_hint: 6 ,0.635
+            #size_hint_y: None
+            #size_hint_x: 0.3
+            pos_hint: {"center_y":0.3}
+            height:32
+            #padding: 10
+            background_color: 1, 1, 1, 1
+            canvas.before:
+                Line:
+                    width: 1  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+
+
+
+    BoxLayout:
+        padding: [20, 0, 20, 0] # padding for right side of the inputextbox
+        canvas.before:
+            Color:
+                rgba: 0.4, 0.4, 0.5, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+
+
+        ResizableLabel2:
+            text: " Repeat Email  "
+            font_size: 13
+            size_hint: 2.5, 0.6 # size of the text email
+            #text_size: self.width, 17 # text dont go out of the field
+            halign: 'center'
+            valign: 'middle'
+            #color: 1, 0, 1, 0
+
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 0.5 # Blue background color
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                Line:
+                    width: 1.5  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+        TextInput:
+            id: repeatemail
+            multiline: False # Turn off type Multiple lines
+            hint_text: ".example@cloud.com" # Placeholder text
+            #padding_y: (self.height - self.line_height) / 2 # position of hint text or type
+            #padding: [self.width / 2 - self.line_height / 2, (self.height - self.line_height) / 2, 0, 0]
+            padding: [10, (self.height - self.line_height) / 2, 0, 0] # input placeholder in middle of field up and down
+            font_size: 12
+            size_hint: 6 ,0.635
+            #size_hint_y: None
+            #size_hint_x: 0.3
+            pos_hint: {"center_y":0.3} # up or down position
+            #height:45
+            #padding: 10
+            background_color: 1, 1, 1, 1
+
+            canvas.before:
+                Line:
+                    width: 1  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+
+
+
+    BoxLayout:
+        padding: [20, 0, 20, 0] # padding for right side of the inputextbox
+        canvas.before:
+            Color:
+                rgba: 0.4, 0.4, 0.5, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        ResizableLabel2:
+            text: " Password     "
+            size_hint: 2.5, 0.6
+            #text_size: self.width, 17 # text dont go out of the field
+            halign: 'center'
+            valign: 'middle'
+            font_size: 13
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 0.5 # Blue background color
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                Line:
+                    width: 1.5  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+
+        TextInput:
+            id: password
+            multiline: False # Turn off type Multiple lines
+            hint_text: "Nr A-Z a-z*$%$#" # Placeholder text
+            padding: [10, (self.height - self.line_height) / 2, 0, 0] # input placeholder in middle of field up and down
+            font_size: 12
+            size_hint: 6 ,0.635
+            #size_hint_y: None
+            #size_hint_x: 0.3
+            pos_hint: {"center_y":0.3}
+            height:35
+            #padding: 10
+            background_color: 1, 1, 1, 1
+
+            canvas.before:
+                Line:
+                    width: 1  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+
+
+
+
+
+
+
+    BoxLayout:
+        padding: [20, 0, 20, 0] # padding for right side of the inputextbox
+        canvas.before:
+            Color:
+                rgba: 0.4, 0.4, 0.5, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        ResizableLabel2:
+            text: "Confirm Password"
+            size_hint: 2.5, 0.6
+            #text_size: self.width, 17 # text dont go out of the field
+            font_size: 11
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 0.5 # Blue background color
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                Line:
+                    width: 1.5  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+
+        TextInput:
+            id: re_password
+            multiline: False # Turn off type Multiple lines
+            hint_text: "Confirmation Passowrd" # Placeholder text
+            padding: [10, (self.height - self.line_height) / 2, 0, 0] # input placeholder in middle of field up and down
+            font_size: 12
+            size_hint: 6 ,0.635
+            #size_hint_y: None
+            #size_hint_x: 0.3
+            pos_hint: {"center_y":0.3}
+            height:35
+            #padding: 10
+            background_color: 1, 1, 1, 1
+
+            canvas.before:
+                Line:
+                    width: 1  # Border width
+                    rectangle: (self.x, self.y, self.width, self.height)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    BoxLayout:
+        #padding: [0.1, 0.8, 0.7,0.1] # padding for right side of the inputextbox
+        canvas.before:
+            Color:
+                rgba: 0.4, 0.4, 0.5, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Button:
+            text: "Save"
+            id: submit_button
+            pos_hint: {"center_x": 0.5}
+            size_hint: 1, 0.6 #-------------------- Size based on text content
+            background_color: 0.12, 1.9, 0.1, 1.9  # --------------------Set your desired background color
+            #on_release: root.save_button_pressed()
+
+            #-----------------add elements input to the list----------------#
+            on_release:
+                app.get_input_value()
+            #-----------------add elements input to the list----------------#
+
+
+
+
+
+
+    BoxLayout:
+        #padding: [0.1, 0.8, 0.7,0.1] # padding for right side of the inputextbox
+        canvas.before:
+            Color:
+                rgba: 0.4, 0.4, 0.5, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Button:
+            text: "Cancel"
+            id: submit_button
+
+
+            size_hint: 1, 0.6 #-------------------- Size based on text content
+            pos_hint: {"center_x":4 ,"center_y": 0.5}
+
+
+            #background_color: 0.12, 0.9, 8.1, 1.9  # -----------best blue--------Set your desired background color
+            #background_color: 1.12, 0.9, 3, 2.9  # ---------special color-----------Set your desired background color
+
+            background_color: 3, 0, 0, 1  # ---------Red color -----------Set your desired background color
+            on_release: root.save_button_pressed()
+
+            #-----------------add elements input to the list----------------#
+            on_release:
+                #app.get_input_value()
+            #-----------------add elements input to the list----------------#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            #pos_hint: {"center_x": 0.3, "center_y": 0.5}
+            #color: 1, 1, 1, 1
+            #size_hint: 1, 0.1  # ------------------------------------Size hint (width, height)
+            #pos_hint: {"center_x": 0.5, "center_y": 0.5}  # ---------------Position hint (centered)
+            #on_press: root.button_pressed()  #----------------------- Function to call on button press
+            #background_normal: 'normal.png'  # -----------------------Background image in the normal state
+
+            # -----------to add a background after pressed button  need this 2 elements-------------
+            #background_down:''
+            #background_color_down: 0.5, 0, 0,1 ,0 # ----------------------Background image in the pressed state
+
+
+
+
+
+            #Label:
+                #padding: [40, 20, 40, 0]
+                #textInput: "Hello Label"
+                #size: "50dp", "40dp"
+                #size_hint: (1, 5)
+                #pos: "100dp", "300dp"
+                #color: 1, 3, 2, 1
+                #background_color: 1, 0, 0, 1
+
+
+
+
+    Label:
+        text: "Footer"
+        size_hint: (1, 1)
+        #size: "100dp" , "80dp"
+        color: 1, 1, 1, 1
+        font_size: 14
+
+        #pos: "200dp", "400dp"
+        canvas.before:
+            Color:
+                rgba: 0.1, 1, 1, 0.1  # Blue background color
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+
+
+
+<ResizableLabel>:
+    font_size: 15  # Set the default font size
+    size_hint: None, None
+    size: self.texture_size
+    text_size: self.width, None
+    halign: 'center'
+
+
+
+
+<MainWidget>:
+    orientation: "vertical"
+    Label:
+        text: "Submit"
+        size_hint: None, None
+        #size: "30dp" , "20dp"
+        width: "40dp"
+        height: "20dp"
+        color: 1, 1, 0.1, 1
+        #background_color: 0, 2, 3, 0.8
+        #pos: "200dp", "400dp"
+
+    Label:
+        text: "Hello Label"
+        #size: "50dp", "40dp"
+
+        pos: "100dp", "300dp"
+        color: 1, 3, 2, 1
+        background_color: 1, 0, 0, 1
+
