@@ -1,5 +1,0 @@
-01.02.2022 18:34 FEHLER "Server öüäß ist nicht erreichbar"
-02.03.2022 12:11 INFO "Server ist wieder in Betrieb"
-irgendeine fehlerhafte Zeile
-05.03.2022 10:09 WARNUNG "Serverauslastung ist extrem hoch"
-
