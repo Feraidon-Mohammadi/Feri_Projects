@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Form</title>
+    <script src="https://www.skulpt.org/js/skulpt.min.js" type="text/javascript"></script>
+    <script src="https://www.skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script>
+</head>
+<body>
+
+ <h1>Hello User</h1>
+    <form  method="get">
+        <input type="text" name="name" id="user_input"> <!-- Remove the space in "name" -->
+        <input type="submit" value="Submit" id="submit_button">
+    </form>
+
+    <script type="text/python">
+        function greet() {
+            var user_vor_name = document.getElementById("user_input").value;
+            var user_nach_name = "Nachname"; // You can change this or get it from another input field
+
+            console.log("Hello User, bitte Eingabe ausfüllen,");
+            console.log("Vorname: " + user_vor_name);
+            console.log("Nachname: " + user_nach_name);
+        }
+
+        document.getElementById("submit_button").addEventListener("click", greet);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
