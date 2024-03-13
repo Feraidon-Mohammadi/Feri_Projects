@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='swagger-ui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='custom-swagger.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}" />
+    <!-- Fix the href values for favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-32x32.png') }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-16x16.png') }}" sizes="16x16" />
+
+</head>
+<body>
+
+    <!-- Navigation B   bar -->
+    <nav>
+          <marquee><h1>API Documentation</h1></marquee>
+       <!--  -->
+        <!-- Add any additional navigation elements as needed -->
+    </nav>
+
+    <!-- Main Content Area -->
+    <div id="swagger-ui">
+
+
+    </div>
+
+    <!-- Swagger UI Scripts -->
+    <script src="{{ url_for('static', filename='swagger-ui-bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='swagger-ui-standalone-preset.js') }}"></script>
+    <script>
+        window.onload = function() {
+            // Begin Swagger UI call region
+            const ui = SwaggerUIBundle({
+                url: "{{ url_for('specs') }}",
+                dom_id: '#swagger-ui',
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset,
+                ],
+                layout: "BaseLayout",
+            });
+            // End Swagger UI call region
+
+            window.ui = ui;
+        };
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Add any additional footer content or links as needed -->
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* custom-swagger.css */
+body {
+    background: url('{{ url_for('static', filename='header.jpg') }}') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.swagger-ui .swagger-ui {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Customize the topbar background color */
+.swagger-ui .topbar {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Add custom styles for icons or images */
+.custom-icon {
+    background: url('favicon-32x32.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+/* Add custom styles for icons or images */
+.custom-icon {
+    background: url('favicon-16x16.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
