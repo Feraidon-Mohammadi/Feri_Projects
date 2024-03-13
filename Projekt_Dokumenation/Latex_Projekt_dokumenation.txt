@@ -61,8 +61,8 @@
 
 % change colore of tables contents section subsection and subsubsection outside the tables
 \definecolor{sectioncolor}{RGB}{0, 0, 200} % Blue
-\definecolor{subsectioncolor}{RGB}{50,50,150} % Red
-\definecolor{subsubsectioncolor}{RGB}{122,122,250} % Green (not black as the comment says)
+\definecolor{subsectioncolor}{RGB}{0,150,150} % Red
+\definecolor{subsubsectioncolor}{RGB}{150,122,250} % Green (not black as the comment says)
 
 \titleformat{\section}
   {\normalfont\Large\bfseries\color{sectioncolor}}
@@ -530,6 +530,8 @@ Die Digitalisierung interner Prozesse und die Implementierung fortschrittlicher 
 
 \subsection{Projektabgrenzung}
 \begin{spacing}{1.3}
+\label{sec:introduction}% put the target like here part 1 and part2 is in section Projektplanung ----part1
+
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
 
@@ -539,9 +541,15 @@ Die Digitalisierung interner Prozesse und die Implementierung fortschrittlicher 
 
 \section{Projektplanung}
 \begin{spacing}{1.3}
+\href{run:./path/to/file.pdf}{Click here to open the file.}  %colorized link text for a picture or any data
+\\
+Visit \url{https://www.example.com} or see \href{https://www.example.com}{Example Website}. % web links with text 
+
+See Section~\ref{sec:introduction} for more information this part2.% which line i want to connect with tag put this line also ----part2
+
+See \hyperref[sec:introduction]{projektabgerenzung} for more information this part 3. % part 3 linked target according to a word ----part3
 \normalsize{\textsf{\textsf{      }}}
 \end{spacing}
-
 
 \subsection{Projektphasen}
 \begin{spacing}{1.3}
