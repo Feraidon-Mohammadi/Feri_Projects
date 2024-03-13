@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./todo-list.js" type="module"></script>
+  </head>
+  <body>
+    <!-- Das ist ein Kommentar -->
+    <form id="item-form">
+      <input type="text" placeholder="Aufgabe" minlength="2" required />
+      <button type="submit">Hinzufügen</button>
+    </form>
+
+    <div class="container">
+      <input type="text" id="filter-input" />
+      <button type="button">Filtern</button>
+    </div>
+
+    <!-- Todo-List -->
+    <ul id="todo-list">
+      <li>Item 1</li>
+      <li hidden>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4<button>x</button></li>
+    </ul>
+  </body>
+</html>
