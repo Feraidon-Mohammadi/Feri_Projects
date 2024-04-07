@@ -4,6 +4,8 @@ first if in new pc starting gitbash to clone files from repository git hub .need
 1- git config --global user.name "your correct name on profile not user name like Feri "
 2- git config --global user.email "example@gmail.com"
 
+if at least one time you did clone, so upper steps dont need just activate agent and add ssh key to agent if not added and 
+when private key ssh added to agent so you are able to clone , 
 
 and than need to activate agent :
 eval "$(ssh-agent -s)"
