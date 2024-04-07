@@ -1,6 +1,5 @@
-
 import mysql.connector
-from typing import Union
+
 
 
 class MySQL_self:
@@ -16,10 +15,11 @@ class MySQL_self:
             # port='3306',
             user='root'  ,  # your_username
             password='password', # your_password
-            database='feraidon'  # your_database
+            database='dbname'  # your_database
         )
 
         cursor = connection.cursor()
+
 
 
         type_column = input("Type of the column: ")
@@ -36,9 +36,12 @@ class MySQL_self:
 
 
 
+
+
         sql = f"CREATE TABLE IF NOT EXISTS {table_name} (id INT AUTO_INCREMENT PRIMARY KEY, {column_name} {create_column_first_type})"
         cursor.execute(sql)
         connection.commit()
+
 
 
 

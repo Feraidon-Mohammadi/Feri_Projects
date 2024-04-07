@@ -10,7 +10,7 @@ class MySQL_self:
             host='Localhost',
             user='root',
             password='password',
-            database='feraidon'
+            database='dbname'
         )
         cursor = connection.cursor()
 

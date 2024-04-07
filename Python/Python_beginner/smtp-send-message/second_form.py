@@ -24,7 +24,7 @@ print(day_name)
 # email = "ff@.com"
 # passowr= "ewifjwufpwufhwihf"
 
-# obj_connect = smtplib.SMTP(host="feri", port=25, local_hostname="faraidon",timeout=22,source_address=tuple("123.123.123.4"))
+# obj_connect = smtplib.SMTP(host="feri", port=25, local_hostname="localname",timeout=22,source_address=tuple("123.123.123.4"))
 
 
 my_list = []

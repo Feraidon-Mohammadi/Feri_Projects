@@ -11,7 +11,7 @@ connection = mysql.connector.connect(
     #port='3306',
     user='root',#your_username
     password='password', # your_password
-    database='feraidon' #your_database
+    database='dbname' #your_database
 )
 
 cursor = connection.cursor()
