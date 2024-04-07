@@ -1,0 +1,28 @@
+{"event_type": "down", "scan_code": 42, "time": 1512112653.0063438, "device": null, "is_keypad": 0, "name": "#"}
+{"event_type": "up", "scan_code": 42, "time": 1512112653.06119, "device": null, "is_keypad": 0, "name": "#"}
+{"event_type": "down", "scan_code": 49, "time": 1512112653.289784, "device": null, "is_keypad": 0, "name": "space"}
+{"event_type": "down", "scan_code": 60, "time": 1512112653.4236312, "device": null, "is_keypad": 0, "name": "right shift"}
+{"event_type": "up", "scan_code": 49, "time": 1512112653.4311, "device": null, "is_keypad": 0, "name": "space"}
+{"event_type": "down", "scan_code": 4, "time": 1512112653.505891, "device": null, "is_keypad": 0, "name": "h"}
+{"event_type": "up", "scan_code": 60, "time": 1512112653.586028, "device": null, "is_keypad": 0, "name": "right shift"}
+{"event_type": "up", "scan_code": 4, "time": 1512112653.59007, "device": null, "is_keypad": 0, "name": "h"}
+{"event_type": "down", "scan_code": 0, "time": 1512112653.654826, "device": null, "is_keypad": 0, "name": "a"}
+{"event_type": "down", "scan_code": 37, "time": 1512112653.7469828, "device": null, "is_keypad": 0, "name": "l"}
+{"event_type": "up", "scan_code": 0, "time": 1512112653.750638, "device": null, "is_keypad": 0, "name": "a"}
+{"event_type": "up", "scan_code": 37, "time": 1512112653.815205, "device": null, "is_keypad": 0, "name": "l"}
+{"event_type": "down", "scan_code": 37, "time": 1512112653.880843, "device": null, "is_keypad": 0, "name": "l"}
+{"event_type": "up", "scan_code": 37, "time": 1512112653.976942, "device": null, "is_keypad": 0, "name": "l"}
+{"event_type": "down", "scan_code": 31, "time": 1512112654.0598772, "device": null, "is_keypad": 0, "name": "o"}
+{"event_type": "up", "scan_code": 31, "time": 1512112654.156111, "device": null, "is_keypad": 0, "name": "o"}
+{"event_type": "down", "scan_code": 49, "time": 1512112654.16977, "device": null, "is_keypad": 0, "name": "space"}
+{"event_type": "down", "scan_code": 60, "time": 1512112654.233841, "device": null, "is_keypad": 0, "name": "right shift"}
+{"event_type": "up", "scan_code": 49, "time": 1512112654.273817, "device": null, "is_keypad": 0, "name": "space"}
+{"event_type": "down", "scan_code": 13, "time": 1512112654.317791, "device": null, "is_keypad": 0, "name": "w"}
+{"event_type": "up", "scan_code": 13, "time": 1512112654.3937438, "device": null, "is_keypad": 0, "name": "w"}
+{"event_type": "up", "scan_code": 60, "time": 1512112654.3981209, "device": null, "is_keypad": 0, "name": "right shift"}
+{"event_type": "down", "scan_code": 14, "time": 1512112654.4778519, "device": null, "is_keypad": 0, "name": "e"}
+{"event_type": "up", "scan_code": 14, "time": 1512112654.550236, "device": null, "is_keypad": 0, "name": "e"}
+{"event_type": "down", "scan_code": 37, "time": 1512112654.5648808, "device": null, "is_keypad": 0, "name": "l"}
+{"event_type": "down", "scan_code": 17, "time": 1512112654.6409721, "device": null, "is_keypad": 0, "name": "t"}
+{"event_type": "up", "scan_code": 37, "time": 1512112654.644716, "device": null, "is_keypad": 0, "name": "l"}
+{"event_type": "up", "scan_code": 17, "time": 1512112654.713197, "device": null, "is_keypad": 0, "name": "t"}
