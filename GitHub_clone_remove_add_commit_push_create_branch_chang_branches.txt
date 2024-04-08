@@ -1,5 +1,47 @@
 GitHub chat Notations .
 
+
+********* remove a file or directory or rename **********
+
+# Remove a file from the repository
+git rm path/to/your/file
+git commit -m "Remove specified file"
+git push origin your_branch_name
+
+# Remove a directory from the repository
+git rm -r path/to/your/directory
+git commit -m "Remove specified directory"
+git push origin your_branch_name
+
+
+
+********** rename becarfull it can remove your files if you do any mistak better not to do this way instead copy and again add ************
+# Rename a file
+git mv old_filename new_filename
+git commit -m "Rename file"
+git push origin your_branch_name
+
+# Rename a directory
+git mv old_directory_name new_directory_name
+git commit -m "Rename directory"
+git push origin your_branch_name
+
+if did any mistake to reset -----> git reset HEAD~1
+
+**********************************************************************************************************************
+
+********** remove cached filed from repository, it doesnt remove your branch files **********
+git rm --cached Feri_Projects
+git commit -m "Remove branch_name from the index"
+git push
+
+
+
+
+****************************************************************************************************************************
+sometimes need maybe 
+***************git config --global core.autocrlf true***************
+
 first if in new pc starting gitbash to clone files from repository git hub .need 2 steps :
 1- git config --global user.name "your correct name on profile not user name like Feri "
 2- git config --global user.email "example@gmail.com"
