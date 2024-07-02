@@ -1,7 +1,7 @@
 GitHub chat Notations .
 
 
-********* remove a file or directory or rename **********
+********* remove a file or directory or rename / or restore removed files  **********
 
 # Remove a file from the repository
 git rm path/to/your/file
@@ -12,6 +12,11 @@ git push origin your_branch_name
 git rm -r path/to/your/directory
 git commit -m "Remove specified directory"
 git push origin your_branch_name
+
+####################### to restore removed files that not commited ##############################
+git reset HEAD path/to/your/directory
+
+after that you can add removed fils physically in last place its easies way, if the you dont have the files you can clone if you didnt commit your removed files 
 
 
 
